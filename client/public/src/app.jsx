@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Tabs from './components/Tabs';
 import CharacterGenerator from './components/CharacterGenerator';
+import Tabs from './components/Tabs';
 import './styles.css';
 
 function App() {
