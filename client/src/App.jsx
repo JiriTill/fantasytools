@@ -29,11 +29,14 @@ export default function App() {
         href={cat.path}
         className="group flex flex-col items-center text-center transition"
       >
-      <img
+      <div className="aspect-square w-full overflow-hidden rounded-lg border-2 border-transparent group-hover:border-white transition">
+        <img
         src={cat.image}
         alt={cat.name}
-        className="h-32 w-full object-cover rounded-lg border-2 border-transparent group-hover:border-white transition"
-      />
+        className="w-full h-full object-cover"
+          />
+    </div>
+
       <span className="mt-2 text-lg font-medium text-white group-hover:underline">
         {cat.name}
       </span>
