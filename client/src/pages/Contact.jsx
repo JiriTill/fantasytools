@@ -15,44 +15,49 @@ export default function Contact() {
           We’re always open to partnerships and feedback from fellow fantasy lovers. Your input helps us grow and improve.
         </p>
 
-        <form className="space-y-4 mt-8">
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your name"
-            />
-          </div>
+        <form
+  action="https://formspree.io/f/mjkrqwke"
+  method="POST"
+  className="space-y-4 mt-8"
+>
+  <div>
+    <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="name">Name</label>
+    <input
+      type="text"
+      name="name"
+      required
+      className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      placeholder="Your name"
+    />
+  </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      required
+      className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      placeholder="your@email.com"
+    />
+  </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="message">Message</label>
+    <textarea
+      name="message"
+      rows="6"
+      required
+      className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      placeholder="Your message or feedback..."
+    ></textarea>
+  </div>
+  <button
+    type="submit"
+    className="bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+  >
+    Send Message
+  </button>
+</form>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="your@email.com"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              rows="6"
-              className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your message or feedback..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-          >
-            Send Message
-          </button>
-        </form>
       </div>
 
       <Link
