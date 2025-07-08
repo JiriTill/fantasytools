@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Character() {
-  const [race, setRace] = useState('');
-  const [culture, setCulture] = useState('');
-  const [keywords, setKeywords] = useState('');
+  const [form, setForm] = useState({
+    gender: 'Male',
+    race: 'Human',
+    profession: 'Combat oriented',
+    socialClass: 'Commoner',
+    tone: 'Harsh'
+  });
+
   const [names, setNames] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const generateNames = async () => {
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setLoading(true);
+    setNames([]);
+
     try {
-      const response = await fetch('/api/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'character',
-          race,
-          culture,
-          keywords,
-        }),
-      });
-      const data = await response.json();
-      setNames(data.names || []);
-    } catch (error) {
-      console.error('Generation error:', error);
+      const prompt = `Generate 10 fantasy names for a ${form.gender.toLowerCase()} ${form.race.toLowerCase()} character. The character is ${form.profession.toLowerCase()}, belongs to ${form.socialClass.toLowerCase()}, and the name should sound ${form.tone.toLowerCase()}. Return only the names in a list format.`;
+
+      const response = await axios.post('/api/generate', { prompt });
+      setNames(response.data.names);
+    } catch (err) {
+      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -32,63 +36,73 @@ export default function Character() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-center mb-4">Character Name Generator</h1>
-      <p className="text-center mb-6 max-w-2xl text-lg">
-        Describe your fantasy character’s race, culture, or story. Our AI will generate ten creative name ideas tailored to your world.
-      </p>
+      <h1 className="text-3xl font-bold mb-6">Fantasy Character Name Generator</h1>
+      <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
+        <label className="block">
+          Gender:
+          <select name="gender" value={form.gender} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </label>
 
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xl mb-6 space-y-4">
-        <input
-          type="text"
-          placeholder="Race (e.g., Elf, Orc, Human)"
-          value={race}
-          onChange={(e) => setRace(e.target.value)}
-          className="w-full p-2 rounded bg-gray-700 text-white"
-        />
-        <input
-          type="text"
-          placeholder="Culture/Region (e.g., Nordic, Desert, Gothic)"
-          value={culture}
-          onChange={(e) => setCulture(e.target.value)}
-          className="w-full p-2 rounded bg-gray-700 text-white"
-        />
-        <input
-          type="text"
-          placeholder="Keywords (e.g., warrior, noble, shadowy)"
-          value={keywords}
-          onChange={(e) => setKeywords(e.target.value)}
-          className="w-full p-2 rounded bg-gray-700 text-white"
-        />
-        <button
-          onClick={generateNames}
-          className="bg-indigo-700 hover:bg-indigo-600 w-full py-2 rounded text-white font-semibold"
-        >
+        <label className="block">
+          Race:
+          <select name="race" value={form.race} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
+            {['Human', 'Elf', 'Orc', 'Dwarf', 'Halfling', 'Hobbit', 'Goblin', 'Gnome', 'Dragonborn', 'Half-Dragon', 'Aasimar', 'Tiefling', 'Undead', 'Beastfolk', 'Giant'].map(r => (
+              <option key={r}>{r}</option>
+            ))}
+          </select>
+        </label>
+
+        <label className="block">
+          Profession:
+          <select name="profession" value={form.profession} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
+            {['Combat oriented', 'Magical', 'Craft and Trade', 'Stealth and Rogue', 'Nature-based', 'Religious', 'Noble', 'Seafaring and Exotic', 'Dark or Forbidden'].map(p => (
+              <option key={p}>{p}</option>
+            ))}
+          </select>
+        </label>
+
+        <label className="block">
+          Social Class:
+          <select name="socialClass" value={form.socialClass} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
+            {['Nobility', 'Military', 'Middle class (Tradefolk)', 'Commoner', 'Outcast or criminal', 'Mythical'].map(c => (
+              <option key={c}>{c}</option>
+            ))}
+          </select>
+        </label>
+
+        <label className="block">
+          Tone:
+          <select name="tone" value={form.tone} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
+            {['Harsh', 'Elegant', 'Short', 'Mysterious'].map(t => (
+              <option key={t}>{t}</option>
+            ))}
+          </select>
+        </label>
+
+        <button type="submit" disabled={loading} className="bg-indigo-600 hover:bg-indigo-500 w-full py-2 rounded font-semibold">
           {loading ? 'Generating...' : 'Generate Names'}
         </button>
-      </div>
+      </form>
 
       {names.length > 0 && (
-        <div className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-xl mb-8">
-          <h2 className="text-xl font-semibold mb-4">Suggested Names</h2>
-          <ul className="space-y-2">
+        <div className="mt-10 w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 className="text-xl font-semibold mb-4">Name Suggestions:</h2>
+          <ul className="list-disc list-inside space-y-1">
             {names.map((name, index) => (
-              <li key={index} className="bg-gray-700 p-2 rounded text-white">{name}</li>
+              <li key={index}>{name}</li>
             ))}
           </ul>
         </div>
       )}
 
-      {/* Placeholder for Google Ad or Affiliate Block */}
-      <div className="w-full max-w-xl h-32 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 mb-8">
-        [Your Ad Here]
+      {/* Ads Placeholder */}
+      <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
+        <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
       </div>
-
-      <Link
-        to="/"
-        className="inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-      >
-        ← Back to Fantasy Tools
-      </Link>
     </div>
   );
 }
+
