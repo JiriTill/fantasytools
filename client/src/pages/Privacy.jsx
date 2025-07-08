@@ -1,10 +1,83 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 export default function Privacy() {
   return (
-    <div className="max-w-2xl mx-auto p-4 text-white">
-      <h1 className="text-2xl font-bold mb-4">Privacy Policy</h1>
-      <p>
-        FantasyTools does not collect or store personal data. Data entered is used solely to generate names during your session. We respect your privacy and do not use trackers or cookies.
-      </p>
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-8 flex flex-col items-center">
+      <div className="max-w-3xl space-y-6">
+        <h1 className="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
+
+        <p className="text-lg">
+          At <strong>Fantasy Tools</strong>, we respect your privacy. This page explains what information we (don’t) collect and how we use it.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">1. No Personal Data Collection</h2>
+        <p className="text-lg">
+          Fantasy Tools does not ask for or collect any personal information. You can use our name generator without creating an account, signing in, or submitting any identifiable data.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">2. Usage Analytics</h2>
+        <p className="text-lg">
+          We may use basic anonymized analytics (e.g., page visits, click counts) to understand how the site is used and to improve the experience. These analytics do not identify individual users.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">3. Third-Party Tools</h2>
+        <p className="text-lg">
+          We do not use ads or trackers. Some hosting or analytics providers (like Vercel or Google Analytics) may process anonymized technical data such as browser type, device type, or visit timestamps.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">4. Cookies</h2>
+        <p className="text-lg">
+          We may use simple, non-intrusive cookies for basic site functionality. No tracking or advertising cookies are used.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">5. AI Content</h2>
+        <p className="text-lg">
+          All names and descriptions are generated using AI tools. Inputs are not stored, and outputs are not linked to any specific users.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">6. Contact</h2>
+        <p className="text-lg">
+          If you have any questions about this Privacy Policy, feel free to{' '}
+          <Link to="/contact" className="text-blue-400 underline">contact us</Link> or visit{' '}
+          <a
+            href="https://neoantica.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 underline"
+          >
+            Neoantica.com
+          </a>.
+        </p>
+      </div>
+
+      <Link
+        to="/"
+        className="mt-10 inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+      >
+        ← Back to Fantasy Tools
+      </Link>
+
+      <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2 w-full">
+        <div className="space-x-4">
+          <a href="/about" className="hover:underline text-white">About Fantasy Tools</a>
+          <a href="/terms" className="hover:underline">Terms of Use</a>
+          <a href="/privacy" className="hover:underline">Privacy Policy</a>
+          <a href="/contact" className="hover:underline">Contact & Feedback</a>
+        </div>
+        <p className="text-xs text-gray-500">
+          Powered by{' '}
+          <a
+            href="https://neoantica.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-semibold hover:underline"
+          >
+            Neoantica
+          </a>{' '}
+          – a place for worldbuilding and quests creation.
+        </p>
+      </footer>
     </div>
   );
 }
