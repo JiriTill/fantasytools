@@ -4,22 +4,20 @@ import { Link } from 'react-router-dom';
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-8 flex flex-col items-center">
+      
       <div className="max-w-3xl space-y-6">
-        <h1 className="text-4xl font-bold text-white text-center">About Fantasy Tools</h1>
-
-        <p className="text-lg">
-          <strong>Fantasy Tools</strong> is a free AI-powered name generator designed for worldbuilders, game masters, writers, and storytellers. Whether you're building a world, naming a faction, or crafting a religion, our generator uses carefully crafted prompts to deliver rich, thematic results tailored for fantasy settings.
-        </p>
-
-        <div className="max-w-3xl space-y-6">
-          <h1 className="text-4xl font-bold text-white text-center mb-6">About Fantasy Tools</h1>
+        <h1 className="text-4xl font-bold text-white text-center mb-6">About Fantasy Tools</h1>
 
         <img
           src="/images/jtill.png"
           alt="JTill"
           className="float-right ml-6 mb-4 w-[300px] h-[300px] rounded-xl shadow-lg border border-indigo-700"
         />
-        
+
+        <p className="text-lg">
+          <strong>Fantasy Tools</strong> is a free AI-powered name generator designed for worldbuilders, game masters, writers, and storytellers. Whether you're building a world, naming a faction, or crafting a religion, our generator uses carefully crafted prompts to deliver rich, thematic results tailored for fantasy settings.
+        </p>
+
         <p className="text-lg">
           This project was born out of love for board games, worldbuilding, and TTRPGs. Behind Fantasy Tools is <strong>JTill</strong>, founder of{' '}
           <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
@@ -42,16 +40,6 @@ export default function About() {
             Neoantica.com
           </a>{' '}
           and explore how we can bring your fantasy vision to life.
-        </p>
-        
-        <img
-          src="/images/jtill.png"
-          alt="JTill"
-          className="rounded-xl w-[300px] h-[300px] mt-6 mx-auto shadow-lg border border-indigo-700"
-        />
-        
-        <p className="italic text-gray-300">
-          “Learn from the past, live in the present, think about the future.” – JTill
         </p>
       </div>
 
@@ -93,4 +81,3 @@ export default function About() {
     </div>
   );
 }
-
