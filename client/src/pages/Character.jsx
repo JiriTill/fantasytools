@@ -102,7 +102,35 @@ export default function Character() {
       <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
         <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
       </div>
+
+            <Link
+              to="/"
+              className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+             >
+                ← Back to Fantasy Tools
+            </Link>
+
+      <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2 w-full">
+        <div className="space-x-4">
+          <a href="/about" className="hover:underline text-white">About Fantasy Tools</a>
+          <a href="/terms" className="hover:underline">Terms of Use</a>
+          <a href="/privacy" className="hover:underline">Privacy Policy</a>
+          <a href="/contact" className="hover:underline">Contact & Feedback</a>
+        </div>
+        <p className="text-xs text-gray-500">
+          Powered by{' '}
+          <a
+            href="https://neoantica.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-semibold hover:underline"
+          >
+            Neoantica
+          </a>{' '}
+          – a place for worldbuilding and quests creation.
+        </p>
+      </footer>
+      
     </div>
   );
 }
-
