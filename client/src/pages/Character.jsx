@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function Character() {
   const [form, setForm] = useState({
@@ -58,6 +59,19 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
   };
 
   return (
+
+    <Helmet>
+      <title>Fantasy Character Name Generator | FantasyTools</title>
+      <meta name="description" content="Generate unique, fantasy-themed character names with our AI-powered tool. Choose race, gender, tone, and more to create the perfect name for your RPG or story." />
+      <meta name="keywords" content="fantasy character name generator, RPG name maker, AI fantasy names, elf name, dwarf name, orc name, tabletop RPG, worldbuilding, character creation tool" />
+      <meta property="og:title" content="Fantasy Character Name Generator | FantasyTools" />
+      <meta property="og:description" content="Use detailed attributes to craft believable fantasy names for characters in your world. Free and AI-powered." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://fantasytools.com/character" /> *je třeba změnit při ostrém provozu
+      <meta property="og:image" content="https://fantasytools.com/images/og-image.jpg" />
+      <meta name="robots" content="index, follow" />
+    </Helmet>
+    
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-6">Fantasy Character Name Generator</h1>
       
