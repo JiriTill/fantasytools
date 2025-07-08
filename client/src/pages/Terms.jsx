@@ -1,10 +1,87 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 export default function Terms() {
   return (
-    <div className="max-w-2xl mx-auto p-4 text-white">
-      <h1 className="text-2xl font-bold mb-4">Terms of Use</h1>
-      <p>
-        By using FantasyTools, you agree to use the content generated for lawful, personal, or creative purposes. No guarantee of availability or accuracy is provided. Content remains the property of its creators.
-      </p>
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-8 flex flex-col items-center">
+      <div className="max-w-3xl space-y-6">
+        <h1 className="text-4xl font-bold text-center mb-6">Terms of Use</h1>
+
+        <p className="text-lg">
+          Welcome to <strong>Fantasy Tools</strong>, a free fantasy name generator provided by Neoantica. By using this website, you agree to the following terms and conditions. If you do not agree, please do not use the site.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">1. Use of the Service</h2>
+        <p className="text-lg">
+          Fantasy Tools is intended for creative purposes such as worldbuilding, storytelling, TTRPG design, and personal or non-commercial projects. You may use the names generated freely. For commercial projects, attribution to Fantasy Tools or Neoantica is appreciated but not required.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">2. No Guarantee</h2>
+        <p className="text-lg">
+          We do our best to provide unique and interesting names, but we make no guarantee that generated names are original or not used elsewhere. Always do your own research before using any name commercially.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">3. AI-Generated Content</h2>
+        <p className="text-lg">
+          All names and descriptions are generated using AI based on crafted prompts. The creators of Fantasy Tools are not responsible for any offensive, inaccurate, or unintended content produced by the generator.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">4. Privacy</h2>
+        <p className="text-lg">
+          We do not collect personal information. Usage data may be anonymized for improvement purposes. For more details, please see our{' '}
+          <Link to="/privacy" className="text-blue-400 underline">
+            Privacy Policy
+          </Link>.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6">5. Updates</h2>
+        <p className="text-lg">
+          We may update these terms from time to time. Continued use of Fantasy Tools means you accept any changes made.
+        </p>
+
+        <p className="text-lg">
+          If you have questions or concerns, feel free to{' '}
+          <Link to="/contact" className="text-blue-400 underline">
+            contact us
+          </Link>.
+        </p>
+      </div>
+
+      <Link
+        to="/"
+        className="mt-10 inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+      >
+        ← Back to Fantasy Tools
+      </Link>
+
+      <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2 w-full">
+        <div className="space-x-4">
+          <a href="/about" className="hover:underline text-white">
+            About Fantasy Tools
+          </a>
+          <a href="/terms" className="hover:underline">
+            Terms of Use
+          </a>
+          <a href="/privacy" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="/contact" className="hover:underline">
+            Contact & Feedback
+          </a>
+        </div>
+        <p className="text-xs text-gray-500">
+          Powered by{' '}
+          <a
+            href="https://neoantica.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-semibold hover:underline"
+          >
+            Neoantica
+          </a>{' '}
+          – a place for worldbuilding and quests creation.
+        </p>
+      </footer>
     </div>
   );
 }
