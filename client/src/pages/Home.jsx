@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 
 const categories = [
   { name: 'World', path: '/world', image: '/images/world.png' },
@@ -11,6 +12,28 @@ const categories = [
 
 export default function Home() {
   return (
+<>
+<Helmet>
+  <title>Fantasy Name Generators for Characters, Worlds, Factions & More | FantasyTools</title>
+  <meta
+    name="description"
+    content="Create amazing fantasy names with our free AI-powered generators. Generate names for characters, worlds, factions, religions, items, and more with detailed options."
+  />
+  <meta
+    name="keywords"
+    content="fantasy name generator, AI name generator, character name generator, world name maker, DnD name tool, faction name creator, RPG tools, worldbuilding"
+  />
+  <meta property="og:title" content="Fantasy Name Generator | Create Epic Names for Your World" />
+  <meta
+    property="og:description"
+    content="Explore our free fantasy name generators for characters, worlds, factions, and more. Perfect for RPGs, books, and worldbuilding."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fantasytools.com" />
+  <meta property="og:image" content="https://fantasytools.com/images/og-home.jpg" />
+  <meta name="robots" content="index, follow" />
+</Helmet>
+    
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
       <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Fantasy Name Generator</h1>
       <p className="text-center text-lg md:text-xl mb-8 max-w-xl">
@@ -64,5 +87,6 @@ export default function Home() {
       </p>
       </footer>
     </div>
+</>
   )
 }
