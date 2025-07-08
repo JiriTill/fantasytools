@@ -34,12 +34,16 @@ export default function About() {
           </a>{' '}
           and explore how we can bring your fantasy vision to life.
         </p>
-
+        
+        <img
+          src="/images/jtill.png"
+          alt="JTill"
+          className="rounded-xl w-[300px] h-[300px] mt-6 mx-auto shadow-lg border border-indigo-700"
+        />
+        
         <p className="italic text-gray-300">
           “Learn from the past, live in the present, think about the future.” – JTill
         </p>
-
-        <img src="/images/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6 mx-auto" />
       </div>
 
       <Link
