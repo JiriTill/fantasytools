@@ -38,6 +38,11 @@ export default function Character() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-6">Fantasy Character Name Generator</h1>
+      
+      <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
+        Choose from the attributes below and let our AI generate 10 unique fantasy name suggestions tailored to your character concept. Perfect for RPGs, novels, worldbuilding, or creative writing!
+      </p>
+      
       <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
         <label className="block">
           Gender:
