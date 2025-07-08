@@ -46,7 +46,7 @@ export default function App() {
 
       <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2">
         <div className="space-x-4">
-          <a href="/about" className="hover:underline text-white">About FantasyTools</a>
+          <a href="/about" className="hover:underline text-white">About Fantasy Tools</a>
           <a href="/terms" className="hover:underline">Terms of Use</a>
           <a href="/privacy" className="hover:underline">Privacy Policy</a>
           <a href="/contact" className="hover:underline">Contact & Feedback</a>
