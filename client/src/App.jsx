@@ -3,7 +3,7 @@ import './styles.css'
 
 const categories = [
   { name: 'World', path: '/world', image: '/images/world.png' },
-  { name: 'Character', path: '/character', image: '/images/character.png' },
+  { name: 'Character', path: '/character', image: '/public/images/character.png' },
   { name: 'Faction', path: '/faction', image: '/images/faction.png' },
   { name: 'Religion', path: '/religion', image: '/images/religion.png' },
   { name: 'Item', path: '/item', image: '/images/item.png' },
@@ -18,6 +18,7 @@ export default function App() {
         Create unique fantasy names for your worlds, characters, factions, religions, or legendary items.
         Pick a category below to begin your journey.
       </p>
+      <h2 className="text-4xl md:text-6xl font-bold mb-4 text-center">What do you what to create?</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 w-full max-w-4xl">
         {categories.map((cat) => (
@@ -33,7 +34,7 @@ export default function App() {
       </div>
 
       <footer className="text-center text-sm text-gray-400 mt-auto">
-        Powered by <span className="text-white font-semibold">Neoantica</span> – a place for worldbuilding and quests creation.
+        Powered by <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:underline">Neoantica</a> – a place for worldbuilding and quests creation.
       </footer>
     </div>
   )
