@@ -12,7 +12,11 @@ export default function About() {
         </p>
 
         <p className="text-lg">
-          This project was born out of love for board games, worldbuilding, and TTRPGs. Behind Fantasy Tools is <strong>JTill</strong>, founder of <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Neoantica</a> — a Czech creative studio focused on storytelling, myth, and immersive fantasy content.
+          This project was born out of love for board games, worldbuilding, and TTRPGs. Behind Fantasy Tools is <strong>JTill</strong>, founder of{' '}
+          <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
+            Neoantica
+          </a>{' '}
+          — a Czech creative studio focused on storytelling, myth, and immersive fantasy content.
         </p>
 
         <p className="text-lg">
@@ -24,15 +28,18 @@ export default function About() {
         </p>
 
         <p className="text-lg">
-          Want us to build you a custom side quest, faction, or a whole world? We do that too. Just visit <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Neoantica.com</a> and explore how we can bring your fantasy vision to life.
+          Want us to build you a custom side quest, faction, or a whole world? We do that too. Just visit{' '}
+          <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
+            Neoantica.com
+          </a>{' '}
+          and explore how we can bring your fantasy vision to life.
         </p>
 
         <p className="italic text-gray-300">
           “Learn from the past, live in the present, think about the future.” – JTill
         </p>
 
-        {/* Optional image */}
-        {/* <img src="/images/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6" /> */}
+        <img src="/images/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6 mx-auto" />
       </div>
 
       <Link
@@ -41,29 +48,36 @@ export default function About() {
       >
         ← Back to Fantasy Tools
       </Link>
-    </div>
 
-          <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2">
+      <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2 w-full">
         <div className="space-x-4">
-          <a href="/about" className="hover:underline text-white">About Fantasy Tools</a>
-          <a href="/terms" className="hover:underline">Terms of Use</a>
-          <a href="/privacy" className="hover:underline">Privacy Policy</a>
-          <a href="/contact" className="hover:underline">Contact & Feedback</a>
+          <a href="/about" className="hover:underline text-white">
+            About Fantasy Tools
+          </a>
+          <a href="/terms" className="hover:underline">
+            Terms of Use
+          </a>
+          <a href="/privacy" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="/contact" className="hover:underline">
+            Contact & Feedback
+          </a>
         </div>
-      <p className="text-xs text-gray-500">
-        Powered by{' '}
+        <p className="text-xs text-gray-500">
+          Powered by{' '}
           <a
             href="https://neoantica.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white font-semibold hover:underline"
-           >
-        Neoantica
+          >
+            Neoantica
           </a>{' '}
-        – a place for worldbuilding and quests creation.
-      </p>
+          – a place for worldbuilding and quests creation.
+        </p>
       </footer>
-  
+    </div>
   );
 }
 
