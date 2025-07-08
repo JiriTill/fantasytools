@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-8">
-      <div className="max-w-3xl mx-auto space-y-6">
-        <h1 className="text-4xl font-bold text-white">About Fantasy Tools</h1>
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-8 flex flex-col items-center">
+      <div className="max-w-3xl space-y-6">
+        <h1 className="text-4xl font-bold text-white text-center">About Fantasy Tools</h1>
 
         <p className="text-lg">
           <strong>Fantasy Tools</strong> is a free AI-powered name generator designed for worldbuilders, game masters, writers, and storytellers. Whether you're building a world, naming a faction, or crafting a religion, our generator uses carefully crafted prompts to deliver rich, thematic results tailored for fantasy settings.
@@ -30,9 +31,11 @@ export default function About() {
           “Learn from the past, live in the present, think about the future.” – JTill
         </p>
 
-        <img src="images/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6" />
+        {/* Optional image */}
+        {/* <img src="/images/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6" /> */}
       </div>
-       <Link
+
+      <Link
         to="/"
         className="mt-10 inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
       >
@@ -41,3 +44,4 @@ export default function About() {
     </div>
   );
 }
+
