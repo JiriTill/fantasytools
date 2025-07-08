@@ -32,7 +32,7 @@ export default function Contact() {
               type="email"
               id="email"
               className="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="studio@neoantica.com"
+              placeholder="your@email.com"
             />
           </div>
 
