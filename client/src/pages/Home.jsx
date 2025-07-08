@@ -1,25 +1,4 @@
 import React from 'react'
-import './styles.css'
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import Contact from './pages/Contact';
-
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-  );
-}
-
-export default App;
 
 const categories = [
   { name: 'World', path: '/world', image: '/images/world.png' },
@@ -30,7 +9,7 @@ const categories = [
   { name: 'Dynamic', path: '/dynamic', image: '/images/dynamic.png' }
 ]
 
-export default function App() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
       <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Fantasy Name Generator</h1>
