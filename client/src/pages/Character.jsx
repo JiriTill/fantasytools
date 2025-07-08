@@ -49,13 +49,14 @@ export default function Character() {
           <select name="gender" value={form.gender} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
             <option>Male</option>
             <option>Female</option>
+            <option>Not specified</option>
           </select>
         </label>
 
         <label className="block">
           Race:
           <select name="race" value={form.race} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
-            {['Human', 'Elf', 'Orc', 'Dwarf', 'Halfling', 'Hobbit', 'Goblin', 'Gnome', 'Dragonborn', 'Half-Dragon', 'Aasimar', 'Tiefling', 'Undead', 'Beastfolk', 'Giant'].map(r => (
+            {['Human', 'Elf', 'Orc', 'Dwarf', 'Halfling', 'Hobbit', 'Goblin', 'Gnome', 'Dragonborn', 'Half-Dragon', 'Aasimar', 'Tiefling', 'Undead', 'Beastfolk', 'Giant', 'Not specified'].map(r => (
               <option key={r}>{r}</option>
             ))}
           </select>
@@ -64,7 +65,7 @@ export default function Character() {
         <label className="block">
           Profession:
           <select name="profession" value={form.profession} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
-            {['Combat oriented', 'Magical', 'Craft and Trade', 'Stealth and Rogue', 'Nature-based', 'Religious', 'Noble', 'Seafaring and Exotic', 'Dark or Forbidden'].map(p => (
+            {['Combat oriented', 'Magical', 'Craft and Trade', 'Stealth and Rogue', 'Nature-based', 'Religious', 'Noble', 'Seafaring and Exotic', 'Dark or Forbidden', 'Not specified'].map(p => (
               <option key={p}>{p}</option>
             ))}
           </select>
@@ -73,7 +74,7 @@ export default function Character() {
         <label className="block">
           Social Class:
           <select name="socialClass" value={form.socialClass} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
-            {['Nobility', 'Military', 'Middle class (Tradefolk)', 'Commoner', 'Outcast or criminal', 'Mythical'].map(c => (
+            {['Nobility', 'Military', 'Middle class (Tradefolk)', 'Commoner', 'Outcast or criminal', 'Mythical', 'Not specified'].map(c => (
               <option key={c}>{c}</option>
             ))}
           </select>
@@ -82,7 +83,7 @@ export default function Character() {
         <label className="block">
           Tone:
           <select name="tone" value={form.tone} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
-            {['Harsh', 'Elegant', 'Short', 'Mysterious'].map(t => (
+            {['Harsh', 'Elegant', 'Short', 'Mysterious', 'Not specified'].map(t => (
               <option key={t}>{t}</option>
             ))}
           </select>
