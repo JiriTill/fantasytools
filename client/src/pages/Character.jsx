@@ -59,7 +59,7 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
   };
 
   return (
-
+  <>
     <Helmet>
       <title>Fantasy Character Name Generator | FantasyTools</title>
       <meta name="description" content="Generate unique, fantasy-themed character names with our AI-powered tool. Choose race, gender, tone, and more to create the perfect name for your RPG or story." />
@@ -175,5 +175,6 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
       </footer>
       
     </div>
+  </>
   );
 }
