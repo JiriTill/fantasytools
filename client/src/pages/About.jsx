@@ -11,7 +11,7 @@ export default function About() {
         <img
           src="/images/jtill.png"
           alt="JTill"
-          className="float-right ml-6 mb-4 w-[300px] h-[300px] rounded-xl shadow-lg border border-indigo-700"
+          className="float-right ml-6 mb-4 w-[500px] h-[500px] rounded-xl shadow-lg border border-indigo-700"
         />
 
         <p className="text-lg">
