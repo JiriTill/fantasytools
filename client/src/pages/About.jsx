@@ -30,8 +30,14 @@ export default function About() {
           “Learn from the past, live in the present, think about the future.” – JTill
         </p>
 
-        <img src="/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6" />
+        <img src="images/jtill.png" alt="JTill" className="rounded-lg w-48 mt-6" />
       </div>
+       <Link
+        to="/"
+        className="mt-10 inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+      >
+        ← Back to Fantasy Tools
+      </Link>
     </div>
   );
 }
