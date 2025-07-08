@@ -24,8 +24,30 @@ export default function Character() {
     setNames([]);
 
     try {
-      const prompt = `Generate 10 fantasy names for a ${form.gender.toLowerCase()} ${form.race.toLowerCase()} character. The character is ${form.profession.toLowerCase()}, belongs to ${form.socialClass.toLowerCase()}, and the name should sound ${form.tone.toLowerCase()}. Return only the names in a list format.`;
+      const prompt = `
+You are a world-class fantasy name crafter for novels, games, and immersive worldbuilding. Generate a unique, believable fantasy name based on the following character attributes. The name must match the race, culture, and tone of the character, while reflecting their background, status, and role in the world.
 
+Rules:
+- Prioritize phonetic consistency with the race and cultural tone (e.g., elves sound melodic, dwarves sound rugged, orcs sound guttural).
+- Include only the name(s) unless told otherwise.
+- Do not copy names from known franchises (no Tolkien, D&D, or Elder Scrolls names).
+- Never be silly or random—names must feel natural in a fantasy world, not made-up nonsense.
+- Use linguistic intuition: names can be inspired by real-world language roots (e.g., Old Norse, Gaelic, Arabic) depending on the culture.
+- If the user requests a full name, consider including a clan name, house, or title if culturally appropriate.
+- Avoid generic name templates. Instead, craft names that reflect the character’s story and world.
+
+User Inputs:
+- Gender: ${form.gender}
+- Race: ${form.race}
+- Social Class: ${form.socialClass}
+- Profession: ${form.profession}
+- Naming Style or Tone: ${form.tone} (e.g., elegant, fierce, noble, ancient)
+
+Output:
+Generate 10 names matching this character, with variations if fitting (e.g., formal name, common alias, or tribal name). Each name must be original and fitting to the fantasy setting. Briefly describe the meaning or origin only if the format requests it.
+`;
+
+      
       const response = await axios.post('/api/generate', { prompt });
       setNames(response.data.names);
     } catch (err) {
