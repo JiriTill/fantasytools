@@ -12,7 +12,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:items-end">
           <Link to="/About" className="hover:text-white">About Fantasy Tools</Link>
-          <Link to="/Why-names-matter" className="hover:text-white">About Fantasy Tools</Link>
+          <Link to="/Why-names-matter" className="hover:text-white">Why names matter?</Link>
           <Link to="/Terms" className="hover:text-white mt-1">Terms of Use</Link>
           <Link to="/Privacy" className="hover:text-white mt-1">Privacy Policy</Link>
           <Link to="/Contact" className="hover:text-white mt-1">Contact & Feedback</Link>
