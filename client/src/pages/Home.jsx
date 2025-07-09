@@ -4,7 +4,7 @@ import NameGallery from '../components/NameGallery';
 import Footer from '../components/Footer';
 
 const categories = [
-  { name: 'World', path: '/world', image: '/images/world.png' },
+  { name: 'Worlds and places', path: '/world', image: '/images/world.png' },
   { name: 'Character', path: '/character', image: '/images/character.png' },
   { name: 'Faction', path: '/faction', image: '/images/faction.png' },
   { name: 'Religion', path: '/religion', image: '/images/religion.png' },
