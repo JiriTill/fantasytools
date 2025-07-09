@@ -12,7 +12,7 @@ import Leaderboard from './pages/Leaderboard';
 import World from './pages/World';
 import Faction from './pages/Faction';
 import Religion from './pages/Religion';
-import Religion from './pages/item';
+import item from './pages/item';
 
 function App() {
   return (
