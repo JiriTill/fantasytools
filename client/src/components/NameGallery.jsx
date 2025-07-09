@@ -8,7 +8,7 @@ export default function NameGallery() {
 
   useEffect(() => {
     const fetchNames = async () => {
-      const snapshot = await getDocs(collection(db, 'names'));
+      const snapshot = await getDocs(collection(db, 'sharedNames'));
       const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setNames(data);
     };
@@ -16,7 +16,7 @@ export default function NameGallery() {
   }, []);
 
   const vote = async (id, type) => {
-    const docRef = doc(db, 'names', id);
+    const docRef = doc(db, 'sharedNames', id);
     await updateDoc(docRef, {
       [type]: increment(1),
     });
@@ -26,7 +26,11 @@ export default function NameGallery() {
   };
 
   const top10 = [...names].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)).slice(0, 10);
-  const newest = [...names].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  const newest = [...names].sort((a, b) => {
+  const timeA = a.timestamp?.toDate?.() || new Date(0);
+  const timeB = b.timestamp?.toDate?.() || new Date(0);
+  return timeB - timeA;
+    });
 
   return (
     <div className="w-full max-w-5xl px-4 py-12 mx-auto text-white">
