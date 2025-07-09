@@ -27,18 +27,17 @@ export default function Faction() {
     setNames([]);
 
     const prompt = `
-You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
-
-Generate 10 unique and original fantasy faction names for a ${form.type} with a ${form.alignment} alignment, inspired by a ${form.culture} cultural aesthetic, and evoking a ${form.tone} tone.
+You are an expert in fantasy worldbuilding and naming. Generate 10 unique and original names for a fantasy ${form.type || 'faction'} that has a ${form.alignment || 'neutral'} alignment, is inspired by a ${form.culture || 'neutral'} cultural aesthetic, and evokes a ${form.tone || 'mysterious'} tone.
 
 Rules:
-- Names must be immersive, evocative, and suitable for a fantasy RPG, Dungeons & Dragons, or novel, fitting guilds, orders, clans, secret societies, or cults.
-- Use phonetic and stylistic elements that reflect the ${form.culture}, ${form.alignment}, and ${form.tone}, ensuring cultural sensitivity and relevance.
-- Avoid overused cliché terms like "Blood," "Shadow," or "Dark" unless they are directly relevant to the ${form.culture} or ${form.tone}.
-- Names should be concise, typically one to two words (e.g., "Starveil Order," "Koa’thra Clan"), with a maximum of three words for complex cultural influences.
-- Ensure names are original and do not mimic or copy names from existing fantasy franchises (e.g., no variations of "Grey Wardens" or "Thieves’ Guild").
-- If ${form.culture} is empty or vague, use a neutral but evocative fantasy style.
-- Return the names as a simple numbered list (1-10), with no additional text or commentary.
+- Names must be immersive, evocative, and suitable for use in fantasy RPGs, novels, or worldbuilding projects.
+- These names should represent factions such as guilds, orders, clans, cults, or secret societies — not individual characters or locations.
+- Use phonetic and stylistic elements that reflect the cultural influence (${form.culture}), alignment (${form.alignment}), and tone (${form.tone}).
+- Avoid generic or overused terms like “Blood,” “Dark,” or “Shadow” unless justified by the culture or tone.
+- Names should be concise: typically one to two words (e.g., “Starveil Order”, “Koa’thra Clan”), up to three if culturally appropriate.
+- Do not copy or adapt names from existing franchises (e.g., no “Dark Brotherhood” or “Knights of the Round” clones).
+- If ${form.culture} is vague or empty, default to a neutral but immersive fantasy style.
+- Return the results as a simple numbered list (1–10). No commentary, no explanations — just the names.
 `;
 
     try {
