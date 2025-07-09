@@ -1,4 +1,3 @@
-// /api/generate.js
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Only POST allowed' });
@@ -6,13 +5,11 @@ export default async function handler(req, res) {
 
   const { type, race, culture, keywords } = req.body;
 
-  const prompt = `Generate 10 unique fantasy ${type} names.
-  Details:
-  - Race: ${race || 'any'}
-  - Culture: ${culture || 'any'}
-  - Keywords: ${keywords || 'none'}
-  
-  Return only the names, numbered list, no extra text.`;
+  const { prompt } = req.body;
+
+      if (!prompt) {
+        return res.status(400).json({ error: 'Missing prompt in request body.' });
+      }
 
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
