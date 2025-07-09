@@ -13,6 +13,7 @@ import World from './pages/World';
 import Faction from './pages/Faction';
 import Religion from './pages/Religion';
 import Item from './pages/Item';
+import Dynamic from './pages/Dynamic';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path="/faction" element={<Faction />} />
       <Route path="/religion" element={<Religion />} />
       <Route path="/item" element={<Item />} />
+      <Route path="/dynamic" element={<Dynamic />} />
     </Routes>
   );
 }
