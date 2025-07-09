@@ -1,29 +1,25 @@
-// src/components/NameGallery.jsx
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, doc, updateDoc, increment } from 'firebase/firestore';
+import { collection, onSnapshot, doc, updateDoc, increment } from 'firebase/firestore';
 import { db } from '../firebase';
 
 export default function NameGallery() {
   const [names, setNames] = useState([]);
 
-  useEffect(() => {
-    const fetchNames = async () => {
-      const snapshot = await getDocs(collection(db, 'sharedNames'));
-      const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setNames(data);
-    };
-    fetchNames();
-  }, []);
+useEffect(() => {
+  const unsubscribe = onSnapshot(collection(db, 'sharedNames'), snapshot => {
+    const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    setNames(data);
+  });
 
-  const vote = async (id, type) => {
-    const docRef = doc(db, 'sharedNames', id);
-    await updateDoc(docRef, {
-      [type]: increment(1),
-    });
-    setNames(prev =>
-      prev.map(n => (n.id === id ? { ...n, [type]: n[type] + 1 } : n))
-    );
-  };
+  return () => unsubscribe();
+}, []);
+
+const vote = async (id, type) => {
+  const docRef = doc(db, 'sharedNames', id);
+  await updateDoc(docRef, {
+    [type]: increment(1),
+  });
+};
 
   const top10 = [...names].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)).slice(0, 10);
   const newest = [...names].sort((a, b) => {
