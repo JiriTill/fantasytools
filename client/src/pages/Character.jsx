@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import ShareGeneratedName from '../components/ShareGeneratedName';
 
 export default function Character() {
   const [form, setForm] = useState({
@@ -67,7 +68,7 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
       <meta property="og:title" content="Fantasy Character Name Generator | FantasyTools" />
       <meta property="og:description" content="Use detailed attributes to craft believable fantasy names for characters in your world. Free and AI-powered." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://fantasytools.com/character" /> *je třeba změnit při ostrém provozu
+      <meta property="og:url" content="https://fantasytools.com/character" /> // TODO:je třeba změnit při ostrém provozu
       <meta property="og:image" content="https://fantasytools.com/images/og-image.jpg" />
       <meta name="robots" content="index, follow" />
     </Helmet>
@@ -146,25 +147,7 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
         <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
       </div>
 
-
-      <form onSubmit={handleSubmitNameToGallery} className="mt-10 w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg">
-          <h3 className="text-lg font-semibold mb-2">Like your name? Share it with others!</h3>
-            <input
-            type="text"
-            name="sharedName"
-            placeholder="Paste your favorite name"
-            value={sharedName}
-            onChange={(e) => setSharedName(e.target.value)}
-            className="w-full p-2 mb-2 bg-gray-700 text-white rounded"
-            required
-            />
-          <button
-            type="submit"
-            className="w-full bg-indigo-600 hover:bg-indigo-500 py-2 rounded font-semibold"
-          >
-            Submit to Leaderboard
-          </button>
-      </form>
+          <ShareGeneratedName form={form} />
 
             <Link
               to="/"
