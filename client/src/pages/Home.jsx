@@ -74,6 +74,10 @@ export default function Home() {
 
       <div className="mt-12 w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6">
         <p className="text-sm text-gray-400">[User shared names and voting for the best]</p>
+        <h2 className="text-2xl font-bold mb-4">🏆 Top Fantasy Names</h2>
+                {/* Loop through top-rated names */}
+        <h2 className="text-2xl font-bold mb-4">✨ Newest Names</h2>
+                {/* Loop through recent submissions */}
       </div>
 
       <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2">
