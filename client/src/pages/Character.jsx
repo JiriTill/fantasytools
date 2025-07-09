@@ -74,7 +74,8 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
       <meta name="robots" content="index, follow" />
     </Helmet>
     
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
+      <main className="p-6 flex flex-col items-center pb-20">
       <h1 className="text-3xl font-bold mb-6">Fantasy Character Name Generator</h1>
       
       <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
@@ -156,7 +157,7 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
              >
                 ← Back to Fantasy Tools
             </Link>
-      <div className="mt-12 mb-24 text-center">
+        </main>
       <Footer />
       
     </div>
