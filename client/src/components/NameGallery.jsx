@@ -41,18 +41,28 @@ const vote = async (id, type) => {
         {/* Top 10 */}
         <div>
           <h3 className="text-xl font-semibold mb-4">🏆 Top 10 Names</h3>
-          {top10.map(n => (
-            <NameCard key={n.id} name={n} vote={vote} />
+         {top10.slice(0, 5).map(n => (
+          <NameCard key={n.id} name={n} vote={vote} />
           ))}
         </div>
 
         {/* Newest */}
         <div>
           <h3 className="text-xl font-semibold mb-4">🆕 Newest Names</h3>
-          {newest.map(n => (
+          {newest.slice(0, 5).map(n => (
             <NameCard key={n.id} name={n} vote={vote} />
-          ))}
+            ))}
         </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href="/leaderboard"
+            className="inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+          >
+          🧭 See the Hall of Legends
+          </a>
+        </div>
+        
       </div>
     </div>
   );
