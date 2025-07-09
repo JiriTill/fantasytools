@@ -29,7 +29,7 @@ export default function WhyNamesMatter() {
         <h1 className="text-4xl font-bold text-white text-center mb-6">
           Why Names Matter in Fantasy Worlds?
         </h1>
-        <p className="italic text-sm text-gray-500">Published: July 9, 2025 | Read Time: 1-2 Minutes</p>
+        <p className="italic text-sm text-gray-500">Published: October, 2025 | Read Time: 1 Minute</p>
         <p className="text-lg text-gray-300">
           In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and entire worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a fantasy novelist, or a     dedicated worldbuilder, the right name sets the tone for everything that follows.
         </p>
