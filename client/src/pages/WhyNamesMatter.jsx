@@ -38,11 +38,11 @@ export default function WhyNamesMatter() {
           A well-crafted name like Eldrin Valthorne for an elven wizard or Ironclaw Syndicate for a shadowy rogue guild instantly conveys mood, culture, and backstory. It can hint at noble heritage, dark magic, forgotten languages, or distant lands. In tabletop roleplaying games (TTRPGs) and novels alike, names shape immersion. They make your creations believable, memorable, and emotionally engaging.
         </p>
 
-    <div className="flex flex-col md:flex-row md:items-start gap-6">
+    <div className="flex justify-center mb-8">
       <img
         src="/images/Whynamesmatter.png"
         alt="Fantasy name scroll with quill"
-        className="md:w-1/3 w-full rounded-lg shadow-md md:float-right md:ml-6 mb-4"
+        className="w-full max-w-md rounded-lg shadow-lg"
       />
     </div>
         <p className="text-lg text-gray-300">
