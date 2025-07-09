@@ -146,6 +146,26 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
         <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
       </div>
 
+
+      <form onSubmit={handleSubmitNameToGallery} className="mt-10 w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 className="text-lg font-semibold mb-2">Like your name? Share it with others!</h3>
+            <input
+            type="text"
+            name="sharedName"
+            placeholder="Paste your favorite name"
+            value={sharedName}
+            onChange={(e) => setSharedName(e.target.value)}
+            className="w-full p-2 mb-2 bg-gray-700 text-white rounded"
+            required
+            />
+          <button
+            type="submit"
+            className="w-full bg-indigo-600 hover:bg-indigo-500 py-2 rounded font-semibold"
+          >
+            Submit to Leaderboard
+          </button>
+      </form>
+
             <Link
               to="/"
               className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
