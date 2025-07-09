@@ -24,18 +24,18 @@ export default function Dynamic() {
     setLoading(true);
     setNames([]);
 
-    const prompt = `You are an expert in fantasy naming and worldbuilding. Based on the user's description, generate 10 unique and immersive names suitable for RPGs, fantasy novels, or worldbuilding. 
+    const prompt = `You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
-Context: ${form.context}
-Culture: ${form.culture || 'neutral fantasy'}
-Tone: ${form.tone || 'evocative'}
-
-Rules:
-- Names should be creative, relevant, and culturally consistent.
-- Use 1 to 3 words per name.
-- Avoid clichés unless they are contextually meaningful.
-- Do not copy names from known franchises.
-- Return names in a simple numbered list (1-10), with no additional text.`;
+            Generate 10 unique and original fantasy names for a ${form.context}, inspired by a ${form.culture || 'neutral fantasy'} cultural aesthetic, evoking a ${form.tone || 'evocative'} tone.
+            
+            Rules:
+            - Names must be immersive, evocative, and suitable for a fantasy RPG, Dungeons & Dragons, or novel, reflecting the described context, cultural aesthetic, and tone.
+            - Use phonetic and stylistic elements that align with the ${form.context}, ${form.culture || 'neutral fantasy'}, and ${form.tone || 'evocative'}, ensuring cultural sensitivity when a specific culture is provided.
+            - Avoid overused clichés like "Blood," "Shadow," or "Star" unless directly relevant to the ${form.context} or ${form.tone}.
+            - Names should be concise, typically one to three words (e.g., "Ashrend Spire," "Oath of Cinders," "Blightglass Veil").
+            - Ensure names are original and do not mimic or copy names from existing fantasy franchises (e.g., no variations of "Mordor," "Stormwind," or "Excalibur").
+            - If ${form.context} is empty or vague, generate names for a generic fantasy concept (e.g., a mystical place, organization, or artifact) inspired by the ${form.tone} and ${form.culture}.
+            - Return the names as a simple numbered list (1-10), with no additional text or commentary.`;
 
     try {
       const response = await axios.post('/api/generate', { prompt });
