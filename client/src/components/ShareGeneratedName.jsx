@@ -46,4 +46,9 @@ export default function ShareGeneratedName({ form }) {
         >
           Submit to Gallery
         </button>
-        {submitted && <p className="text-green-400 mt-2">Thanks! Your name was sh
+        {submitted && <p className="text-green-400 mt-2">Thanks! Your name was shared.</p>}
+        {error && <p className="text-red-400 mt-2">{error}</p>}
+      </form>
+    </div>
+  );
+}
