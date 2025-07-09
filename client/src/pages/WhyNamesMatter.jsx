@@ -31,23 +31,23 @@ export default function WhyNamesMatter() {
         </h1>
 
         <p className="text-lg text-gray-300">
-          In fantasy worlds, names aren’t just labels — they’re anchors of identity, culture, and story. A name can whisper a race’s heritage, hint at a tragic past, or evoke fear, awe, or beauty in a single breath.
+          In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a novelist crafting an epic saga, or a worldbuilder shaping a mythical universe, the right name sets the tone for your creation. That’s where a fantasy name generator like Neoantica Name Generator shines, offering AI-generated names tailored for your RPG character names, fantasy worldbuilding, and storytelling needs.
         </p>
 
         <p className="text-lg text-gray-300">
-          From the melodic elegance of elven names to the guttural punch of orcish ones, well-crafted names reinforce the internal logic of your world. They help players, readers, and storytellers immerse themselves deeply in a believable setting.
+          Why do names matter? A well-chosen name, like “Eldrin Valthorne” for an elven wizard or “Ironclaw Syndicate” for a rogue faction, instantly evokes personality, culture, and lore. It immerses players in tabletop RPGs or readers in your novel, making your world feel authentic. For D&D name generators, names must reflect races (e.g., orc, elf, tiefling), professions (e.g., warrior, mage), and tones (e.g., elegant, harsh). A generic name risks breaking immersion, while a unique one captivates.
         </p>
 
         <p className="text-lg text-gray-300">
-          Great names stay with us: <em>Gandalf</em>, <em>Drizzt</em>, <em>Atreyu</em>, <em>Geralt</em>. Not because they are strange — but because they *belong*. They reflect character, setting, and tone. They’re shaped by their people’s language, history, and beliefs.
+          Neoantica’s AI name generator simplifies this process, delivering fantasy character names, faction names, and worldbuilding names with customizable parameters like gender, race, and tone. Whether you’re crafting a TTRPG campaign, writing a fantasy novel, or designing a game, our tool saves time while sparking creativity.
         </p>
 
         <p className="text-lg text-gray-300">
-          At FantasyTools, we believe every name is a thread in your world’s tapestry. That’s why our generators use context and cultural flavor — not randomness. Whether you're naming a noble dwarven warrior or a mischievous goblin thief, we help make the name fit like destiny.
+          Struggling to name your next hero or kingdom? Use our RPG name generator to create unforgettable names that resonate with your audience. Dive into fantasy worldbuilding with Neoantica Name Generator and make every name matter.
         </p>
 
         <p className="italic text-sm text-gray-500">
-          “A name is not just what you're called. It's who you are when legends are told.” – JTill
+          “A name is not just what you're called. It's who you are when legends are told.”
         </p>
 
         <Link
@@ -61,10 +61,10 @@ export default function WhyNamesMatter() {
       <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2 w-full">
         <div className="space-x-4">
           <a href="/about" className="hover:underline text-white">About Fantasy Tools</a>
+          <a href="/why-names-matter" className="hover:underline">Why Names Matter?</a>
           <a href="/terms" className="hover:underline">Terms of Use</a>
           <a href="/privacy" className="hover:underline">Privacy Policy</a>
           <a href="/contact" className="hover:underline">Contact & Feedback</a>
-          <a href="/why-names-matter" className="hover:underline">Why Names Matter?</a>
         </div>
         <p className="text-xs text-gray-500">
           Powered by{' '}
