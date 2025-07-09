@@ -12,6 +12,7 @@ import Leaderboard from './pages/Leaderboard';
 import World from './pages/World';
 import Faction from './pages/Faction';
 import Religion from './pages/Religion';
+import Religion from './pages/item';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path="/world" element={<World />} />
       <Route path="/faction" element={<Faction />} />
       <Route path="/religion" element={<Religion />} />
+      <Route path="/item" element={<Item />} />
     </Routes>
   );
 }
