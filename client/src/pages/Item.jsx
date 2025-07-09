@@ -29,17 +29,18 @@ export default function Item() {
 
     try {
       const prompt = `
-You are a legendary item-namer in a fantasy world, crafting names for powerful artifacts, weapons, relics, and magical gear.
+You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
-Generate 10 unique and original fantasy item names for a ${form.itemType} made of ${form.material}, with a ${form.rarity} rarity and a ${form.magicEffect} magic effect. The tone should be ${form.tone}.
+Generate 10 unique and original fantasy item names for a ${form.itemType} made of ${form.material}, with a ${form.rarity} rarity and a ${form.magicEffect} magic effect, evoking a ${form.tone} tone.
 
 Rules:
-- Names should sound like they belong in a fantasy RPG, novel, or D&D game.
-- Use evocative, lore-rich language, but avoid clichés unless relevant to the magic effect or tone.
-- Keep names concise (1–3 words), e.g., “Ashrend”, “Oath of Cinders”, “Blightglass”.
-- Reflect the item’s type, rarity, material, effect, and tone in the naming style.
-- Avoid copying names from existing games or franchises.
-- Return only a simple numbered list (1–10) of item names, no extra text.
+- Names must be immersive, evocative, and suitable for a fantasy RPG, Dungeons & Dragons, or novel, reflecting the item’s type, material, rarity, magic effect, and tone.
+- Use phonetic and stylistic elements that align with the ${form.material}, ${form.magicEffect}, and ${form.tone}, ensuring the name feels lore-rich and purposeful.
+- Avoid overused clichés like "Blood," "Shadow," or "Star" unless directly relevant to the ${form.magicEffect} or ${form.tone}.
+- Names should be concise, typically one to three words (e.g., "Ashrend Blade," "Oath of Cinders," "Blightglass Amulet").
+- Ensure names are original and do not mimic or copy names from existing fantasy franchises (e.g., no variations of "Excalibur" or "Frostmourne").
+- If ${form.material}, ${form.magicEffect}, or ${form.tone} is empty or vague, use a neutral but evocative fantasy style inspired by the ${form.itemType} and ${form.rarity}.
+- Return the names as a simple numbered list (1-10), with no additional text or commentary.
 `;
 
       const response = await axios.post('/api/generate', { prompt });
