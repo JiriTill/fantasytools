@@ -40,7 +40,7 @@ export default function WhyNamesMatter() {
 
     <div className="flex flex-col md:flex-row md:items-start gap-6">
       <img
-        src="/images/whynamesmatter.png"
+        src="/images/Whynamesmatter.png"
         alt="Fantasy name scroll with quill"
         className="md:w-1/3 w-full rounded-lg shadow-md md:float-right md:ml-6 mb-4"
       />
