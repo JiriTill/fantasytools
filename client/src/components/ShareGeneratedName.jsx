@@ -1,7 +1,6 @@
-// ShareGeneratedName.jsx
 import React, { useState } from 'react';
-import db from '../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase'; // <- your firebase.js export
 
 export default function ShareGeneratedName({ form }) {
   const [sharedName, setSharedName] = useState('');
@@ -13,11 +12,9 @@ export default function ShareGeneratedName({ form }) {
     setSubmitted(false);
     setError(null);
 
-    if (!sharedName.trim()) return;
-
     try {
       await addDoc(collection(db, 'sharedNames'), {
-        name: sharedName.trim(),
+        name: sharedName,
         attributes: form,
         timestamp: serverTimestamp(),
         upvotes: 0,
@@ -26,8 +23,8 @@ export default function ShareGeneratedName({ form }) {
       setSubmitted(true);
       setSharedName('');
     } catch (err) {
-      console.error('Firestore error:', err);
-      setError('Failed to submit. Please try again later.');
+      console.error('Error submitting name:', err);
+      setError('Something went wrong. Try again later.');
     }
   };
 
@@ -37,7 +34,6 @@ export default function ShareGeneratedName({ form }) {
       <form onSubmit={handleSubmitNameToGallery}>
         <input
           type="text"
-          name="sharedName"
           placeholder="Paste your favorite name"
           value={sharedName}
           onChange={(e) => setSharedName(e.target.value)}
@@ -50,9 +46,4 @@ export default function ShareGeneratedName({ form }) {
         >
           Submit to Gallery
         </button>
-        {submitted && <p className="text-green-400 mt-2">Thanks! Your name was shared.</p>}
-        {error && <p className="text-red-400 mt-2">{error}</p>}
-      </form>
-    </div>
-  );
-}
+        {submitted && <p className="text-green-400 mt-2">Thanks! Your name was sh
