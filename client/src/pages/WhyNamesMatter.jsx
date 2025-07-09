@@ -44,6 +44,7 @@ export default function WhyNamesMatter() {
         alt="Fantasy name scroll with quill"
         className="md:w-1/3 w-full rounded-lg shadow-md md:float-right md:ml-6 mb-4"
       />
+    </div>
         <p className="text-lg text-gray-300">
          That’s where a fantasy name generator like the Neoantica Name Generator becomes an essential tool. Designed for RPG character creation, storytelling, and immersive fantasy worldbuilding, our AI-powered tool crafts unique names tailored to your exact needs—race, gender, tone, social class, and more.
         </p>
@@ -60,7 +61,7 @@ export default function WhyNamesMatter() {
         <p>
         Make every name matter. Dive into the world of fantasy creation with Neoantica Name Generator—where identity begins with the perfect name.
         </p>
-      </div>
+   
         <p className="italic text-sm text-gray-500">
           “A name is not just what you're called. It's who you are when legends are told.”
         </p>
