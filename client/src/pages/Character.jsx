@@ -28,29 +28,31 @@ export default function Character() {
 
     try {
       const prompt = `
-You are a world-class fantasy name crafter for novels, games, and immersive worldbuilding. Generate a unique, believable fantasy name based on the following character attributes. The name must match the race, culture, and tone of the character, while reflecting their background, status, and role in the world.
+You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
-Rules:
-- Prioritize phonetic consistency with the race and cultural tone (e.g., elves sound melodic, dwarves sound rugged, orcs sound guttural).
-- Include only the name(s) unless told otherwise.
-- Do not copy names from known franchises (no Tolkien, D&D, or Elder Scrolls names).
-- Never be silly or random—names must feel natural in a fantasy world, not made-up nonsense.
-- Use linguistic intuition: names can be inspired by real-world language roots (e.g., Old Norse, Gaelic, Arabic) depending on the culture.
-- If the user requests a full name, consider including a clan name, house, or title if culturally appropriate.
-- Avoid generic name templates. Instead, craft names that reflect the character’s story and world.
-
-User Inputs:
+Generate 10 unique and original fantasy character names for a character with the following attributes:
 - Gender: ${form.gender}
 - Race: ${form.race}
 - Social Class: ${form.socialClass}
 - Profession: ${form.profession}
-- Naming Style or Tone: ${form.tone} (e.g., elegant, fierce, noble, ancient)
+- Naming Style or Tone: ${form.tone}
+
+Rules:
+- Names must be immersive, believable, and suitable for a fantasy RPG, Dungeons & Dragons, or novel, reflecting the character’s race, culture, background, status, and role.
+- Ensure phonetic and stylistic consistency with the ${form.race} and ${form.tone} (e.g., melodic for elves, rugged for dwarves, guttural for orcs).
+- Use linguistic inspiration from real-world language roots (e.g., Old Norse, Gaelic, Arabic) when appropriate, based on the implied culture of the ${form.race} or ${form.tone}, ensuring cultural sensitivity.
+- Names should be concise, typically one to two words (e.g., "Eldrin Valthorne," "Krag Ironfist"), with a maximum of three words for complex cultural or high-status names (e.g., noble titles, clan affiliations).
+- Include variations where fitting, such as a formal name, common alias, or clan-based name, if appropriate for the ${form.socialClass} or ${form.profession}.
+- Avoid generic or overused terms (e.g., "Storm," "Shadow") unless culturally or tonally relevant to the ${form.race} or ${form.tone}.
+- Ensure names are original and do not mimic or copy names from existing fantasy franchises (e.g., no variations of "Legolas," "Drizzt," or "Alduin").
+- Names must feel natural and grounded in the fantasy world, avoiding silly or random combinations.
+- If ${form.race} or ${form.tone} is vague or unspecified, use a neutral but evocative fantasy style.
+- Return the names as a simple numbered list (1-10), with no additional text, commentary, or descriptions unless explicitly requested.
 
 Output:
-Generate 10 names matching this character, with variations if fitting (e.g., formal name, common alias, or tribal name). Each name must be original and fitting to the fantasy setting. Briefly describe the meaning or origin only if the format requests it.
+Provide 10 distinct names that match the character’s attributes and setting.
 `;
 
-      
       const response = await axios.post('/api/generate', { prompt });
       setNames(response.data.names);
     } catch (err) {
