@@ -15,10 +15,15 @@ useEffect(() => {
 }, []);
 
 const vote = async (id, type) => {
+  const voted = localStorage.getItem(`voted-${id}`);
+  if (voted) return; // Prevent multiple votes
+
   const docRef = doc(db, 'sharedNames', id);
   await updateDoc(docRef, {
     [type]: increment(1),
   });
+
+  localStorage.setItem(`voted-${id}`, type);
 };
 
   const top10 = [...names].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)).slice(0, 10);
