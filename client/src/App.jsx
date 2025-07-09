@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Character from './pages/Character';
 import WhyNamesMatter from './pages/WhyNamesMatter';
 import Leaderboard from './pages/Leaderboard';
+import World from './pages/World';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/character" element={<Character />} />
       <Route path="/why-names-matter" element={<WhyNamesMatter />} />
       <Route path="/leaderboard" element={<Leaderboard />} />
+      <Route path="/world" element={<World />} />
     </Routes>
   );
 }
