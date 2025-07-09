@@ -28,22 +28,20 @@ export default function World() {
 
     try {
       const prompt = `
-You are a renowned worldbuilder's assistant. Generate original and evocative names for a fantasy world based on the following settings:
+You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
-- Type: ${form.type}
-- Climate: ${form.climate}
-- Culture: ${form.culture}
-- Magic Level: ${form.magicLevel}
-- Tone: ${form.tone}
+Generate 10 unique and original names for places that sound like they belong on a fantasy map for a ${params.type} with a ${params.climate} climate, inspired by a ${params.cultureInfluence} cultural aesthetic, featuring a ${params.magicLevel} level of magic, and evoking a ${params.tone} tone.
 
-Guidelines:
-- Names should be immersive, plausible, and fitting for the fantasy genre.
-- Prioritize linguistic and tonal consistency with the described setting.
-- Avoid clichés or overused templates.
-- Do not reuse known names from fantasy media or real-world locations.
+Rules:
+- Names must be immersive, evocative, and suitable for a fantasy RPG, Dungeons & Dragons, or novel worldbuilding.
+- Focus on names for regions, planets, kingdoms, islands, or realms, not characters or objects.
+- Avoid overused generic terms like "Storm", "Blood", or "Shadow" unless they are culturally relevant to the ${params.cultureInfluence}.
+- Names should be concise, typically one to two words (e.g., "Vaerys Coral", "Tiaru’s Veil"), with a maximum of three words for complex cultural influences.
+- Ensure names are original and do not mimic or copy names from existing fantasy franchises (e.g., no variations of "Middle-earth" or "Westeros").
+- Reflect the ${params.climate}, ${params.cultureInfluence}, ${params.magicLevel}, and ${params.tone} in the phonetic and stylistic choices of the names.
+- If ${params.cultureInfluence} is empty or vague, use a neutral but evocative fantasy style.
 
-Output:
-Return 10 unique and creative names for this world type.
+Return the names as a simple numbered list (1-10), with no additional text or commentary.
 `;
 
       const response = await axios.post('/api/generate', { prompt });
@@ -58,22 +56,22 @@ Return 10 unique and creative names for this world type.
   return (
     <>
       <Helmet>
-        <title>Fantasy World Name Generator | FantasyTools</title>
+        <title>Fantasy World and Place Name Generator | FantasyTools</title>
         <meta name="description" content="Craft immersive world names for continents, kingdoms, realms, and more. Choose the style, tone, and magic level to get unique names." />
         <meta name="keywords" content="fantasy world name generator, realm names, fantasy place name, continent name generator, worldbuilding tool" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
-          <h1 className="text-3xl font-bold mb-6">Fantasy World Name Generator</h1>
+          <h1 className="text-3xl font-bold mb-6">Fantasy World and Place Name Generator</h1>
 
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
-            Choose world attributes and generate 10 original fantasy world names. Perfect for continents, realms, kingdoms, or mysterious lands.
+            Choose world or place attributes and generate 10 original fantasy names. Perfect for continents, realms, kingdoms, or mysterious lands.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
-              World Type:
+              Type:
               <select name="type" value={form.type} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
                 {['Continent', 'Realm', 'Kingdom', 'Island', 'Planet', 'Dimension', 'Other'].map(t => (
                   <option key={t}>{t}</option>
