@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-8 mt-12 border-t border-gray-700 text-sm">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-4">
-        <div>
+    <footer className="w-full bg-gray-900 text-gray-400 border-t border-gray-700 text-sm">
+      <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-6">
+
+        <div className="flex flex-col md:flex-row justify-between gap-4">
+          <div>
           <p className="font-semibold text-white mb-2">FantasyTools.com</p>
           <p>Crafted for worldbuilders, storytellers, and creators of all realms.</p>
         </div>
