@@ -12,7 +12,8 @@
     "vite": "^4.5.14",
     "react-router-dom": "^6.21.2",
     "axios": "^1.6.8",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "firebase": "^10.12.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
