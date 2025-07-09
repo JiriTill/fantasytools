@@ -10,7 +10,6 @@ import Character from './pages/Character';
 import WhyNamesMatter from './pages/WhyNamesMatter';
 import Leaderboard from './pages/Leaderboard';
 import World from './pages/World';
-import World from './pages/Faction';
 
 function App() {
   return (
