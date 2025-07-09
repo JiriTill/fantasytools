@@ -7,6 +7,7 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
 import Character from './pages/Character';
+import WhyNamesMatter from './pages/WhyNamesMatter';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/character" element={<Character />} />
+      <Route path="/why-names-matter" element={<WhyNamesMatter />} />
     </Routes>
   );
 }
