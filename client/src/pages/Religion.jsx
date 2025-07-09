@@ -28,17 +28,16 @@ export default function Religion() {
     const prompt = `
 You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
-Generate 10 unique and original fantasy religion names for a ${form.type} centered around a ${form.alignment} deity or belief system, influenced by a ${form.culture} cultural aesthetic, and evoking a ${form.tone} tone.
+Generate 10 unique and original fantasy religion names for a ${form.type} centered around a ${form.alignment} deity or belief system, inspired by a ${form.culture} cultural aesthetic, and evoking a ${form.tone} tone.
 
 Rules:
-- Names must be immersive, evocative, and suitable for a fantasy RPG, D&D campaign, or worldbuilding.
-- Reflect the religion’s values, origin, and followers through the style and structure of the name.
-- Avoid common clichés like "Blood," "Shadow," or "Holy" unless culturally relevant.
-- Names should typically be 1–3 words long (e.g., "Children of the Flame", "Order of the Veil", "Zephyrite Faith").
-- Avoid copying known religions or franchises.
-- If ${form.culture} is empty or vague, use a neutral but immersive fantasy style.
-
-Return a simple numbered list (1-10), with no extra text.
+- Names must be immersive, evocative, and suitable for a fantasy RPG, Dungeons & Dragons, or novel worldbuilding, reflecting the religion’s values, deity, or followers.
+- Use phonetic and stylistic elements that align with the ${form.culture}, ${form.alignment}, and ${form.tone}, ensuring cultural sensitivity and relevance.
+- Avoid overused clichés like "Blood," "Shadow," or "Holy" unless directly relevant to the ${form.culture} or ${form.tone}.
+- Names should be concise, typically one to three words (e.g., "Starveil Faith," "Koa’thra Covenant," "Eryndor’s Sanctum").
+- Ensure names are original and do not mimic or copy existing religions or fantasy franchises (e.g., no variations of "Church of Pelor" or "Cult of Cthulhu").
+- If ${form.culture} is empty or vague, use a neutral but evocative fantasy style inspired by the ${form.tone} and ${form.alignment}.
+- Return the names as a simple numbered list (1-10), with no additional text or commentary.
 `;
 
     try {
@@ -71,7 +70,7 @@ Return a simple numbered list (1-10), with no extra text.
             <label className="block">
               Religion Type:
               <select name="type" value={form.type} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
-                {['Faith', 'Cult', 'Order', 'Pantheon', 'Sect', 'Other'].map(t => (
+                {['Church', 'Cult', 'Order', 'Pantheon', 'Sect', 'Covenant', 'Not specified'].map(t => (
                   <option key={t}>{t}</option>
                 ))}
               </select>
@@ -94,19 +93,43 @@ Return a simple numbered list (1-10), with no extra text.
             <label className="block">
               Tone:
               <select name="tone" value={form.tone} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
-                {['Mystical', 'Dark', 'Zealous', 'Ancient', 'Peaceful', 'Heroic', 'Other'].map(t => (
+                {['Mystical', 'Dark', 'Zealous', 'Ancient', 'Peaceful', 'Heroic', 'Not specified'].map(t => (
                   <option key={t}>{t}</option>
                 ))}
               </select>
             </label>
 
-            <button
+           <button
               type="submit"
               disabled={loading}
-              className="bg-indigo-600 hover:bg-indigo-500 w-full py-2 rounded font-semibold transition duration-300 ease-in-out transform hover:scale-105"
+              className={`w-full py-2 rounded font-semibold flex items-center justify-center transition ${
+                loading ? 'bg-indigo-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500'
+              }`}
             >
               {loading ? (
-                <span className="animate-pulse">Generating...</span>
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 mr-2 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                  Generating...
+                </>
               ) : (
                 'Generate Names'
               )}
