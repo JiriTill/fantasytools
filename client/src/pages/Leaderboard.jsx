@@ -29,7 +29,7 @@ export default function Leaderboard() {
     .slice(0, 20);
 
   return (
-
+    <>
     <Helmet>
         <title>Hall of Legends | Fantasy Name Leaderboard</title>
         <meta
@@ -88,6 +88,7 @@ export default function Leaderboard() {
         </Link>
       </div>
     </div>
+    </>
   );
 }
 
