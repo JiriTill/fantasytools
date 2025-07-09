@@ -3,6 +3,7 @@ import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Footer from '../components/Footer';
 
 export default function Leaderboard() {
   const [names, setNames] = useState([]);
