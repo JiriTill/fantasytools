@@ -60,7 +60,7 @@ export default function WhyNamesMatter() {
         <p>
         Make every name matter. Dive into the world of fantasy creation with Neoantica Name Generator—where identity begins with the perfect name.
         </p>
-
+      </div>
         <p className="italic text-sm text-gray-500">
           “A name is not just what you're called. It's who you are when legends are told.”
         </p>
