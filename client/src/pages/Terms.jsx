@@ -54,7 +54,7 @@ export default function Terms() {
       >
         ← Back to Fantasy Tools
       </Link>
+       <Footer />
      </div>
-    <Footer />
   );
 }
