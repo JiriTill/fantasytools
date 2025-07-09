@@ -27,9 +27,9 @@ export default function WhyNamesMatter() {
 
       <div className="max-w-3xl space-y-6">
         <h1 className="text-4xl font-bold text-white text-center mb-6">
-          Why Names Matter in Fantasy
+          Why Names Matter in Fantasy Worlds?
         </h1>
-
+        <p className="italic text-sm text-gray-500">Published: July 9, 2025 | Read Time: 1-2 Minutes</p>
         <p className="text-lg text-gray-300">
           In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and entire worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a fantasy novelist, or a     dedicated worldbuilder, the right name sets the tone for everything that follows.
         </p>
@@ -46,7 +46,7 @@ export default function WhyNamesMatter() {
       />
     </div>
         <p className="text-lg text-gray-300">
-         That’s where a fantasy name generator like the Neoantica Name Generator becomes an essential tool. Designed for RPG character creation, storytelling, and immersive fantasy worldbuilding, our AI-powered tool crafts unique names tailored to your exact needs—race, gender, tone, social class, and more.
+         That’s where a fantasy name generator like the ours becomes an essential tool. Designed for RPG character creation, storytelling, and immersive fantasy worldbuilding, our AI-powered tool crafts unique names tailored to your exact needs—race, gender, tone, social class, and more.
         </p>
 
         <p className="text-lg text-gray-300">
