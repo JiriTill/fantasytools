@@ -1,1 +1,120 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import ShareGeneratedName from '../components/ShareGeneratedName';
+import Footer from '../components/Footer';
+
+export default function Dynamic() {
+  const [form, setForm] = useState({
+    context: '',
+    culture: '',
+    tone: ''
+  });
+
+  const [names, setNames] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setNames([]);
+
+    const prompt = `You are an expert in fantasy naming and worldbuilding. Based on the user's description, generate 10 unique and immersive names suitable for RPGs, fantasy novels, or worldbuilding. 
+
+Context: ${form.context}
+Culture: ${form.culture || 'neutral fantasy'}
+Tone: ${form.tone || 'evocative'}
+
+Rules:
+- Names should be creative, relevant, and culturally consistent.
+- Use 1 to 3 words per name.
+- Avoid clichés unless they are contextually meaningful.
+- Do not copy names from known franchises.
+- Return names in a simple numbered list (1-10), with no additional text.`;
+
+    try {
+      const response = await axios.post('/api/generate', { prompt });
+      setNames(response.data.names);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Custom Fantasy Name Generator | FantasyTools</title>
+        <meta name="description" content="Create truly unique fantasy names based on your custom inputs. Describe your world, culture, and tone to generate evocative names." />
+        <meta name="keywords" content="custom fantasy name generator, AI fantasy naming, worldbuilding, RPG names, generate unique fantasy names" />
+        <meta property="og:title" content="Custom Fantasy Name Generator | FantasyTools" />
+        <meta property="og:description" content="Describe your context, culture, and tone to generate personalized fantasy names for your RPGs, novels, or games." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fantasytools.com/dynamic" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
+        <main className="p-6 flex flex-col items-center pb-20">
+          <h1 className="text-3xl font-bold mb-6">Custom Fantasy Name Generator</h1>
+
+          <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
+            Describe your name’s purpose, cultural inspiration, and tone to let our AI craft 10 original, context-driven names.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
+            <label className="block">
+              Context (What is being named?):
+              <textarea name="context" value={form.context} onChange={handleChange} rows="3" className="mt-1 w-full p-2 bg-gray-800 text-white rounded" required />
+            </label>
+
+            <label className="block">
+              Cultural Influence (Optional):
+              <input name="culture" value={form.culture} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded" />
+            </label>
+
+            <label className="block">
+              Tone (Optional):
+              <input name="tone" value={form.tone} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded" />
+            </label>
+
+            <button type="submit" disabled={loading} className="bg-indigo-600 hover:bg-indigo-500 w-full py-2 rounded font-semibold animate-pulse">
+              {loading ? 'Generating...' : 'Generate Names'}
+            </button>
+          </form>
+
+          {names.length > 0 && (
+            <div className="mt-10 w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h2 className="text-xl font-semibold mb-4">Name Suggestions:</h2>
+              <ul className="list-disc list-inside space-y-1">
+                {names.map((name, index) => (
+                  <li key={index}>{name}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
+            <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
+          </div>
+
+          <ShareGeneratedName form={form} />
+
+          <Link
+            to="/"
+            className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+          >
+            ← Back to Fantasy Tools
+          </Link>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}
 
