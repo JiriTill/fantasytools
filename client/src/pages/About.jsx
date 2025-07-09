@@ -10,7 +10,7 @@ export default function About() {
 
         <img
           src="/images/jtill.png"
-          alt="JTill"
+          alt="Portrait of JTill, Worldbuilder and founder of Neoantica"
           className="float-right ml-6 mb-4 w-[400px] h-[400px] rounded-xl shadow-lg border border-indigo-700"
         />
 
