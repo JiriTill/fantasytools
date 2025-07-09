@@ -10,6 +10,7 @@ import Character from './pages/Character';
 import WhyNamesMatter from './pages/WhyNamesMatter';
 import Leaderboard from './pages/Leaderboard';
 import World from './pages/World';
+import World from './pages/Faction';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/why-names-matter" element={<WhyNamesMatter />} />
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/world" element={<World />} />
+      <Route path="/faction" element={<Faction />} />
     </Routes>
   );
 }
