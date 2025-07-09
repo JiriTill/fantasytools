@@ -11,6 +11,7 @@ import WhyNamesMatter from './pages/WhyNamesMatter';
 import Leaderboard from './pages/Leaderboard';
 import World from './pages/World';
 import Faction from './pages/Faction';
+import Religion from './pages/Religion';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/world" element={<World />} />
       <Route path="/faction" element={<Faction />} />
+      <Route path="/religion" element={<Religion />} />
     </Routes>
   );
 }
