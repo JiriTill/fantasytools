@@ -72,6 +72,10 @@ export default function Home() {
         <p className="text-sm text-gray-400">[Google Ads or affiliate banner here]</p>
       </div>
 
+      <div className="mt-12 w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6">
+        <p className="text-sm text-gray-400">[User shared names and voting for the best]</p>
+      </div>
+
       <footer className="text-center text-sm text-gray-400 mt-12 border-t border-gray-700 pt-6 px-4 space-y-2">
         <div className="space-x-4">
           <a href="/about" className="hover:underline text-white">About Fantasy Tools</a>
