@@ -1,5 +1,7 @@
+// ShareGeneratedName.jsx
 import React, { useState } from 'react';
-import axios from 'axios';
+import db from '../firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function ShareGeneratedName({ form }) {
   const [sharedName, setSharedName] = useState('');
@@ -11,18 +13,20 @@ export default function ShareGeneratedName({ form }) {
     setSubmitted(false);
     setError(null);
 
+    if (!sharedName.trim()) return;
+
     try {
-      await axios.post('/api/submit-name', {
-        name: sharedName,
+      await addDoc(collection(db, 'sharedNames'), {
+        name: sharedName.trim(),
         attributes: form,
-        timestamp: new Date().toISOString(),
+        timestamp: serverTimestamp(),
         upvotes: 0,
         downvotes: 0,
       });
       setSubmitted(true);
       setSharedName('');
     } catch (err) {
-      console.error(err);
+      console.error('Firestore error:', err);
       setError('Failed to submit. Please try again later.');
     }
   };
