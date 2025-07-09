@@ -4,7 +4,8 @@ import Footer from '../components/Footer';
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-8 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
+      <main className="p-6 flex flex-col items-center pb-20">
       
       <div className="max-w-3xl space-y-6">
         <h1 className="text-4xl font-bold text-white text-center mb-6">About Fantasy Tools</h1>
@@ -50,7 +51,7 @@ export default function About() {
       >
         ← Back to Fantasy Tools
       </Link>
-
+        </main>
       <Footer />
     </div>
   );
