@@ -27,19 +27,19 @@ export default function World() {
     setNames([]);
 
     try {
-      const prompt = `
+const prompt = `
 You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
-Generate 10 unique and original names for places that sound like they belong on a fantasy map for a ${params.type} with a ${params.climate} climate, inspired by a ${params.cultureInfluence} cultural aesthetic, featuring a ${params.magicLevel} level of magic, and evoking a ${params.tone} tone.
+Generate 10 unique and original names for places that sound like they belong on a fantasy map for a ${form.type} with a ${form.climate} climate, inspired by a ${form.culture} cultural aesthetic, featuring a ${form.magicLevel} level of magic, and evoking a ${form.tone} tone.
 
 Rules:
 - Names must be immersive, evocative, and suitable for a fantasy RPG, Dungeons & Dragons, or novel worldbuilding.
 - Focus on names for regions, planets, kingdoms, islands, or realms, not characters or objects.
-- Avoid overused generic terms like "Storm", "Blood", or "Shadow" unless they are culturally relevant to the ${params.cultureInfluence}.
+- Avoid overused generic terms like "Storm", "Blood", or "Shadow" unless they are culturally relevant to the ${form.culture}.
 - Names should be concise, typically one to two words (e.g., "Vaerys Coral", "Tiaru’s Veil"), with a maximum of three words for complex cultural influences.
 - Ensure names are original and do not mimic or copy names from existing fantasy franchises (e.g., no variations of "Middle-earth" or "Westeros").
-- Reflect the ${params.climate}, ${params.cultureInfluence}, ${params.magicLevel}, and ${params.tone} in the phonetic and stylistic choices of the names.
-- If ${params.cultureInfluence} is empty or vague, use a neutral but evocative fantasy style.
+- Reflect the ${form.climate}, ${form.culture}, ${form.magicLevel}, and ${form.tone} in the phonetic and stylistic choices of the names.
+- If ${form.culture} is empty or vague, use a neutral but evocative fantasy style.
 
 Return the names as a simple numbered list (1-10), with no additional text or commentary.
 `;
