@@ -5,7 +5,9 @@ import Footer from '../components/Footer';
 
 export default function WhyNamesMatter() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white px-6 py-12 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
+      <main className="p-6 flex flex-col items-center pb-20">
+
       <Helmet>
         <title>Why Names Matter in Fantasy | FantasyTools</title>
         <meta
@@ -74,6 +76,7 @@ export default function WhyNamesMatter() {
           ← Back to Fantasy Tools
         </Link>
       </div>
+        </main>
       <Footer />
     </div>
   );
