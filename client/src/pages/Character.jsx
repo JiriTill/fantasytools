@@ -156,7 +156,7 @@ Generate 10 names matching this character, with variations if fitting (e.g., for
              >
                 ← Back to Fantasy Tools
             </Link>
-
+      <div className="mt-12 mb-24 text-center">
       <Footer />
       
     </div>
