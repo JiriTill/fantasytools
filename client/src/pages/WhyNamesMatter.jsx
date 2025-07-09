@@ -31,19 +31,34 @@ export default function WhyNamesMatter() {
         </h1>
 
         <p className="text-lg text-gray-300">
-          In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a novelist crafting an epic saga, or a worldbuilder shaping a mythical universe, the right name sets the tone for your creation. That’s where a fantasy name generator like Neoantica Name Generator shines, offering AI-generated names tailored for your RPG character names, fantasy worldbuilding, and storytelling needs.
+          In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and entire worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a fantasy novelist, or a     dedicated worldbuilder, the right name sets the tone for everything that follows.
         </p>
 
         <p className="text-lg text-gray-300">
-          Why do names matter? A well-chosen name, like “Eldrin Valthorne” for an elven wizard or “Ironclaw Syndicate” for a rogue faction, instantly evokes personality, culture, and lore. It immerses players in tabletop RPGs or readers in your novel, making your world feel authentic. For D&D name generators, names must reflect races (e.g., orc, elf, tiefling), professions (e.g., warrior, mage), and tones (e.g., elegant, harsh). A generic name risks breaking immersion, while a unique one captivates.
+          A well-crafted name like Eldrin Valthorne for an elven wizard or Ironclaw Syndicate for a shadowy rogue guild instantly conveys mood, culture, and backstory. It can hint at noble heritage, dark magic, forgotten languages, or distant lands. In tabletop roleplaying games (TTRPGs) and novels alike, names shape immersion. They make your creations believable, memorable, and emotionally engaging.
+        </p>
+
+    <div className="flex flex-col md:flex-row md:items-start gap-6">
+      <img
+        src="/images/whynamesmatter.png"
+        alt="Fantasy name scroll with quill"
+        className="md:w-1/3 w-full rounded-lg shadow-md md:float-right md:ml-6 mb-4"
+      />
+        <p className="text-lg text-gray-300">
+         That’s where a fantasy name generator like the Neoantica Name Generator becomes an essential tool. Designed for RPG character creation, storytelling, and immersive fantasy worldbuilding, our AI-powered tool crafts unique names tailored to your exact needs—race, gender, tone, social class, and more.
         </p>
 
         <p className="text-lg text-gray-300">
-          Neoantica’s AI name generator simplifies this process, delivering fantasy character names, faction names, and worldbuilding names with customizable parameters like gender, race, and tone. Whether you’re crafting a TTRPG campaign, writing a fantasy novel, or designing a game, our tool saves time while sparking creativity.
+          Why do names matter so much? Because in fantasy, every detail counts. A generic or out-of-place name can shatter the illusion of a rich, believable world. But a carefully chosen one reinforces it. For example, names for elves might sound melodic and ancient, while dwarves may favor rough, consonant-heavy tones. Orc names may carry aggression, and noble names may sound refined or ceremonial.
         </p>
-
-        <p className="text-lg text-gray-300">
-          Struggling to name your next hero or kingdom? Use our RPG name generator to create unforgettable names that resonate with your audience. Dive into fantasy worldbuilding with Neoantica Name Generator and make every name matter.
+        <p>
+        With Neoantica’s fantasy name generator, you don’t need to spend hours agonizing over naming conventions. Whether you're creating a new hero, forging a mythical kingdom, or inventing a secretive cult, our generator offers hundreds of unique, AI-crafted options that resonate with the tone and lore of your world.
+        </p>
+        <p>
+        Struggling to name your next hero, kingdom, or rebel faction? Let Neoantica spark your creativity. Use our character name generator, faction name generator, and more to create immersive, lore-friendly names that enhance your storytelling and gameplay.
+        </p>
+        <p>
+        Make every name matter. Dive into the world of fantasy creation with Neoantica Name Generator—where identity begins with the perfect name.
         </p>
 
         <p className="italic text-sm text-gray-500">
