@@ -11,7 +11,7 @@ export default function Contact() {
         <h1 className="text-4xl font-bold text-center mb-4">Contact & Feedback</h1>
 
         <p className="text-lg text-center">
-          Fantasy Tools is crafted for worldbuilders, storytellers, game masters, and creators of all kinds. If you have feedback, suggestions, or you'd like to collaborate — we’d love to hear from you!
+          Fantasy Name Creator is crafted for worldbuilders, storytellers, game masters, and creators of all kinds. If you have feedback, suggestions, or you'd like to collaborate — we’d love to hear from you!
         </p>
 
         <p className="text-lg text-center text-gray-300">
@@ -67,7 +67,7 @@ export default function Contact() {
         to="/"
         className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
       >
-        ← Back to Fantasy Tools
+        ← Back to Fantasy Name Creator
       </Link>
         </main>
       <Footer />
