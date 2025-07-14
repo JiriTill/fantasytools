@@ -16,34 +16,39 @@ export default function Home() {
   return (
 <>
 <Helmet>
-  <title>Fantasy Name Generators for Characters, Worlds, Factions & More | FantasyTools</title>
+  <title>Fantasy Name Creator for Characters, Worlds, Factions & More | FantasyTools</title>
   <meta
     name="description"
-    content="Create amazing fantasy names with our free AI-powered generators. Generate names for characters, worlds, factions, religions, items, and more with detailed options."
+    content="Create amazing fantasy names with our free AI-powered creator. Create names for characters, worlds, factions, religions, items, and more with detailed options."
   />
   <meta
     name="keywords"
-    content="fantasy name generator, AI name generator, character name generator, world name maker, DnD name tool, faction name creator, RPG tools, worldbuilding"
+    content="fantasy name creator, AI name creator, character name generator, world name maker, DnD name tool, faction name creator, RPG tools, worldbuilding"
   />
-  <meta property="og:title" content="Fantasy Name Generator | Create Epic Names for Your World" />
+  <meta property="og:title" content="Fantasy Name Creator | Create Epic Names for Your World" />
   <meta
     property="og:description"
-    content="Explore our free fantasy name generators for characters, worlds, factions, and more. Perfect for RPGs, books, and worldbuilding."
+    content="Explore our free fantasy name creator for characters, worlds, factions, and more. Perfect for RPGs, books, and worldbuilding."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://fantasytools.com" />
-  <meta property="og:image" content="https://fantasytools.com/images/og-home.jpg" />
+  <meta property="og:url" content="https://fantasynamecreator.com" />
+  <meta property="og:image" content="https://fantasynamecreator.com/images/og-home.jpg" />
   <meta name="robots" content="index, follow" />
 </Helmet>
     
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Fantasy Name Generator</h1>
+      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Fantasy Name Creator</h1>
       <p className="text-center text-lg md:text-xl mb-8 max-w-xl">
         Create unique fantasy names for your worlds, characters, factions, religions, or legendary items.
       </p>
       <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-8">
-        Pick a category, choose from tailored options, and let our AI generate 10 unique, lore-friendly names instantly. Designed for writers, worldbuilders, game masters, and fantasy lovers.
+        Pick a category, choose from tailored options, and let our AI create 10 unique, lore-friendly names instantly. Designed for writers, worldbuilders, game masters, and fantasy lovers.
       </p>
+      
+      <div className="mt-12 w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6">
+        <p className="text-sm text-gray-400">[Google Ads or affiliate banner here]</p>
+      </div>
+      
       <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">
           What do you want to create?
       </h2>
