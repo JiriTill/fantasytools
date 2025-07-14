@@ -34,6 +34,21 @@ export default function Home() {
         <meta property="og:url" content="https://fantasynamecreator.com" />
         <meta property="og:image" content="https://fantasynamecreator.com/images/og-home.jpg" />
         <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">
+            {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Fantasy Name Creator",
+              "url": "https://www.fantasynamecreator.com/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.fantasynamecreator.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }
+            `}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
