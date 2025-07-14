@@ -29,15 +29,15 @@ export default function About() {
         </p>
 
         <p className="text-lg">
-          Rooted in mythology, folklore, and history, Neoantica creates thematic tabletop games and fantasy worlds for RPGs, novels, and creative projects. Every mechanic, quest, and narrative is designed to pull players deep into believable, emotionally resonant settings.
+          I’ve used many name generators over the years, and while some were helpful, most felt generic or limited. That’s why I built Fantasy Name Creator: to provide a fresh, customizable experience using modern AI that adapts to different fantasy themes and creative needs.
         </p>
 
         <p className="text-lg">
-          We also provide professional <strong>English-to-Czech translation</strong> services, especially for games and lore-heavy materials. Whether you’re a developer, publisher, or storyteller, we help your creations resonate across languages.
+          Whether you're writing a Slavic-inspired dark fantasy saga, designing a faction for your D&D world, or inventing relics of ancient religions, this tool is here to support your creativity and imagination. This is just the beginning. New features, categories, and inspiration tools are already in the works. If you have ideas or feedback, feel free to share them—Fantasy Name Creator is a tool for creators, shaped by creators.
         </p>
 
         <p className="text-lg">
-          Want us to build you a custom side quest, faction, or a whole world? We do that too. Just visit{' '}
+          Want us to build you a custom side quest, faction, or a whole world? We can help you with that. Just visit{' '}
           <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
             Neoantica.com
           </a>{' '}
