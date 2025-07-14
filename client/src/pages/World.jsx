@@ -56,17 +56,17 @@ Return the names as a simple numbered list (1-10), with no additional text or co
   return (
     <>
       <Helmet>
-        <title>Fantasy World and Place Name Generator | FantasyTools</title>
+        <title>Fantasy World and Place Name Generator | Fantasy Name Generator</title>
         <meta name="description" content="Craft immersive world names for continents, kingdoms, realms, and more. Choose the style, tone, and magic level to get unique names." />
         <meta name="keywords" content="fantasy world name generator, realm names, fantasy place name, continent name generator, worldbuilding tool" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
-          <h1 className="text-3xl font-bold mb-6">Fantasy World and Place Name Generator</h1>
+          <h1 className="text-3xl font-bold mb-6">Fantasy World and Place Name Creator</h1>
 
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
-            Choose world or place attributes and generate 10 original fantasy names. Perfect for continents, realms, kingdoms, or mysterious lands.
+            Choose world or place attributes and create 10 original fantasy names. Perfect for continents, realms, kingdoms, or mysterious lands.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
@@ -170,7 +170,7 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             to="/"
             className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            ← Back to Fantasy Tools
+            ← Back to Fantasy Name Creator
           </Link>
         </main>
         <Footer />
