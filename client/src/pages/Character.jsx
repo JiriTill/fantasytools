@@ -65,14 +65,14 @@ Provide 10 distinct names that match the character’s attributes and setting.
   return (
   <>
     <Helmet>
-      <title>Fantasy Character Name Generator | FantasyTools</title>
+      <title>Fantasy Character Name Generator | Fantasy Name Creator</title>
       <meta name="description" content="Generate unique, fantasy-themed character names with our AI-powered tool. Choose race, gender, tone, and more to create the perfect name for your RPG or story." />
       <meta name="keywords" content="fantasy character name generator, RPG name maker, AI fantasy names, elf name, dwarf name, orc name, tabletop RPG, worldbuilding, character creation tool" />
       <meta property="og:title" content="Fantasy Character Name Generator | FantasyTools" />
       <meta property="og:description" content="Use detailed attributes to craft believable fantasy names for characters in your world. Free and AI-powered." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://fantasytools.com/character" /> // TODO:je třeba změnit při ostrém provozu
-      <meta property="og:image" content="https://fantasytools.com/images/og-image.jpg" />
+      <meta property="og:url" content="https://fantasynamecreator.com/character" /> // TODO:je třeba změnit při ostrém provozu
+      <meta property="og:image" content="https://fantasynamecreator.com/images/og-image.jpg" />
       <meta name="robots" content="index, follow" />
     </Helmet>
     
@@ -190,7 +190,7 @@ Provide 10 distinct names that match the character’s attributes and setting.
               to="/"
               className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
              >
-                ← Back to Fantasy Tools
+                ← Back to Fantasy Name Creator
             </Link>
         </main>
       <Footer />
