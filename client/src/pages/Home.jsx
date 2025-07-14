@@ -85,8 +85,9 @@ export default function Home() {
       <div className="mt-12 w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6">
         <NameGallery />
       </div>
+    
       <Footer />
-    </div>
+    
 </>
   )
 }
