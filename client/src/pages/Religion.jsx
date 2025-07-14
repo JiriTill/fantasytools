@@ -53,14 +53,14 @@ Rules:
   return (
     <>
       <Helmet>
-        <title>Fantasy Religion Name Generator | FantasyTools</title>
+        <title>Fantasy Religion Name Generator | Fantasy Name Creator</title>
         <meta name="description" content="Generate immersive fantasy religion names for your worldbuilding. Use tone, culture, and alignment to craft divine or cultic names." />
         <meta name="keywords" content="fantasy religion name generator, cult name, divine order, pantheon name, D&D, RPG, worldbuilding tool" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
-          <h1 className="text-3xl font-bold mb-6">Fantasy Religion Name Generator</h1>
+          <h1 className="text-3xl font-bold mb-6">Fantasy Religion Name Creator</h1>
 
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Craft 10 original religion names tailored to your world’s tone, culture, and divine alignment. Ideal for pantheons, faiths, cults, and mystical orders.
@@ -157,7 +157,7 @@ Rules:
             to="/"
             className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            ← Back to Fantasy Tools
+            ← Back to Fantasy Name Creator
           </Link>
         </main>
         <Footer />
