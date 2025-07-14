@@ -1,4 +1,3 @@
-// src/pages/Item.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -55,14 +54,14 @@ Rules:
   return (
     <>
       <Helmet>
-        <title>Fantasy Item Name Generator | FantasyTools</title>
+        <title>Fantasy Item Name Generator | Fantasy Name Creator</title>
         <meta name="description" content="Generate legendary names for fantasy weapons, relics, potions, and magical artifacts. Perfect for D&D, RPGs, and worldbuilding." />
         <meta name="keywords" content="fantasy item name generator, RPG item names, magic weapon name, artifact generator, Dungeons & Dragons item name tool" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
-          <h1 className="text-3xl font-bold mb-6">Fantasy Item Name Generator</h1>
+          <h1 className="text-3xl font-bold mb-6">Fantasy Item Name Creator</h1>
 
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Create legendary names for swords, potions, tomes, and magical relics. Choose item type, rarity, material, and magical effect to generate 10 original names.
@@ -164,7 +163,7 @@ Rules:
             to="/"
             className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            ← Back to Fantasy Tools
+            ← Back to Fantasy Name Creator
           </Link>
         </main>
         <Footer />
