@@ -1,4 +1,3 @@
-// src/pages/Faction.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -53,7 +52,7 @@ Rules:
   return (
     <>
       <Helmet>
-        <title>Fantasy Faction Name Generator | FantasyTools</title>
+        <title>Fantasy Faction Name Generator | Fantasy Name Creator</title>
         <meta name="description" content="Generate powerful and mysterious fantasy faction names for guilds, cults, or clans. Customizable by alignment, tone, and culture." />
       </Helmet>
 
@@ -156,7 +155,7 @@ Rules:
             to="/"
             className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            ← Back to Fantasy Tools
+            ← Back to Fantasy Name Creator
           </Link>
         </main>
         <Footer />
