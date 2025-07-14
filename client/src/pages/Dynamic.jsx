@@ -50,13 +50,13 @@ export default function Dynamic() {
   return (
     <>
       <Helmet>
-        <title>Custom Fantasy Name Generator | FantasyTools</title>
+        <title>Custom Fantasy Name Generator | Fantasy Name Creator</title>
         <meta name="description" content="Create truly unique fantasy names based on your custom inputs. Describe your world, culture, and tone to generate evocative names." />
         <meta name="keywords" content="custom fantasy name generator, AI fantasy naming, worldbuilding, RPG names, generate unique fantasy names" />
-        <meta property="og:title" content="Custom Fantasy Name Generator | FantasyTools" />
+        <meta property="og:title" content="Custom Fantasy Name Generator | Fantasy Name Creator" />
         <meta property="og:description" content="Describe your context, culture, and tone to generate personalized fantasy names for your RPGs, novels, or games." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fantasytools.com/dynamic" />
+        <meta property="og:url" content="https://fantasynamecreator.com/dynamic" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
@@ -141,7 +141,7 @@ export default function Dynamic() {
             to="/"
             className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
-            ← Back to Fantasy Tools
+            ← Back to Fantasy Name Creator
           </Link>
         </main>
         <Footer />
