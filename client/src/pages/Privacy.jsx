@@ -62,7 +62,7 @@ export default function Privacy() {
         to="/"
         className="mt-10 inline-block bg-indigo-700 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition"
       >
-        ← Back to Fantasy Tools
+        ← Back to Fantasy Name Creator
       </Link>
         </main>
       <Footer />
