@@ -14,44 +14,51 @@ const categories = [
 
 export default function Home() {
   return (
-<>
-<Helmet>
-  <title>Fantasy Name Creator for Characters, Worlds, Factions & More | FantasyTools</title>
-  <meta
-    name="description"
-    content="Create amazing fantasy names with our free AI-powered creator. Create names for characters, worlds, factions, religions, items, and more with detailed options."
-  />
-  <meta
-    name="keywords"
-    content="fantasy name creator, AI name creator, character name generator, world name maker, DnD name tool, faction name creator, RPG tools, worldbuilding"
-  />
-  <meta property="og:title" content="Fantasy Name Creator | Create Epic Names for Your World" />
-  <meta
-    property="og:description"
-    content="Explore our free fantasy name creator for characters, worlds, factions, and more. Perfect for RPGs, books, and worldbuilding."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://fantasynamecreator.com" />
-  <meta property="og:image" content="https://fantasynamecreator.com/images/og-home.jpg" />
-  <meta name="robots" content="index, follow" />
-</Helmet>
+  <>
+    <Helmet>
+      <title>Fantasy Name Creator – Generate Names for Characters, Worlds, Factions & More</title>
+      <meta
+        name="description"
+        content="Generate unique fantasy names with our free AI-powered name creator. Perfect for characters, worlds, factions, religions, items, and more. Ideal for writers, game designers, and worldbuilders."
+      />
+      <meta
+        name="keywords"
+        content="fantasy name creator, AI fantasy name generator, character names, world name generator, RPG tools, DnD name creator, faction names, worldbuilding tools, Slavic fantasy names, Norse names"
+      />
+      <meta property="og:title" content="Fantasy Name Creator – Free AI Name Generator for Fantasy Worlds" />
+      <meta
+        property="og:description"
+        content="Use our AI-powered fantasy name creator to craft names for characters, worlds, factions, and more. Designed for fantasy writers, RPG players, and worldbuilders."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://fantasynamecreator.com" />
+      <meta property="og:image" content="https://fantasynamecreator.com/images/og-home.jpg" />
+      <meta name="robots" content="index, follow" />
+    </Helmet>
     
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Fantasy Name Creator</h1>
-      <p className="text-center text-lg md:text-xl mb-8 max-w-xl">
-        Create unique fantasy names for your worlds, characters, factions, religions, or legendary items.
-      </p>
-      <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-8">
-        Pick a category, choose from tailored options, and let our AI create 10 unique, lore-friendly names instantly. Designed for writers, worldbuilders, game masters, and fantasy lovers.
-      </p>
+      <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Fantasy Name Creator</h1>
       
-      <div className="mt-12 w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6">
-        <p className="text-sm text-gray-400">[Google Ads or affiliate banner here]</p>
-      </div>
+        <p className="text-center text-lg md:text-xl mb-6 max-w-xl">
+          Create unique fantasy names for your worlds, characters, factions, religions, and legendary items.
+        </p>
       
-      <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">
+        <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-10">
+          Choose a category, fine-tune your settings, and let our AI generate 10 unique, lore-rich names. Built for writers, worldbuilders, game masters, and fantasy enthusiasts.
+        </p>
+      
+        {/* Ads or Affiliate Banner */}
+        <div className="w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6 mb-10">
+          {/* Replace with actual ad component or embed */}
+          <div className="text-sm text-gray-400 italic">
+            [Google Ads or affiliate banner]
+          </div>
+        </div>
+      
+        <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">
           What do you want to create?
-      </h2>
+        </h2>
+      </div>
 
      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8 w-full max-w-4xl">
         {categories.map((cat) => (
