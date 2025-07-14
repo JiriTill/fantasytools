@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-6">
         <div className="flex flex-col md:flex-row justify-between gap-4">
           <div>
-            <p className="font-semibold text-white mb-2">FantasyTools.com</p>
+            <p className="font-semibold text-white mb-2">FantasyNameCreator.com</p>
             <p>Crafted for worldbuilders, storytellers, and creators of all realms.</p>
           </div>
 
@@ -22,7 +22,7 @@ export default function Footer() {
 
         <div className="text-center text-gray-600 border-t border-gray-700 pt-4">
           <p>
-            Powered by{' '}
+            © 2025 Fantasy Name Creator • Powered by{' '}
             <a
               href="https://neoantica.com"
               target="_blank"
