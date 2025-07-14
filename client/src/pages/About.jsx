@@ -21,11 +21,11 @@ export default function About() {
         </p>
 
         <p className="text-lg">
-          This project was born out of love for board games, worldbuilding, and TTRPGs. Behind Fantasy Name Creator is <strong>JTill</strong>, founder of{' '}
+          This project was born out of love for board games, worldbuilding, and TTRPGs. My name is <strong>JTill</strong>, and I've founded {' '}
           <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
             Neoantica
           </a>{' '}
-          — a Czech creative studio focused on storytelling, myth, and immersive fantasy content.
+          — a small Czech creative studio focused on storytelling, myth, and fantasy content.
         </p>
 
         <p className="text-lg">
