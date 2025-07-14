@@ -41,14 +41,14 @@ export default function Leaderboard() {
             name="keywords"
             content="fantasy name generator leaderboard, top RPG names, best fantasy names, fantasy name voting, shared fantasy names"
         />
-        <meta property="og:title" content="Hall of Legends | FantasyTools" />
+        <meta property="og:title" content="Hall of Legends | Fantasy Name Creator" />
         <meta
             property="og:description"
             content="Vote on the best fantasy names or share your own in the Hall of Legends – powered by the community."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fantasytools.com/leaderboard" />
-        <meta property="og:image" content="https://fantasytools.com/images/og-leaderboard.jpg" />
+        <meta property="og:url" content="https://fantasynamecreator.com/leaderboard" />
+        <meta property="og:image" content="https://fantasynamecreator.com/images/og-leaderboard.jpg" />
     </Helmet>
     
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6">
@@ -85,7 +85,7 @@ export default function Leaderboard() {
           to="/"
           className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
         >
-          ← Back to Fantasy Tools
+          ← Back to Fantasy Name Creator
         </Link>
       </div>
     </div>
