@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
+import GoogleAd from '../components/GoogleAd';
 
 export default function Character() {
   const [form, setForm] = useState({
@@ -179,9 +180,8 @@ Provide 10 distinct names that match the character’s attributes and setting.
         </div>
       )}
 
-      {/* Ads Placeholder */}
       <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
-        <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
+        <GoogleAd slot="4105556455" />
       </div>
 
           <ShareGeneratedName form={form} />
