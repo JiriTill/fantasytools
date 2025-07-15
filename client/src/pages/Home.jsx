@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet';
 import NameGallery from '../components/NameGallery';
 import Footer from '../components/Footer';
+import { useEffect } from 'react';
 
 const categories = [
   { name: 'Worlds and places', path: '/world', image: '/images/world.png' },
@@ -13,6 +14,17 @@ const categories = [
 ]
 
 export default function Home() {
+      useEffect(() => {
+        const ads = document.getElementsByClassName("adsbygoogle");
+        for (let i = 0; i < ads.length; i++) {
+          try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          } catch (e) {
+            console.error("Adsbygoogle error:", e);
+          }
+        }
+      }, []);
+
   return (
     <>
       <Helmet>
@@ -34,8 +46,14 @@ export default function Home() {
         <meta property="og:url" content="https://fantasynamecreator.com" />
         <meta property="og:image" content="https://fantasynamecreator.com/images/og-home.jpg" />
         <meta name="robots" content="index, follow" />
+        {/* Load Google Ads script */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7735418117469222"
+          crossOrigin="anonymous"
+        ></script>
         <script type="application/ld+json">
-            {`
+          {`
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
@@ -47,7 +65,7 @@ export default function Home() {
                 "query-input": "required name=search_term_string"
               }
             }
-            `}
+          `}
         </script>
       </Helmet>
 
@@ -62,10 +80,17 @@ export default function Home() {
           Choose a category, fine-tune your settings, and let our AI generate 10 unique, lore-rich names. Built for writers, worldbuilders, game masters, and fantasy enthusiasts.
         </p>
 
-        {/* Ads or Affiliate Banner */}
+        {/* Google Ads Block */}
         <div className="w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6 mb-10">
-          {/* Replace with actual ad component or embed */}
-          <div className="text-sm text-gray-400 italic">
+          <ins
+            className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-7735418117469222"
+            data-ad-slot="4105556455"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <div className="text-sm text-gray-400 italic mt-2">
             [Google Ads or affiliate banner]
           </div>
         </div>
