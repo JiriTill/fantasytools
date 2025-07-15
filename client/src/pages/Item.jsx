@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
+import GoogleAd from '../components/GoogleAd';
 
 export default function Item() {
   const [form, setForm] = useState({
@@ -66,6 +67,8 @@ Rules:
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Create legendary names for swords, potions, tomes, and magical relics. Choose item type, rarity, material, and magical effect to generate 10 original names.
           </p>
+
+          <GoogleAd slot="4105556455" />
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
