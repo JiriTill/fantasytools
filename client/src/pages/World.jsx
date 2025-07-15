@@ -163,10 +163,6 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             </div>
           )}
 
-          <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
-            <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
-          </div>
-
           <ShareGeneratedName form={form} />
 
           <Link
