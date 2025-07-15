@@ -14,18 +14,25 @@ useEffect(() => {
   return () => unsubscribe();
 }, []);
 
-const vote = async (id, type) => {
-  const voted = localStorage.getItem(`voted-${id}`);
-  if (voted) return; // Prevent multiple votes
-
-  const docRef = doc(db, 'sharedNames', id);
-  await updateDoc(docRef, {
-    [type]: increment(1),
-  });
-
-  localStorage.setItem(`voted-${id}`, type);
-};
-
+    const vote = async (id, type) => {
+      const voteKey = `voted-${id}-${type}`;
+      const lastVoteTime = localStorage.getItem(voteKey);
+      const now = Date.now();
+    
+      // Check if the last vote was within the past 24 hours
+      if (lastVoteTime && now - parseInt(lastVoteTime) < 24 * 60 * 60 * 1000) {
+        alert("You can only vote for this name once per day.");
+        return;
+      }
+    
+      const docRef = doc(db, 'sharedNames', id);
+      await updateDoc(docRef, {
+        [type]: increment(1),
+      });
+    
+      localStorage.setItem(voteKey, now.toString());
+      };
+      
   const top10 = [...names].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)).slice(0, 10);
   const newest = [...names].sort((a, b) => {
   const timeA = a.timestamp?.toDate?.() || new Date(0);
@@ -69,6 +76,17 @@ const vote = async (id, type) => {
 }
 
 function NameCard({ name, vote }) {
+  const [hasVotedUp, setHasVotedUp] = useState(false);
+  const [hasVotedDown, setHasVotedDown] = useState(false);
+
+  useEffect(() => {
+    const now = Date.now();
+    const up = localStorage.getItem(`voted-${name.id}-upvotes`);
+    const down = localStorage.getItem(`voted-${name.id}-downvotes`);
+    if (up && now - parseInt(up) < 24 * 60 * 60 * 1000) setHasVotedUp(true);
+    if (down && now - parseInt(down) < 24 * 60 * 60 * 1000) setHasVotedDown(true);
+  }, [name.id]);
+
   return (
     <div className="bg-gray-800 p-4 rounded shadow mb-4">
       <p className="text-2xl font-bold mb-1">{name.name}</p>
@@ -76,8 +94,21 @@ function NameCard({ name, vote }) {
         {Object.entries(name.attributes).map(([k, v]) => `${k}: ${v}`).join(' | ')}
       </p>
       <div className="flex items-center gap-4">
-        <button onClick={() => vote(name.id, 'upvotes')} className="hover:text-green-400">👍 {name.upvotes}</button>
-        <button onClick={() => vote(name.id, 'downvotes')} className="hover:text-red-400">👎 {name.downvotes}</button>
+        <button
+          onClick={() => vote(name.id, 'upvotes')}
+          disabled={hasVotedUp}
+          className={`hover:text-green-400 ${hasVotedUp ? 'opacity-50 cursor-not-allowed' : ''}`}
+        >
+          👍 {name.upvotes}
+        </button>
+
+        <button
+          onClick={() => vote(name.id, 'downvotes')}
+          disabled={hasVotedDown}
+          className={`hover:text-red-400 ${hasVotedDown ? 'opacity-50 cursor-not-allowed' : ''}`}
+        >
+          👎 {name.downvotes}
+        </button>
       </div>
     </div>
   );
