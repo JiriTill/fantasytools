@@ -31,7 +31,7 @@ useEffect(() => {
       });
     
       localStorage.setItem(voteKey, now.toString());
-      };
+    };
       
   const top10 = [...names].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)).slice(0, 10);
   const newest = [...names].sort((a, b) => {
