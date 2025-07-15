@@ -84,7 +84,9 @@ Provide 10 distinct names that match the character’s attributes and setting.
       <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
         Choose from the attributes below and let our AI generate 10 unique fantasy name suggestions tailored to your character concept. Perfect for RPGs, novels, worldbuilding, or creative writing!
       </p>
-      
+
+        <GoogleAd slot="4105556455" />
+        
       <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
         <label className="block">
           Gender:
@@ -179,10 +181,6 @@ Provide 10 distinct names that match the character’s attributes and setting.
           </ul>
         </div>
       )}
-
-      <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
-        <GoogleAd slot="4105556455" />
-      </div>
 
           <ShareGeneratedName form={form} />
 
