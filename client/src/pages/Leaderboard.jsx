@@ -58,9 +58,9 @@ export default function Leaderboard() {
       <p className="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
         These names have captured the imaginations of creators across the realms. Vote for your favorites, discover new inspirations, and see which names rise to legendary status.
       </p>
-        <GoogleAd slot="4105556455" />
-              
-      </div>
+        <div className="mb-10">
+          <GoogleAd slot="4105556455" />
+        </div>
     </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         <div>
