@@ -19,17 +19,21 @@ export default function NameGallery() {
     const lastVoteTime = localStorage.getItem(voteKey);
     const now = Date.now();
 
+    // Check if vote was already cast today
     if (lastVoteTime && now - parseInt(lastVoteTime) < 24 * 60 * 60 * 1000) {
       alert("You can only vote for this name once per day.");
       return;
     }
 
-    const docRef = doc(db, 'sharedNames', id);
-    await updateDoc(docRef, {
-      [type]: increment(1),
-    });
-
-    localStorage.setItem(voteKey, now.toString());
+    try {
+      const docRef = doc(db, 'sharedNames', id);
+      await updateDoc(docRef, {
+        [type]: increment(1),
+      });
+      localStorage.setItem(voteKey, now.toString());
+    } catch (error) {
+      console.error("Vote failed:", error.message);
+    }
   };
 
   const top10 = [...names].sort((a, b) => (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes)).slice(0, 10);
@@ -63,6 +67,44 @@ export default function NameGallery() {
             🧭 See the Hall of Legends
           </a>
         </div>
+      </div>
+    </div>
+  );
+}
+function NameCard({ name, vote }) {
+  const [hasVotedUp, setHasVotedUp] = useState(false);
+  const [hasVotedDown, setHasVotedDown] = useState(false);
+
+  useEffect(() => {
+    const now = Date.now();
+    const up = localStorage.getItem(`voted-${name.id}-upvotes`);
+    const down = localStorage.getItem(`voted-${name.id}-downvotes`);
+    if (up && now - parseInt(up) < 24 * 60 * 60 * 1000) setHasVotedUp(true);
+    if (down && now - parseInt(down) < 24 * 60 * 60 * 1000) setHasVotedDown(true);
+  }, [name.id]);
+
+  return (
+    <div className="bg-gray-800 p-4 rounded shadow mb-4">
+      <p className="text-2xl font-bold mb-1">{name.name}</p>
+      <p className="text-sm text-gray-400 mb-2">
+        {Object.entries(name.attributes).map(([k, v]) => `${k}: ${v}`).join(' | ')}
+      </p>
+      <div className="flex items-center gap-4">
+        <button
+          onClick={() => vote(name.id, 'upvotes')}
+          disabled={hasVotedUp}
+          className={`hover:text-green-400 ${hasVotedUp ? 'opacity-50 cursor-not-allowed' : ''}`}
+        >
+          👍 {name.upvotes}
+        </button>
+
+        <button
+          onClick={() => vote(name.id, 'downvotes')}
+          disabled={hasVotedDown}
+          className={`hover:text-red-400 ${hasVotedDown ? 'opacity-50 cursor-not-allowed' : ''}`}
+        >
+          👎 {name.downvotes}
+        </button>
       </div>
     </div>
   );
