@@ -82,6 +82,7 @@ export default function Privacy() {
               Neoantica.com
             </a>.
           </p>
+          <p>Thank you for using our site!</p>
         </div>
 
         <Link
