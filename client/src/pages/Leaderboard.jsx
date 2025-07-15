@@ -32,61 +32,63 @@ export default function Leaderboard() {
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Hall of Legends | Fantasy Name Leaderboard</title>
         <meta
-            name="description"
-            content="Explore the Hall of Legends – the top-voted fantasy names shared by creators across realms. Vote for your favorites or add your own creation!"
+          name="description"
+          content="Explore the Hall of Legends – the top-voted fantasy names shared by creators across realms. Vote for your favorites or add your own creation!"
         />
         <meta
-            name="keywords"
-            content="fantasy name generator leaderboard, top RPG names, best fantasy names, fantasy name voting, shared fantasy names"
+          name="keywords"
+          content="fantasy name generator leaderboard, top RPG names, best fantasy names, fantasy name voting, shared fantasy names"
         />
         <meta property="og:title" content="Hall of Legends | Fantasy Name Creator" />
         <meta
-            property="og:description"
-            content="Vote on the best fantasy names or share your own in the Hall of Legends – powered by the community."
+          property="og:description"
+          content="Vote on the best fantasy names or share your own in the Hall of Legends – powered by the community."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fantasynamecreator.com/leaderboard" />
         <meta property="og:image" content="https://fantasynamecreator.com/images/og-leaderboard.jpg" />
-    </Helmet>
-    
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6">
-      <h1 className="text-4xl font-bold text-center mb-10">🧭 Hall of Legends</h1>
+      </Helmet>
 
-      <p className="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
-        These names have captured the imaginations of creators across the realms. Vote for your favorites, discover new inspirations, and see which names rise to legendary status.
-      </p>
+      <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-6">
+        <h1 className="text-4xl font-bold text-center mb-10">🧭 Hall of Legends</h1>
+
+        <p className="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
+          These names have captured the imaginations of creators across the realms. Vote for your favorites, discover new inspirations, and see which names rise to legendary status.
+        </p>
+
         <div className="mb-10">
           <GoogleAd slot="4105556455" />
         </div>
-    </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">🏆 Top 20 Voted Names</h2>
-          {top20.map(n => (
-            <NameCard key={n.id} name={n} />
-          ))}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">🏆 Top 20 Voted Names</h2>
+            {top20.map(n => (
+              <NameCard key={n.id} name={n} />
+            ))}
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">🆕 Newest 20 Names</h2>
+            {newest20.map(n => (
+              <NameCard key={n.id} name={n} />
+            ))}
+          </div>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">🆕 Newest 20 Names</h2>
-          {newest20.map(n => (
-            <NameCard key={n.id} name={n} />
-          ))}
+        <div className="mt-12 text-center">
+          <Link
+            to="/"
+            className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+          >
+            ← Back to Fantasy Name Creator
+          </Link>
         </div>
       </div>
 
-      <div className="mt-12 text-center">
-        <Link
-          to="/"
-          className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-        >
-          ← Back to Fantasy Name Creator
-        </Link>
-      </div>
-    </div>
       <Footer />
     </>
   );
