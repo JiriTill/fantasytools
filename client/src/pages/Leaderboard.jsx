@@ -4,6 +4,7 @@ import { db } from '../firebase';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
+import GoogleAd from '../components/GoogleAd';
 
 export default function Leaderboard() {
   const [names, setNames] = useState([]);
@@ -57,11 +58,8 @@ export default function Leaderboard() {
       <p className="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
         These names have captured the imaginations of creators across the realms. Vote for your favorites, discover new inspirations, and see which names rise to legendary status.
       </p>
-
-              {/* Google Ad Placeholder */}
-      <div className="w-full flex justify-center mb-8">
-      <div className="bg-gray-700 text-white p-4 rounded shadow-lg w-full max-w-xl text-center">
-              [ Google Ad Goes Here ]
+        <GoogleAd slot="4105556455" />
+              
       </div>
     </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
