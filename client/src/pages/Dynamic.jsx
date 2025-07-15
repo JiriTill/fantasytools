@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
+import GoogleAd from '../components/GoogleAd';
 
 export default function Dynamic() {
   const [form, setForm] = useState({
@@ -66,6 +67,8 @@ export default function Dynamic() {
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Describe your name’s purpose, cultural inspiration, and tone to let our AI craft 10 original, context-driven names.
           </p>
+          
+            <GoogleAd slot="4105556455" />
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
@@ -130,10 +133,6 @@ export default function Dynamic() {
               </ul>
             </div>
           )}
-
-          <div className="mt-12 w-full max-w-md text-center border-t border-indigo-700 pt-6">
-            <p className="text-sm text-gray-400">[Google Ads or affiliate space here]</p>
-          </div>
 
           <ShareGeneratedName form={form} />
 
