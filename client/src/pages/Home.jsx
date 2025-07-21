@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import NameGallery from '../components/NameGallery';
 import Footer from '../components/Footer';
 import { useEffect } from 'react';
+import GoogleAd from '../components/GoogleAd';
 
 const categories = [
   { name: 'Worlds and places', path: '/world', image: '/images/world.png' },
