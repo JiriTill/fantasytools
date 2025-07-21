@@ -14,6 +14,7 @@ import Faction from './pages/Faction';
 import Religion from './pages/Religion';
 import Item from './pages/Item';
 import Dynamic from './pages/Dynamic';
+import GoogleAd from './components/GoogleAd';
 
 function App() {
   return (
