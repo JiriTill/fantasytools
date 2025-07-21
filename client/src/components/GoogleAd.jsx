@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-export default function GoogleAd({ slot }) {
+export default function GoogleAd() {
   useEffect(() => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (e) {
-      console.error("Adsbygoogle error:", e);
+      console.error('Google Ads error:', e);
     }
   }, []);
 
@@ -15,12 +15,12 @@ export default function GoogleAd({ slot }) {
         className="adsbygoogle"
         style={{ display: 'block' }}
         data-ad-client="ca-pub-7735418117469222"
-        data-ad-slot={slot}
+        data-ad-slot="4105556455"
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
       <div className="text-sm text-gray-400 italic mt-2">
-        [Google Ad]
+        [Google Ads or affiliate banner]
       </div>
     </div>
   );
