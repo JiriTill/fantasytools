@@ -80,10 +80,9 @@ export default function Home() {
         <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-10">
           Choose a category, fine-tune your settings, and let our AI generate 10 unique, lore-rich names. Built for writers, worldbuilders, game masters, and fantasy enthusiasts.
         </p>
-
-        {/* Google Ads Block */}
-       <GoogleAd slot="4105556455" />
-
+  
+      <GoogleAd /> 
+     
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">
           What do you want to create?
         </h2>
