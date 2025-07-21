@@ -81,19 +81,7 @@ export default function Home() {
         </p>
 
         {/* Google Ads Block */}
-        <div className="w-full max-w-2xl mx-auto text-center border-t border-indigo-700 pt-6 mb-10">
-          <ins
-            className="adsbygoogle"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-7735418117469222"
-            data-ad-slot="4105556455"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <div className="text-sm text-gray-400 italic mt-2">
-            [Google Ads or affiliate banner]
-          </div>
-        </div>
+       <GoogleAd slot="4105556455" />
 
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">
           What do you want to create?
