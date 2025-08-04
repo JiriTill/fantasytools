@@ -63,12 +63,12 @@ Rules:
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
           <h1 className="text-3xl font-bold mb-6">Fantasy Religion Name Creator</h1>
+          
+                        <GoogleAd slot="4105556455" />
 
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Craft 10 original religion names tailored to your world’s tone, culture, and divine alignment. Ideal for pantheons, faiths, cults, and mystical orders.
           </p>
-          
-              <GoogleAd slot="4105556455" />
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
