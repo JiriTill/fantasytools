@@ -19,9 +19,6 @@ export default function GoogleAd() {
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
-      <div className="text-sm text-gray-400 italic mt-2">
-        [Google Ads or affiliate banner]
-      </div>
     </div>
   );
 }
