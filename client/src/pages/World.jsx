@@ -67,11 +67,11 @@ Return the names as a simple numbered list (1-10), with no additional text or co
         <main className="p-6 flex flex-col items-center pb-20">
           <h1 className="text-3xl font-bold mb-6">Fantasy World and Place Name Creator</h1>
 
+                    <GoogleAd slot="4105556455" />
+
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Choose world or place attributes and create 10 original fantasy names. Perfect for continents, realms, kingdoms, or mysterious lands.
           </p>
-          
-          <GoogleAd slot="4105556455" />
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
