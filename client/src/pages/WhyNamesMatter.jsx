@@ -4,33 +4,63 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import { useEffect } from 'react';
 
 export default function WhyNamesMatter() {
+  useEffect(() => {
+    const ads = document.getElementsByClassName("adsbygoogle");
+    for (let i = 0; i < ads.length; i++) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error("Adsbygoogle error:", e);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
       <main className="p-6 flex flex-col items-center pb-20">
 
       <Helmet>
-        <title>Why Names Matter in Fantasy | Fantasy Name Creator</title>
+        <title>Why Names Matter: A Guide to Naming in Fantasy | Fantasy Name Creator</title>
         <meta
           name="description"
-          content="Discover why names are crucial in fantasy storytelling, RPGs, and worldbuilding. Learn how meaningful names create immersion and bring your characters to life."
+          content="Discover why a good name is crucial for fantasy storytelling and worldbuilding. Learn how to use our AI fantasy name generator to create lore and depth in your projects."
         />
         <meta
           name="keywords"
-          content="fantasy names, worldbuilding, character creation, RPG naming, immersion, storytelling tips"
+          content="fantasy names, worldbuilding, character creation, RPG naming, storytelling tips, lore, naming conventions"
         />
-        <meta property="og:title" content="Why Names Matter in Fantasy | FantasyTools" />
+        <meta property="og:title" content="Why Names Matter: A Guide to Naming in Fantasy" />
         <meta
           property="og:description"
-          content="Names shape how players and readers experience your world. Learn how to make them matter."
+          content="Explore the art of naming in fantasy. Learn how to craft meaningful names that enhance your characters and worlds with our name generator."
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://fantasytools.com/why-names-matter" />
-        <meta property="og:image" content="https://fantasytools.com/images/og-image.jpg" />
+        <meta property="og:url" content="https://fantasynamecreator.com/why-names-matter" />
+        <meta property="og:image" content="https://fantasynamecreator.com/images/og-image.jpg" />
       </Helmet>
 
       <div className="max-w-3xl space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
+            <Link
+              to="/"
+              className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors mb-4 md:mb-0"
+            >
+              ← Back to Fantasy Name Creator
+            </Link>
+            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-center md:text-right">
+              <span className="text-lg font-semibold">Related Articles:</span>
+              <Link to="/blog/tips-for-worldbuilding" className="text-purple-400 hover:text-purple-300 underline">
+                5 Tips for Worldbuilding
+              </Link>
+              <Link to="/blog/lore-rich-names" className="text-purple-400 hover:text-purple-300 underline">
+                Creating Lore-Rich Names
+              </Link>
+            </div>
+        </div>
+
         <h1 className="text-4xl font-bold text-white text-center mb-6">
           Why Names Matter in Fantasy Worlds?
         </h1>
@@ -73,13 +103,6 @@ export default function WhyNamesMatter() {
         <p className="italic text-sm text-gray-500">
           “A name is not just what you're called. It's who you are when legends are told.”
         </p>
-
-        <Link
-          to="/"
-          className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-        >
-          ← Back to Fantasy Name Creator
-        </Link>
       </div>
 
         <MultiplexAd />
