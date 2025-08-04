@@ -68,8 +68,6 @@ Rules:
             Create names for powerful guilds, cults, or noble houses. Tune the cultural influence, tone, and alignment to shape your ideal fantasy faction.
           </p>
 
-          <GoogleAd slot="4105556455" />
-
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
               Faction Type:
