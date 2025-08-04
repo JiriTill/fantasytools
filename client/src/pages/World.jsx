@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
+import MultiplexAd from '../components/MultiplexAd';
 
 export default function World() {
   const [form, setForm] = useState({
@@ -171,6 +172,9 @@ Return the names as a simple numbered list (1-10), with no additional text or co
           >
             ← Back to Fantasy Name Creator
           </Link>
+
+          <MultiplexAd />
+          
         </main>
         <Footer />
       </div>
