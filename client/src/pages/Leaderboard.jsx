@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
+import MultiplexAd from '../components/MultiplexAd';
 
 export default function Leaderboard() {
   const [names, setNames] = useState([]);
@@ -88,6 +89,8 @@ export default function Leaderboard() {
           </Link>
         </div>
       </div>
+      
+      <MultiplexAd />
 
       <Footer />
     </>
