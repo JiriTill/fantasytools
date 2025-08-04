@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
+import MultiplexAd from '../components/MultiplexAd';
 
 export default function Character() {
   const [form, setForm] = useState({
@@ -190,6 +191,7 @@ Provide 10 distinct names that match the character’s attributes and setting.
              >
                 ← Back to Fantasy Name Creator
             </Link>
+        <MultiplexAd />
         </main>
       <Footer />
       
