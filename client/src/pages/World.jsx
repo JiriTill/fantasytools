@@ -29,7 +29,7 @@ export default function World() {
     setNames([]);
 
     try {
-const prompt = `
+      const prompt = `
 You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
 
 Generate 10 unique and original names for places that sound like they belong on a fantasy map for a ${form.type} with a ${form.climate} climate, inspired by a ${form.culture} cultural aesthetic, featuring a ${form.magicLevel} level of magic, and evoking a ${form.tone} tone.
@@ -66,11 +66,10 @@ Return the names as a simple numbered list (1-10), with no additional text or co
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
           <h1 className="text-3xl font-bold mb-6">Fantasy World and Place Name Creator</h1>
+          <GoogleAd />
 
-                    <GoogleAd />
-
-            <p>Every great story begins with a great world, and every great world needs a great name. Our <strong>Fantasy World Name Generator</strong> is the perfect starting point for any writer, game designer, or creative looking to create a unique and memorable setting. The name of your world is the first thing your audience will hear, and it sets the tone for everything that follows. It can evoke a sense of ancient history, magical wonder, or untamed wilderness. Our tool is specifically designed to help you craft a name that does all of this and more.
-            </p>
+          {/* This is the intro text, which you had in the correct location */}
+          <p>Every great story begins with a great world, and every great world needs a great name. Our <strong>Fantasy World Name Generator</strong> is the perfect starting point for any writer, game designer, or creative looking to create a unique and memorable setting. The name of your world is the first thing your audience will hear, and it sets the tone for everything that follows. It can evoke a sense of ancient history, magical wonder, or untamed wilderness. Our tool is specifically designed to help you craft a name that does all of this and more.</p>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
@@ -81,7 +80,6 @@ Return the names as a simple numbered list (1-10), with no additional text or co
                 ))}
               </select>
             </label>
-
             <label className="block">
               Climate:
               <select name="climate" value={form.climate} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
@@ -90,12 +88,10 @@ Return the names as a simple numbered list (1-10), with no additional text or co
                 ))}
               </select>
             </label>
-
             <label className="block">
               Culture Influence:
               <input name="culture" value={form.culture} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded" />
             </label>
-
             <label className="block">
               Magic Level:
               <select name="magicLevel" value={form.magicLevel} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
@@ -104,7 +100,6 @@ Return the names as a simple numbered list (1-10), with no additional text or co
                 ))}
               </select>
             </label>
-
             <label className="block">
               Tone:
               <select name="tone" value={form.tone} onChange={handleChange} className="mt-1 w-full p-2 bg-gray-800 text-white rounded">
@@ -113,7 +108,6 @@ Return the names as a simple numbered list (1-10), with no additional text or co
                 ))}
               </select>
             </label>
-
             <button
               type="submit"
               disabled={loading}
@@ -149,7 +143,6 @@ Return the names as a simple numbered list (1-10), with no additional text or co
                 'Generate Names'
               )}
             </button>
-
           </form>
 
           {names.length > 0 && (
@@ -172,20 +165,17 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             ← Back to Fantasy Name Creator
           </Link>
 
-            <hr />
+          <hr className="my-10 w-full" />
 
-          <div>
+          {/* NEW: This is the bottom SEO text section */}
+          <div className="w-full max-w-2xl text-left">
             <h2>Why Your World Needs a Great Name</h2>
-            <p>We use a sophisticated system to combine elements from different languages, mythologies, and geographical features to generate thousands of original names. Whether you need a name for a sprawling continent, a single kingdom, a mythical city, or a hidden dungeon, our generator can provide the inspiration you need. You can find names that sound like they belong in a classic fantasy epic, or you can find something completely new and unique to set your project apart.
-            </p>
-            
-            <h2>How Our Generator Helps You Build a Believable World</h2>
-            <p>Finding a name for your world is a vital part of the world-building process. It’s not just about a cool sound; it’s about a name that feels right. A name that suggests a rich history, a hidden danger, or a hopeful future. Our generator helps you explore different ideas and themes, offering a wide array of options to choose from. Stop struggling with naming your world and start building the story within it. Let our <strong>world name maker</strong> do the heavy lifting so you can focus on the fun part: creating the lore, characters, and adventures that will captivate your audience.
-            </p>
-          </div>
+            <p>We use a sophisticated system to combine elements from different languages, mythologies, and geographical features to generate thousands of original names. Whether you need a name for a sprawling continent, a single kingdom, a mythical city, or a hidden dungeon, our generator can provide the inspiration you need. You can find names that sound like they belong in a classic fantasy epic, or you can find something completely new and unique to set your project apart.</p>
 
+            <h2>How Our Generator Helps You Build a Believable World</h2>
+            <p>Finding a name for your world is a vital part of the world-building process. It’s not just about a cool sound; it’s about a name that feels right. A name that suggests a rich history, a hidden danger, or a hopeful future. Our generator helps you explore different ideas and themes, offering a wide array of options to choose from. Stop struggling with naming your world and start building the story within it. Let our <strong>world name maker</strong> do the heavy lifting so you can focus on the fun part: creating the lore, characters, and adventures that will captivate your audience.</p>
+          </div>
           <MultiplexAd />
-          
         </main>
         <Footer />
       </div>
