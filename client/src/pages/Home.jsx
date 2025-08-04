@@ -82,7 +82,7 @@ export default function Home() {
         </p>
 
         <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-10">
-          Our <strong>fantasy name generator**</strong> is the perfect tool for writers, worldbuilders, and game masters. Simply choose a category and let our AI craft 10 unique, lore-rich names just for you.
+          Our <strong>fantasy name generator</strong> is the perfect tool for writers, worldbuilders, and game masters. Simply choose a category and let our AI craft 10 unique, lore-rich names just for you.
         </p>
      
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">
