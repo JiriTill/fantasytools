@@ -1,13 +1,9 @@
 {
+  // The "redirects" array defines a list of URL redirection rules.
   "redirects": [
     {
-      "source": "https://fantasynamecreator.com/(.*)",
-      "destination": "https://www.fantasynamecreator.com/$1",
-      "permanent": true
-    },
-    {
       "source": "/(.*)",
-      "has": [{ "type": "header", "key": "x-forwarded-proto", "value": "http" }],
+      "has": [{ "type": "host", "value": "fantasynamecreator.com" }],
       "destination": "https://www.fantasynamecreator.com/$1",
       "permanent": true
     }
