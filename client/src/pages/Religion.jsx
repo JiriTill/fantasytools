@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
+import MultiplexAd from '../components/MultiplexAd';
 
 export default function Religion() {
   const [form, setForm] = useState({
@@ -158,6 +159,7 @@ Rules:
           >
             ← Back to Fantasy Name Creator
           </Link>
+          <MultiplexAd />
         </main>
         <Footer />
       </div>
