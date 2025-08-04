@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
+import MultiplexAd from '../components/MultiplexAd';
 
 export default function Dynamic() {
   const [form, setForm] = useState({
@@ -142,6 +143,7 @@ export default function Dynamic() {
           >
             ← Back to Fantasy Name Creator
           </Link>
+          <MultiplexAd />
         </main>
         <Footer />
       </div>
