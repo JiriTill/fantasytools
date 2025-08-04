@@ -1,5 +1,4 @@
 {
-  // The "redirects" array defines a list of URL redirection rules.
   "redirects": [
     {
       "source": "/(.*)",
