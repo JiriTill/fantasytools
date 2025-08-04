@@ -69,7 +69,7 @@ Rules:
 
           {/* NEW: Replaced the old intro paragraph with a new, centered one */}
           <div className="w-full max-w-2xl text-center mb-10">
-            <p>Every legendary hero needs a legendary weapon, every epic quest requires a powerful artifact. Our **Fantasy Item Name Generator** is the ultimate tool for breathing life into the magical and mundane objects of your world. Whether you need to name a cursed sword, a blessed amulet, a mysterious scroll, or a potent elixir, our AI provides unique names that capture the essence of your item's history, power, and purpose.</p>
+            <p>Every legendary hero needs a legendary weapon, every epic quest requires a powerful artifact. Our <strong>Fantasy Item Name Generator</strong> is the ultimate tool for breathing life into the magical and mundane objects of your world. Whether you need to name a cursed sword, a blessed amulet, a mysterious scroll, or a potent elixir, our AI provides unique names that capture the essence of your item's history, power, and purpose.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
@@ -172,10 +172,10 @@ Rules:
           {/* NEW: Bottom SEO text section with proper styling. */}
           <div className="w-full max-w-2xl text-left">
             <h2 className="text-2xl font-bold mt-8 mb-4">The Ultimate Fantasy Item Name Generator</h2>
-            <p>Every adventurer needs a legendary item. Whether it's a mighty sword, a powerful spellbook, or a mystical amulet, a great name can tell a story on its own. Our **fantasy item name generator** is built to help you find the perfect name for any item you can imagine. By specifying the item type, rarity, and magical properties, you can create a name that fits perfectly into your fantasy world, whether it's for a Dungeons & Dragons campaign, a novel, or a video game. Stop struggling with generic item names and start crafting legends.</p>
+            <p>Every adventurer needs a legendary item. Whether it's a mighty sword, a powerful spellbook, or a mystical amulet, a great name can tell a story on its own. Our <strong>fantasy item name generator</strong> is built to help you find the perfect name for any item you can imagine. By specifying the item type, rarity, and magical properties, you can create a name that fits perfectly into your fantasy world, whether it's for a Dungeons & Dragons campaign, a novel, or a video game. Stop struggling with generic item names and start crafting legends.</p>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">Finding the Perfect Name with Our Magic Weapon Name Generator</h2>
-            <p>Our tool offers the most flexible **magic weapon name generator** on the web. Looking for an **epic sword name generator**? Simply choose "Weapon" as the type, set the rarity to "Legendary," and describe its magical effect, such as "Fire" or "Shadow." The generator will produce a list of evocative names like "Blaze of the Phoenix" or "Umbral Fury." The same applies to other items, from potions and scrolls to armor and jewelry. Our tool ensures your legendary items have names that are just as memorable as their stories. Give our tool a try and see what epic names you can discover!</p>
+            <p>Our tool offers the most flexible <strong>magic weapon name generator</strong> on the web. Looking for an <strong>epic sword name generator</strong>? Simply choose "Weapon" as the type, set the rarity to "Legendary," and describe its magical effect, such as "Fire" or "Shadow." The generator will produce a list of evocative names like "Blaze of the Phoenix" or "Umbral Fury." The same applies to other items, from potions and scrolls to armor and jewelry. Our tool ensures your legendary items have names that are just as memorable as their stories. Give our tool a try and see what epic names you can discover!</p>
           </div>
           
           <MultiplexAd />
