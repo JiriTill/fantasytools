@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
+import MultiplexAd from '../components/MultiplexAd';
 
 export default function WhyNamesMatter() {
   return (
@@ -80,6 +81,9 @@ export default function WhyNamesMatter() {
           ← Back to Fantasy Name Creator
         </Link>
       </div>
+
+        <MultiplexAd />
+        
         </main>
       <Footer />
     </div>
