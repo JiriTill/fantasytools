@@ -10,8 +10,7 @@ export default function MultiplexAd() {
   }, []);
 
   return (
-    <>
-      {/* Google AdSense script (only once in your app is enough, can be in index.html or Helmet) */}
+    <div className="w-full max-w-3xl mx-auto my-8 text-center">
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
@@ -19,6 +18,6 @@ export default function MultiplexAd() {
         data-ad-client="ca-pub-7735418117469222"
         data-ad-slot="5497946015"
       ></ins>
-    </>
+    </div>
   );
 }
