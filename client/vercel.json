@@ -1,19 +1,11 @@
-// vercel.json
-// This file should be placed in the root of your project directory.
 {
-  // The "redirects" array defines a list of URL redirection rules.
   "redirects": [
     {
-      // This rule redirects all traffic from the non-www domain to the www domain.
-      // The "destination" specifies the target URL with the www prefix.
-      // "permanent: true" sets the HTTP status code to 308, which is a permanent redirect.
       "source": "https://fantasynamecreator.com/(.*)",
       "destination": "https://www.fantasynamecreator.com/$1",
       "permanent": true
     },
     {
-      // This rule is for handling potential http to https redirects, though Vercel
-      // often handles this automatically.
       "source": "/(.*)",
       "has": [{ "type": "header", "key": "x-forwarded-proto", "value": "http" }],
       "destination": "https://www.fantasynamecreator.com/$1",
