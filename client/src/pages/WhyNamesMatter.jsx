@@ -36,7 +36,7 @@ export default function WhyNamesMatter() {
         </h1>
         <p className="italic text-sm text-gray-500">Published: July, 2025 | Read Time: 1 Minute</p>
         <p className="text-lg text-gray-300">
-          In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and entire worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a fantasy novelist, or a     dedicated worldbuilder, the right name sets the tone for everything that follows.
+          In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and entire worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a fantasy novelist, or a dedicated worldbuilder, the right name sets the tone for everything that follows.
         </p>
 
         <p className="text-lg text-gray-300">
@@ -51,14 +51,14 @@ export default function WhyNamesMatter() {
       />
     </div>
         <p className="text-lg text-gray-300">
-         That’s where a fantasy name creator like the ours becomes an essential tool. Designed for RPG character creation, storytelling, and immersive fantasy worldbuilding, our AI-powered tool crafts unique names tailored to your exact needs—race, gender, tone, social class, and more.
+          That’s where a fantasy name creator like the ours becomes an essential tool. Designed for RPG character creation, storytelling, and immersive fantasy worldbuilding, our AI-powered tool crafts unique names tailored to your exact needs—race, gender, tone, social class, and more.
         </p>
 
         <p className="text-lg text-gray-300">
           Why do names matter so much? Because in fantasy, every detail counts. A generic or out-of-place name can shatter the illusion of a rich, believable world. But a carefully chosen one reinforces it. For example, names for elves might sound melodic and ancient, while dwarves may favor rough, consonant-heavy tones. Orc names may carry aggression, and noble names may sound refined or ceremonial.
         </p>
         
-         <GoogleAd slot="4105556455" />
+          <GoogleAd slot="4105556455" />
         
         <p className="text-lg text-gray-300">
         With Neoantica’s fantasy name creator, you don’t need to spend hours agonizing over naming conventions. Whether you're creating a new hero, forging a mythical kingdom, or inventing a secretive cult, our generator offers hundreds of unique, AI-crafted options that resonate with the tone and lore of your world.
@@ -69,7 +69,7 @@ export default function WhyNamesMatter() {
         <p className="text-lg text-gray-300">
         Make every name matter. Dive into the world of fantasy creation with Neoantica Name Generator—where identity begins with the perfect name.
         </p>
-   
+    
         <p className="italic text-sm text-gray-500">
           “A name is not just what you're called. It's who you are when legends are told.”
         </p>
