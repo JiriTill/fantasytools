@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
 
-
 const categories = [
   { name: 'Worlds and places', path: '/world', image: '/images/world.png' },
   { name: 'Character', path: '/character', image: '/images/character.png' },
@@ -14,7 +13,7 @@ const categories = [
   { name: 'Religion', path: '/religion', image: '/images/religion.png' },
   { name: 'Item', path: '/item', image: '/images/item.png' },
   { name: 'Dynamic', path: '/dynamic', image: '/images/dynamic.png' }
-]
+];
 
 export default function Home() {
       useEffect(() => {
@@ -81,6 +80,7 @@ export default function Home() {
           Create unique fantasy names for your worlds, characters, factions, religions, and legendary items.
         </p>
 
+        {/* Corrected bold tag syntax */}
         <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-10">
           Our <strong>fantasy name generator</strong> is the perfect tool for writers, worldbuilders, and game masters. Simply choose a category and let our AI craft 10 unique, lore-rich names just for you.
         </p>
@@ -116,8 +116,8 @@ export default function Home() {
           <NameGallery />
         </div>
         
-        {/* New SEO content at the bottom of the page */}
-        <div className="w-full max-w-2xl text-left mt-10">
+        {/* New SEO content at the bottom of the page with corrected bold tags and bottom margin */}
+        <div className="w-full max-w-2xl text-left mt-10 mb-10">
           <h2 className="text-2xl font-bold mb-4">Crafting Your World with the Fantasy Name Generator</h2>
           <p className="mb-4">Welcome to FantasyNameCreator.com, your ultimate resource for crafting unique and immersive fantasy names. For every worldbuilder, writer, or game master, a great name is the first step toward a great story. Our advanced <strong>AI name generator</strong> is designed to provide you with a constant stream of inspiration for your characters, places, and lore.</p>
 
