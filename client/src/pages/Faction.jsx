@@ -61,6 +61,9 @@ Rules:
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
         <main className="p-6 flex flex-col items-center pb-20">
           <h1 className="text-3xl font-bold mb-6">Fantasy Faction Name Generator</h1>
+          
+                    <GoogleAd slot="4105556455" />
+
           <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
             Create names for powerful guilds, cults, or noble houses. Tune the cultural influence, tone, and alignment to shape your ideal fantasy faction.
           </p>
