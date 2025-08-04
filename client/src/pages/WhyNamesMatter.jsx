@@ -43,24 +43,6 @@ export default function WhyNamesMatter() {
       </Helmet>
 
       <div className="max-w-3xl space-y-6">
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
-            <Link
-              to="/"
-              className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors mb-4 md:mb-0"
-            >
-              ← Back to Fantasy Name Creator
-            </Link>
-            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-center md:text-right">
-              <span className="text-lg font-semibold">Related Articles:</span>
-              <Link to="/blog/tips-for-worldbuilding" className="text-purple-400 hover:text-purple-300 underline">
-                5 Tips for Worldbuilding
-              </Link>
-              <Link to="/blog/lore-rich-names" className="text-purple-400 hover:text-purple-300 underline">
-                Creating Lore-Rich Names
-              </Link>
-            </div>
-        </div>
-
         <h1 className="text-4xl font-bold text-white text-center mb-6">
           Why Names Matter in Fantasy Worlds?
         </h1>
@@ -103,6 +85,30 @@ export default function WhyNamesMatter() {
         <p className="italic text-sm text-gray-500">
           “A name is not just what you're called. It's who you are when legends are told.”
         </p>
+        
+        {/* New section for related articles with a box design */}
+        <div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+            <h2 className="text-2xl font-bold mb-4 text-white">Continue Your Journey</h2>
+            <div className="flex flex-col space-y-3">
+              <Link to="/blog/tips-for-worldbuilding" className="text-lg text-purple-400 hover:text-purple-300 transition-colors">
+                → 5 Tips for Worldbuilding and Creating a Cohesive World
+              </Link>
+              <Link to="/blog/lore-rich-names" className="text-lg text-purple-400 hover:text-purple-300 transition-colors">
+                → How to Create Lore-Rich Names for Your Characters
+              </Link>
+              <Link to="/blog/gender-specific-names" className="text-lg text-purple-400 hover:text-purple-300 transition-colors">
+                → Fantasy Female vs. Male Names: Crafting Distinctive Identities
+              </Link>
+            </div>
+        </div>
+        
+        {/* The back button is now at the bottom */}
+        <Link
+          to="/"
+          className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+        >
+          ← Back to Fantasy Name Creator
+        </Link>
       </div>
 
         <MultiplexAd />
