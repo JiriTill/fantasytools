@@ -69,9 +69,9 @@ Return the names as a simple numbered list (1-10), with no additional text or co
 
                     <GoogleAd />
 
-          <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
-            Every great story begins with a great world, and every great world needs a great name. Our Fantasy World Name Generator is the perfect starting point for any writer, game designer, or creative looking to create a unique and memorable setting. The name of your world is the first thing your audience will hear, and it sets the tone for everything that follows. It can evoke a sense of ancient history, magical wonder, or untamed wilderness. Our tool is specifically designed to help you craft a name that does all of this and more.
-          </p>
+          <div class="intro-text">
+            <p>Every great story begins with a great world, and every great world needs a great name. Our <strong>Fantasy World Name Generator</strong> is the perfect starting point for any writer, game designer, or creative looking to create a unique and memorable setting. The name of your world is the first thing your audience will hear, and it sets the tone for everything that follows. It can evoke a sense of ancient history, magical wonder, or untamed wilderness. Our tool is specifically designed to help you craft a name that does all of this and more.</p>
+          </div>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
@@ -173,12 +173,14 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             ← Back to Fantasy Name Creator
           </Link>
 
-          <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
-            We use a sophisticated system to combine elements from different languages, mythologies, and geographical features to generate thousands of original names. Whether you need a name for a sprawling continent, a single kingdom, a mythical city, or a hidden dungeon, our generator can provide the inspiration you need. You can find names that sound like they belong in a classic fantasy epic, or you can find something completely new and unique to set your project apart.
-          </p>
-          <p className="text-lg text-center max-w-2xl text-gray-300 mb-6">
-            Finding a name for your world is a vital part of the world-building process. It’s not just about a cool sound; it’s about a name that feels right. A name that suggests a rich history, a hidden danger, or a hopeful future. Our generator helps you explore different ideas and themes, offering a wide array of options to choose from. Stop struggling with naming your world and start building the story within it. Let our world name maker do the heavy lifting so you can focus on the fun part: creating the lore, characters, and adventures that will captivate your audience.
-          </p>
+          <hr style="margin-top: 40px; margin-bottom: 40px; border-top: 1px solid #eee;">
+          <div class="seo-content-box" style="padding: 20px; border: 1px solid #f0f0f0; border-radius: 8px; background-color: #fafafa;">
+            <h2>Why Your World Needs a Great Name</h2>
+            <p>We use a sophisticated system to combine elements from different languages, mythologies, and geographical features to generate thousands of original names. Whether you need a name for a sprawling continent, a single kingdom, a mythical city, or a hidden dungeon, our generator can provide the inspiration you need. You can find names that sound like they belong in a classic fantasy epic, or you can find something completely new and unique to set your project apart.</p>
+          
+            <h2>How Our Generator Helps You Build a Believable World</h2>
+            <p>Finding a name for your world is a vital part of the world-building process. It’s not just about a cool sound; it’s about a name that feels right. A name that suggests a rich history, a hidden danger, or a hopeful future. Our generator helps you explore different ideas and themes, offering a wide array of options to choose from. Stop struggling with naming your world and start building the story within it. Let our <strong>world name maker</strong> do the heavy lifting so you can focus on the fun part: creating the lore, characters, and adventures that will captivate your audience.</p>
+          </div>
 
           <MultiplexAd />
           
