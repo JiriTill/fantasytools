@@ -67,7 +67,7 @@ Rules:
           <GoogleAd slot="4105556455" />
 
           <div className="w-full max-w-2xl text-center mb-10">
-            <p>The pantheon of gods, the whispers of an ancient cult, or the righteous faith of a divine order—religion is a cornerstone of any rich fantasy world. Our **Fantasy Religion Name Generator** is designed to help you craft names that convey a sense of history, power, and mystery. Whether you’re a Dungeon Master creating a new pantheon for your campaign or a writer building the lore for a new novel, our tool provides a wealth of inspiration.</p>
+            <p>The pantheon of gods, the whispers of an ancient cult, or the righteous faith of a divine order—religion is a cornerstone of any rich fantasy world. Our <strong>Fantasy Religion Name Generator</strong> is designed to help you craft names that convey a sense of history, power, and mystery. Whether you’re a Dungeon Master creating a new pantheon for your campaign or a writer building the lore for a new novel, our tool provides a wealth of inspiration.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
@@ -164,10 +164,10 @@ Rules:
           
           <div className="w-full max-w-2xl text-left">
             <h2 className="text-2xl font-bold mt-8 mb-4">Crafting Divine and Mysterious Religion Names</h2>
-            <p>A well-named religion can be a powerful storytelling element, hinting at its origins, tenets, and the very nature of its deity. Our **fantasy religion name generator** helps you create names that feel authentic to your world. Whether you're a Dungeon Master, a writer, or a game designer, this tool gives you the power to craft names that will resonate with your audience and add depth to your worldbuilding. From names for righteous churches to secretive cults and ancient pantheons, our generator has you covered.</p>
+            <p>A well-named religion can be a powerful storytelling element, hinting at its origins, tenets, and the very nature of its deity. Our <strong>fantasy religion name generator</strong> helps you create names that feel authentic to your world. Whether you're a Dungeon Master, a writer, or a game designer, this tool gives you the power to craft names that will resonate with your audience and add depth to your worldbuilding. From names for righteous churches to secretive cults and ancient pantheons, our generator has you covered.</p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">How to Use the Cult Name Generator and More</h2>
-            <p>Our tool simplifies the process of creating impactful names. Just select a **Religion Type** like "Cult" or "Church," choose the **Deity Alignment** to set the moral compass, and provide a **Cultural Influence** for a unique phonetic style. Finally, select a **Tone** to capture the feeling of the religion, from "Mystical" to "Dark." This detailed customization allows you to create names like "The Veil of Whispers" for a mysterious sect or "The Sunstone Covenant" for a heroic faith. Our tool is your best resource for generating a rich and diverse religious landscape for your fantasy world.</p>
+            <p>Our tool simplifies the process of creating impactful names. Just select a <strong>Religion Type</strong> like "Cult" or "Church," choose the <strong>Deity Alignment</strong> to set the moral compass, and provide a <strong>Cultural Influence</strong> for a unique phonetic style. Finally, select a <strong>Tone</strong> to capture the feeling of the religion, from "Mystical" to "Dark." This detailed customization allows you to create names like "The Veil of Whispers" for a mysterious sect or "The Sunstone Covenant" for a heroic faith. Our tool is your best resource for generating a rich and diverse religious landscape for your fantasy world.</p>
           </div>
           
           <MultiplexAd />
