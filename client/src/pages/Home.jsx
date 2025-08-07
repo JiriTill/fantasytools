@@ -126,6 +126,7 @@ export default function Home() {
         </div>
 
         <Footer />
+        <Analytics />
       </div>
     </>
   );
