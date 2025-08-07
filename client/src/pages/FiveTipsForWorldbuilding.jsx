@@ -1,23 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
 
 export default function FiveTipsForWorldbuilding() {
-  // useEffect hook to push Google Ads to the adsbygoogle array
-  useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle");
-    for (let i = 0; i < ads.length; i++) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("Adsbygoogle error:", e);
-      }
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
       <main className="p-6 flex flex-col items-center pb-20">
@@ -81,8 +67,6 @@ export default function FiveTipsForWorldbuilding() {
           Your world is not a static backdrop; it's a living, breathing entity. As your story unfolds, let the events have real consequences on the world itself. A major battle might leave a lasting scar on the landscape, a new king might change the laws, or the discovery of a new magical artifact might alter the balance of power. This dynamic nature keeps the world engaging and makes your story's impact feel real.
         </p>
         
-        <GoogleAd slot="4105556455" />
-        
         {/* Related articles section */}
         <div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
             <h2 className="text-2xl font-bold mb-4 text-white">Continue Your Journey</h2>
@@ -106,9 +90,6 @@ export default function FiveTipsForWorldbuilding() {
           ← Back to Fantasy Name Creator
         </Link>
       </div>
-
-      <MultiplexAd />
-        
       </main>
       <Footer />
     </div>
