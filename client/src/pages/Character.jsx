@@ -183,16 +183,16 @@ Provide 10 distinct names that match the character’s attributes and setting.
 
           <ShareGeneratedName form={form} />
 
-          <Link
-            to="/"
-            className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-          >
-            ← Back to Fantasy Name Creator
-          </Link>
+        <Link
+          to="/"
+          onClick={() => window.scrollTo(0, 0)}
+          className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+        >
+          ← Back to Fantasy Name Creator
+        </Link>
           
           <hr className="my-10 w-full" />
           
-          {/* NEW: Bottom SEO text section with proper styling. */}
           <div className="w-full max-w-2xl text-left">
             <h2 className="text-2xl font-bold mt-8 mb-4">The Ultimate Fantasy Character Name Generator and Creator</h2>
             <p>Forget spending hours poring over long lists of names. Our generator provides instant, unique names that fit your character's race, class, and backstory. We understand that a great name is more than just a label—it’s a piece of your character’s identity. It can hint at their heritage, their personality, or their destiny. Our tool helps you with this creative process, offering a fast and efficient way to overcome writer's block or the dreaded "blank character sheet" syndrome.</p>
