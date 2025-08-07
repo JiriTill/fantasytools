@@ -15,6 +15,8 @@ import Religion from './pages/Religion';
 import Item from './pages/Item';
 import Dynamic from './pages/Dynamic';
 import GoogleAd from './components/GoogleAd';
+import HowToCreateLoreRichNames from './pages/HowToCreateLoreRichNames';
+
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
       <Route path="/religion" element={<Religion />} />
       <Route path="/item" element={<Item />} />
       <Route path="/dynamic" element={<Dynamic />} />
+      <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
     </Routes>
   );
 }
