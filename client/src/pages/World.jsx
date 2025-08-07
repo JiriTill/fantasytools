@@ -162,6 +162,7 @@ Return the names as a simple numbered list (1-10), with no additional text or co
 
           <Link
             to="/"
+            onClick={() => window.scrollTo(0, 0)}
             className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
             ← Back to Fantasy Name Creator
