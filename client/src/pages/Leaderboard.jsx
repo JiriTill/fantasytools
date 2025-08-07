@@ -83,7 +83,8 @@ export default function Leaderboard() {
         <div className="mt-12 text-center">
           <Link
             to="/"
-            className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+            onClick={() => window.scrollTo(0, 0)}
+            className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
           >
             ← Back to Fantasy Name Creator
           </Link>
