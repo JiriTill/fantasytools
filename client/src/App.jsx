@@ -16,6 +16,7 @@ import Item from './pages/Item';
 import Dynamic from './pages/Dynamic';
 import GoogleAd from './components/GoogleAd';
 import HowToCreateLoreRichNames from './pages/HowToCreateLoreRichNames';
+import FiveTipsForWorldbuilding from './pages/FiveTipsForWorldbuilding';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Route path="/item" element={<Item />} />
       <Route path="/dynamic" element={<Dynamic />} />
       <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
+      <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
     </Routes>
   );
 }
