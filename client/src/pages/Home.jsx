@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
 import { Analytics } from '@vercel/analytics/react';
-import { resizeImageBase64 } from '../components/ocrUtils';
 
 const categories = [
   { name: 'Worlds and places', path: '/world', image: '/images/world.png' },
