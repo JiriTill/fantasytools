@@ -55,21 +55,16 @@ export default function Home() {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7735418117469222"
           crossOrigin="anonymous"
         ></script>
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Fantasy Name Creator",
-              "url": "https://www.fantasynamecreator.com/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.fantasynamecreator.com/?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }
-          `}
-        </script>
+               <script type="application/ld+json">
+                  {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "WebSite",
+                      "name": "Fantasy Name Creator",
+                      "url": "https://www.fantasynamecreator.com/"
+                    }
+                  `}
+                </script>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white p-4 flex flex-col items-center">
