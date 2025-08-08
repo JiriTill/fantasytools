@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { useEffect } from 'react';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import { Analytics } from '@vercel/analytics/react';
 
 const categories = [
   { name: 'Worlds and places', path: '/world', image: '/images/world.png' },
