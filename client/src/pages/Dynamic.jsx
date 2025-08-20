@@ -70,7 +70,7 @@ export default function Dynamic() {
 
           {/* NEW: Replaced the old intro paragraph with a new, centered one */}
           <div className="w-full max-w-2xl text-center mb-10">
-            <p>Sometimes, a standard generator just isn't enough. Our **Custom Fantasy Name Generator** is your all-purpose tool for any creative need. Whether you need a name for a mystical artifact, a hidden city, a powerful spell, or an ancient prophecy, this tool puts the power in your hands. Simply describe the **context**, **culture**, and **tone**, and our AI will craft unique names tailored specifically to your vision.</p>
+            <p>Sometimes, a standard generator just isn't enough. Our <strong>Custom Fantasy Name Generator</strong> is your all-purpose tool for any creative need. Whether you need a name for a mystical artifact, a hidden city, a powerful spell, or an ancient prophecy, this tool puts the power in your hands. Simply describe the <strong>context, culture, and tone</strong>, and our AI will craft unique names tailored specifically to your vision.</p>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md bg-indigo-800 p-6 rounded-lg shadow-md">
             <label className="block">
