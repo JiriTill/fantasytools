@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import KoFiButton from "../components/KoFiButton";
 
 export default function HowToCreateLoreRichNames() {
   // useEffect hook to push Google Ads to the adsbygoogle array
@@ -56,6 +57,8 @@ export default function HowToCreateLoreRichNames() {
         <p className="text-lg text-gray-300">
           The best names are products of their environment. Consider the history, geography, and values of a culture. Does a society live in harsh mountains? Their names might sound hard and guttural. Are they an ancient, seafaring people? Their names might have flowing, vowel-heavy tones. Using a fantasy name generator can help you explore different linguistic styles to find what fits.
         </p>
+
+        <KoFiButton id="T6T31JW6G3" />
 
         {/* Tip 2 */}
         <h3 className="text-2xl font-bold text-white mt-8">2. Use Linguistic Building Blocks</h3>
