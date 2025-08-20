@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import KoFiButton from "../components/KoFiButton";
 
 export default function GenderSpecificNames() {
   // useEffect hook to push Google Ads to the adsbygoogle array
@@ -50,6 +51,8 @@ export default function GenderSpecificNames() {
         <p className="text-lg text-gray-300">
           In fantasy worldbuilding, a name does more than just identify a character; it defines them. When creating a fantasy world, one of the most effective ways to build a sense of a distinct culture is by creating noticeable, yet believable, differences between male and female names. This not only makes your characters more memorable but also reinforces the underlying lore of your world.
         </p>
+
+        <KoFiButton id="T6T31JW6G3" />
 
         {/* Section 1 */}
         <h3 className="text-2xl font-bold text-white mt-8">The Power of Phonetics and Rhythm</h3>
