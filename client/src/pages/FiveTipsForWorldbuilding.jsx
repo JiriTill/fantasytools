@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import KoFiButton from "../components/KoFiButton";
 
 export default function FiveTipsForWorldbuilding() {
   // useEffect hook to push Google Ads to the adsbygoogle array
@@ -61,6 +62,8 @@ export default function FiveTipsForWorldbuilding() {
         <p className="text-lg text-gray-300">
           One of the quickest ways to break a reader's immersion is with inconsistent names. A naming convention should be a thread that runs through your entire world, linking people, places, and cultures. Decide on a linguistic style for each race or region and stick to it. This is where a great fantasy name generator can be invaluable, providing a foundation for your naming schemes.
         </p>
+
+        <KoFiButton id="T6T31JW6G3" />
 
         {/* Tip 2 */}
         <h3 className="text-2xl font-bold text-white mt-8">2. Create a Clear Magic System</h3>
