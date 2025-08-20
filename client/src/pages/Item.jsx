@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import KoFiButton from "../components/KoFiButton";
 
 export default function Item() {
   const [form, setForm] = useState({
@@ -158,6 +159,7 @@ Rules:
             </div>
           )}
 
+          <KoFiButton id="T6T31JW6G3" />
           <ShareGeneratedName form={form} />
 
                     <Link
