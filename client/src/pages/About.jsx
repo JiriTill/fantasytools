@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import KoFiWidget from "./KoFiWidget";
 
 export default function About() {
   return (
@@ -28,6 +29,8 @@ export default function About() {
           — a small Czech creative studio focused on storytelling, myth, and fantasy content.
         </p>
 
+        <KoFiWidget id="T6T31JW6G3" label="Support us on Ko-fi" color="#72a4f2" />
+
         <p className="text-lg">
           I’ve used many name generators over the years, and while some were helpful, most felt generic or limited. That’s why I built Fantasy Name Creator: to provide a fresh, customizable experience using modern AI that adapts to different fantasy themes and creative needs.
         </p>
@@ -43,6 +46,9 @@ export default function About() {
           </a>{' '}
           and explore how we can bring your fantasy vision to life.
         </p>
+
+        <KoFiWidget id="T6T31JW6G3" />
+        
       </div>
 
         <Link
