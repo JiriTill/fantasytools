@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import KoFiButton from "../components/KoFiButton";
 
 export default function Contact() {
   return (
@@ -17,6 +18,8 @@ export default function Contact() {
         <p className="text-lg text-center text-gray-300">
           We’re always open to partnerships and feedback from fellow fantasy lovers. Your input helps us grow and improve.
         </p>
+
+        <KoFiButton id="T6T31JW6G3" />
 
         <form
   action="https://formspree.io/f/mjkrqwke"
