@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
 import { useEffect } from 'react';
+import KoFiButton from "../components/KoFiButton";
 
 export default function WhyNamesMatter() {
   useEffect(() => {
@@ -50,6 +51,8 @@ export default function WhyNamesMatter() {
         <p className="text-lg text-gray-300">
           In the realms of fantasy, a name is more than a label—it’s a spark of identity that breathes life into characters, factions, and entire worlds. Whether you’re a Dungeons & Dragons game master, an RPG enthusiast, a fantasy novelist, or a dedicated worldbuilder, the right name sets the tone for everything that follows.
         </p>
+
+        <KoFiButton id="T6T31JW6G3" />
 
         <p className="text-lg text-gray-300">
           A well-crafted name like Eldrin Valthorne for an elven wizard or Ironclaw Syndicate for a shadowy rogue guild instantly conveys mood, culture, and backstory. It can hint at noble heritage, dark magic, forgotten languages, or distant lands. In tabletop roleplaying games (TTRPGs) and novels alike, names shape immersion. They make your creations believable, memorable, and emotionally engaging.
