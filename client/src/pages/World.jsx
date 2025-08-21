@@ -62,6 +62,7 @@ Return the names as a simple numbered list (1-10), with no additional text or co
         <title>Fantasy World and Place Name Generator | Fantasy Name Generator</title>
         <meta name="description" content="Craft immersive world names for continents, kingdoms, realms, and more. Choose the style, tone, and magic level to get unique names." />
         <meta name="keywords" content="fantasy world name generator, realm names, fantasy place name, continent name generator, worldbuilding tool" />
+        <link rel="canonical" href="https://www.fantasynamecreator.com/world" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
