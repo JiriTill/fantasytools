@@ -60,6 +60,7 @@ export default function Dynamic() {
         <meta property="og:description" content="Describe your context, culture, and tone to generate personalized fantasy names for your RPGs, novels, or games." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fantasynamecreator.com/dynamic" />
+        <link rel="canonical" href="https://www.fantasynamecreator.com/dynamic" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
