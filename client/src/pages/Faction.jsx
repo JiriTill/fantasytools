@@ -58,6 +58,7 @@ Rules:
         <title>Fantasy Faction Name Generator & Creator | Fantasy Name Creator</title>
         <meta name="description" content="Generate powerful fantasy faction names for guilds, cults, or clans. Customizable by alignment, tone, and culture. Perfect for D&D and other RPGs." />
         <meta name="keywords" content="fantasy faction name generator, guild name generator, clan name creator, D&D factions, cult names, fantasy names" />
+                <link rel="canonical" href="https://www.fantasynamecreator.com/faction" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
