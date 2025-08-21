@@ -1,3 +1,4 @@
+// client/src/pages/FemalevsMale.jsx
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -22,9 +23,11 @@ export default function GenderSpecificNames() {
   const title = "Fantasy Female vs Male Names: Crafting Distinctive Identities";
   const description = "Explore the art of naming male and female characters in fantasy. Learn how to use phonetic differences, cultural roles, and storytelling to create unique, gender-specific names.";
   const ogImage = "https://www.fantasynamecreator.com/images/og-gender-names-image.jpg";
-  const datePublished = "2025-08-21";
-  const dateModified  = "2025-08-21";
+  // Full ISO-8601 datetimes with timezone (Europe/Prague ~ +02:00 in Aug)
+  const datePublished = "2025-08-21T09:00:00+02:00";
+  const dateModified  = "2025-08-21T12:00:00+02:00";
   const authorName = "Fantasy Name Creator Team"; // or "JTill"
+  const authorUrl  = "https://www.fantasynamecreator.com/about";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
@@ -60,8 +63,9 @@ export default function GenderSpecificNames() {
               "@type": "BlogPosting",
               "headline": title,
               "description": description,
-              "image": ogImage,
-              "author": { "@type": "Person", "name": authorName },
+              "image": [ogImage],
+              "inLanguage": "en",
+              "author": { "@type": "Person", "name": authorName, "url": authorUrl },
               "publisher": {
                 "@type": "Organization",
                 "name": siteName,
