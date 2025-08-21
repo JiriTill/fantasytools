@@ -76,6 +76,7 @@ Provide 10 distinct names that match the character’s attributes and setting.
         <meta property="og:url" content="https://fantasynamecreator.com/character" />
         <meta property="og:image" content="https://fantasynamecreator.com/images/og-image.jpg" />
         <meta name="robots" content="index, follow" />
+              <link rel="canonical" href="https://www.fantasynamecreator.com/character" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
