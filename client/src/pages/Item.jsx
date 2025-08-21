@@ -60,6 +60,7 @@ Rules:
         <title>Fantasy Item Name Generator & Creator | Fantasy Name Creator</title>
         <meta name="description" content="Generate legendary names for fantasy weapons, relics, potions, and magical artifacts. Our AI-powered tool is perfect for D&D, RPGs, and worldbuilding." />
         <meta name="keywords" content="fantasy item name generator, RPG item names, magic weapon name, artifact generator, Dungeons & Dragons item name tool, legendary weapon names" />
+                <link rel="canonical" href="https://www.fantasynamecreator.com/item" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
