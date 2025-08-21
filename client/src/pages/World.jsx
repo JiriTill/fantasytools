@@ -170,6 +170,25 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             ← Back to Fantasy Name Creator
           </Link>
 
+          <section id="faq" class="faq">
+            <h2>FAQ</h2>
+          
+            <h3>Is this generator free?</h3>
+            <p>Yes—completely free, no login required.</p>
+          
+            <h3>Can I use these names commercially?</h3>
+            <p>Yes. You can use the generated names in books, games, and projects. Attribution is appreciated but not required.</p>
+          
+            <h3>How do I get specific styles like Elven or Dwarven?</h3>
+            <p>Use the style chips above or try our specialized sub-generators (Elven, Dwarven, Orc, Noble, Dark).</p>
+          
+            <h3>Can I copy or download the list?</h3>
+            <p>Click “Copy” next to any name or “Copy All”. A TXT download option is also available.</p>
+          
+            <h3>What makes the names feel authentic?</h3>
+            <p>Each style is tuned with syllable patterns and phonetics that match typical fantasy tropes, so results feel consistent.</p>
+          </section>
+
           <hr className="my-10 w-full" />
 
           {/* Corrected Bottom Text Section with proper styling */}
