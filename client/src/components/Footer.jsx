@@ -1,4 +1,3 @@
-// client/src/components/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import KoFiButton from './KoFiButton';
@@ -12,7 +11,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col gap-8">
         {/* Top area: brand • Ko-fi • links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Brand */}
+          {/* Brand (logo + name + tagline) */}
           <div className="flex items-start gap-3">
             <Link
               to="/"
@@ -20,7 +19,6 @@ export default function Footer() {
               aria-label="Fantasy Name Creator — Home"
               className="inline-flex shrink-0 rounded-lg ring-1 ring-indigo-600/40 hover:ring-indigo-400 transition"
             >
-              {/* from public/ so use absolute path */}
               <img
                 src="/images/logo512.png"
                 alt="Fantasy Name Creator logo"
@@ -30,21 +28,26 @@ export default function Footer() {
                 height="56"
               />
             </Link>
-            <p className="text-gray-400 leading-relaxed">
-              Crafted for worldbuilders, storytellers, and creators of all realms.
-            </p>
+            <div>
+              <Link
+                to="/"
+                onClick={scrollToTop}
+                className="font-semibold text-white hover:underline transition"
+              >
+                Fantasy Name Creator
+              </Link>
+              <p className="text-gray-400 leading-relaxed">
+                Crafted for worldbuilders, storytellers, and creators of all realms.
+              </p>
+            </div>
           </div>
 
-          {/* Ko-fi callout (center) */}
-          <div className="flex flex-col items-center text-center gap-3 md:gap-4">
-            <p className="font-medium text-white">Enjoying the tool?</p>
+          {/* Ko-fi (center, top-aligned) */}
+          <div className="flex flex-col items-center text-center gap-3 md:self-start">
             <KoFiButton id="T6T31JW6G3" />
-            <p className="text-gray-400">
-              Your support helps keep the generator free and growing.
-            </p>
           </div>
 
-          {/* Quick links */}
+          {/* Quick links (right) */}
           <nav className="flex md:justify-end" aria-label="Footer navigation">
             <ul className="space-y-2 text-gray-400">
               <li>
