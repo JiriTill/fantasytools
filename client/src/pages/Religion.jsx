@@ -59,6 +59,7 @@ Rules:
         <title>Fantasy Religion Name Generator & Creator | Fantasy Name Creator</title>
         <meta name="description" content="Generate immersive fantasy religion names for your worldbuilding, perfect for pantheons, faiths, cults, and mystical orders. Customizable by tone, culture, and alignment." />
         <meta name="keywords" content="fantasy religion name generator, cult name generator, divine order, pantheon name, D&D religion, RPG worldbuilding tool, custom religion names" />
+          <link rel="canonical" href="https://www.fantasynamecreator.com/religion" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 to-gray-900 text-white">
