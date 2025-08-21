@@ -170,6 +170,7 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             ← Back to Fantasy Name Creator
           </Link>
 
+          
           <section id="faq" class="faq">
             <h2>FAQ</h2>
           
@@ -188,6 +189,43 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             <h3>What makes the names feel authentic?</h3>
             <p>Each style is tuned with syllable patterns and phonetics that match typical fantasy tropes, so results feel consistent.</p>
           </section>
+
+          <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is this generator free?",
+                "acceptedAnswer": {"@type":"Answer","text":"Yes—completely free, no login required."}
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use these names commercially?",
+                "acceptedAnswer": {"@type":"Answer","text":"Yes. You can use the generated names in books, games, and projects. Attribution is appreciated but not required."}
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get specific styles like Elven or Dwarven?",
+                "acceptedAnswer": {"@type":"Answer","text":"Use the style chips above or try our specialized sub-generators (Elven, Dwarven, Orc, Noble, Dark)."}
+              },
+              {
+                "@type": "Question",
+                "name": "Can I copy or download the list?",
+                "acceptedAnswer": {"@type":"Answer","text":"Click “Copy” next to any name or “Copy All”. A TXT download option is also available."}
+              },
+              {
+                "@type": "Question",
+                "name": "What makes the names feel authentic?",
+                "acceptedAnswer": {"@type":"Answer","text":"Each style is tuned with syllable patterns and phonetics that match typical fantasy tropes, so results feel consistent."}
+              }
+            ]
+          }
+          </script>
+
+
+          
 
           <hr className="my-10 w-full" />
 
