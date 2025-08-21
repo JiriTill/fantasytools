@@ -1,48 +1,96 @@
+// client/src/components/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import KoFiButton from './KoFiButton';
 
 export default function Footer() {
-  // This function handles scrolling to the top of the page on link clicks.
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  const scrollToTop = () => window.scrollTo(0, 0);
+  const year = new Date().getFullYear();
 
-  return (
-    <footer className="w-full bg-gray-900 text-gray-400 border-t border-gray-700 text-sm">
-      <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-6">
-        
-        <div className="flex flex-col md:flex-row justify-between gap-6">
-          <div>
-            {/* The main site name is now a link to the homepage */}
-            <Link to="/" onClick={scrollToTop} className="font-semibold text-white mb-2 hover:underline transition">
-              FantasyNameCreator.com
-            </Link>
-            <p>Crafted for worldbuilders, storytellers, and creators of all realms.</p>
-          </div>
+  return (
+    <footer className="w-full bg-gray-900 text-gray-300 border-t border-gray-800 text-sm">
+      <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col gap-8">
+        {/* Top area: brand • Ko-fi • links */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          {/* Brand */}
+          <div className="flex items-start gap-3">
+            <Link
+              to="/"
+              onClick={scrollToTop}
+              aria-label="Fantasy Name Creator — Home"
+              className="inline-flex shrink-0 rounded-lg ring-1 ring-indigo-600/40 hover:ring-indigo-400 transition"
+            >
+              {/* from public/ so use absolute path */}
+              <img
+                src="/images/logo512.png"
+                alt="Fantasy Name Creator logo"
+                className="h-12 w-12 md:h-14 md:w-14 rounded-lg object-contain"
+                loading="lazy"
+                width="56"
+                height="56"
+              />
+            </Link>
+            <p className="text-gray-400 leading-relaxed">
+              Crafted for worldbuilders, storytellers, and creators of all realms.
+            </p>
+          </div>
 
-          <div className="flex flex-col md:items-end">
-            <Link to="/About" onClick={scrollToTop} className="hover:text-white transition">About Fantasy Name Creator</Link>
-            <Link to="/Why-names-matter" onClick={scrollToTop} className="hover:text-white mt-1 transition">Why names matter?</Link>
-            <Link to="/Terms" onClick={scrollToTop} className="hover:text-white mt-1 transition">Terms of Use</Link>
-            <Link to="/Privacy" onClick={scrollToTop} className="hover:text-white mt-1 transition">Privacy Policy</Link>
-            <Link to="/Contact" onClick={scrollToTop} className="hover:text-white mt-1 transition">Contact & Feedback</Link>
-          </div>
-        </div>
+          {/* Ko-fi callout (center) */}
+          <div className="flex flex-col items-center text-center gap-3 md:gap-4">
+            <p className="font-medium text-white">Enjoying the tool?</p>
+            <KoFiButton id="T6T31JW6G3" />
+            <p className="text-gray-400">
+              Your support helps keep the generator free and growing.
+            </p>
+          </div>
 
-        <div className="text-center text-gray-400 border-t border-gray-700 pt-4">
-          <p>
-            © 2025 Fantasy Name Creator • Powered by{' '}
-            <a
-              href="https://neoantica.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white transition"
-            >
-              Neoantica
-            </a>
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
+          {/* Quick links */}
+          <nav className="flex md:justify-end" aria-label="Footer navigation">
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link to="/About" onClick={scrollToTop} className="hover:text-white transition">
+                  About Fantasy Name Creator
+                </Link>
+              </li>
+              <li>
+                <Link to="/Why-names-matter" onClick={scrollToTop} className="hover:text-white transition">
+                  Why names matter?
+                </Link>
+              </li>
+              <li>
+                <Link to="/Terms" onClick={scrollToTop} className="hover:text-white transition">
+                  Terms of Use
+                </Link>
+              </li>
+              <li>
+                <Link to="/Privacy" onClick={scrollToTop} className="hover:text-white transition">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/Contact" onClick={scrollToTop} className="hover:text-white transition">
+                  Contact &amp; Feedback
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="text-center text-gray-400 border-t border-gray-800 pt-4">
+          <p>
+            © {year} Fantasy Name Creator • Powered by{' '}
+            <a
+              href="https://neoantica.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white transition"
+            >
+              Neoantica
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }
