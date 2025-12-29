@@ -10,4 +10,10 @@ app.use(express.json());
 app.use('/api/generate', generateRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Only listen if not running on Vercel (Vercel exports the app)
+if (require.main === module) {
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;
