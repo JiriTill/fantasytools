@@ -51,6 +51,10 @@ module.exports = async (req, res) => {
     }
 
     try {
+        if (!process.env.GEMINI_API_KEY) {
+            return res.status(500).json({ error: 'GEMINI_API_KEY not configured' });
+        }
+
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
@@ -76,9 +80,13 @@ module.exports = async (req, res) => {
         return res.json({ names });
     } catch (error) {
         console.error("Gemini API Error:", error);
+        console.error("Error stack:", error.stack);
+        console.error("Error details:", JSON.stringify(error, null, 2));
+
         return res.status(500).json({
-            error: `Failed to generate names: ${error.message}`,
-            details: error.response ? error.response.data : null
+            error: `Failed to generate: ${error.message}`,
+            type: error.constructor.name,
+            details: error.response?.data || error.toString()
         });
     }
 };
