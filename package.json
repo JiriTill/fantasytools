@@ -6,7 +6,9 @@
         "dev": "cd client && npm run dev",
         "start": "cd server && npm start",
         "start:server": "cd server && npm start",
-        "install:all": "cd client && npm install && cd ../server && npm install"
+        "build": "cd client && npm run build",
+        "install:all": "cd client && npm install && cd ../server && npm install",
+        "postinstall": "npm run install:all"
     },
     "keywords": [],
     "author": "",
