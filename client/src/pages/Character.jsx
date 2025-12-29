@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -24,6 +24,18 @@ export default function Character() {
     const saved = localStorage.getItem('fantasyFavorites');
     return saved ? JSON.parse(saved) : [];
   });
+  const [timer, setTimer] = useState(0);
+
+  useEffect(() => {
+    let interval;
+    if (loading) {
+      setTimer(0);
+      interval = setInterval(() => {
+        setTimer(prev => prev + 0.1);
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [loading]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -239,7 +251,7 @@ Rules:
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
                   </svg>
-                  Consulting the Oracle...
+                  Consulting the Oracle... {timer.toFixed(1)}s
                 </>
               ) : (
                 'Generate Names'
