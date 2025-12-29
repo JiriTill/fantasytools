@@ -14,7 +14,8 @@ export default function Character() {
     race: 'Human',
     profession: 'Combat oriented',
     socialClass: 'Commoner',
-    tone: 'Harsh'
+    tone: 'Harsh',
+    culturalInfluence: ''
   });
 
   const [names, setNames] = useState([]);
@@ -82,6 +83,7 @@ Generate 10 unique and original fantasy character names for a character with the
 - Social Class: ${form.socialClass}
 - Profession: ${form.profession}
 - Naming Style or Tone: ${form.tone}
+${form.culturalInfluence ? `- Cultural Influence: ${form.culturalInfluence}` : ''}
 
 Rules:
 - Names must be immersive, believable, and suitable for a fantasy RPG, Dungeons & Dragons, or novel, reflecting the character’s race, culture, background, status, and role.
@@ -238,6 +240,21 @@ Rules:
                   <option key={t}>{t}</option>
                 ))}
               </select>
+            </label>
+
+            <label className="block">
+              <span className="text-fantasy-gold font-semibold mb-2 block">
+                Cultural Influence <span className="text-gray-500 text-sm font-normal">(Optional)</span>
+              </span>
+              <input
+                type="text"
+                name="culturalInfluence"
+                value={form.culturalInfluence}
+                onChange={handleChange}
+                placeholder="e.g., Norse, Celtic, Japanese, Arabian, Slavic..."
+                className="w-full p-3 bg-black/50 border border-white/10 rounded-lg text-gray-200 placeholder-gray-600 focus:border-fantasy-gold focus:outline-none transition"
+              />
+              <p className="text-xs text-gray-500 mt-1">Specify a cultural style to influence name generation</p>
             </label>
 
             <button
