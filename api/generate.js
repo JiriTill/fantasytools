@@ -55,12 +55,31 @@ module.exports = async (req, res) => {
             return res.status(500).json({ error: 'GEMINI_API_KEY not configured' });
         }
 
-        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+        // Use REST API directly instead of SDK to use v1 endpoint
+        const apiUrl = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent';
 
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text = response.text();
+        const response = await fetch(`${apiUrl}?key=${process.env.GEMINI_API_KEY}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                contents: [{
+                    parts: [{ text: prompt }]
+                }]
+            })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.text();
+            return res.status(500).json({
+                error: `Gemini API error: ${response.status}`,
+                details: errorData
+            });
+        }
+
+        const data = await response.json();
+        const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
 
         if (mode === 'lore') {
             return res.json({ lore: text.trim() });
@@ -81,12 +100,11 @@ module.exports = async (req, res) => {
     } catch (error) {
         console.error("Gemini API Error:", error);
         console.error("Error stack:", error.stack);
-        console.error("Error details:", JSON.stringify(error, null, 2));
 
         return res.status(500).json({
             error: `Failed to generate: ${error.message}`,
             type: error.constructor.name,
-            details: error.response?.data || error.toString()
+            details: error.toString()
         });
     }
 };
