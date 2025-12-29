@@ -4,6 +4,7 @@
     "description": "Root package to manage client and server",
     "scripts": {
         "dev": "cd client && npm run dev",
+        "start": "cd server && npm start",
         "start:server": "cd server && npm start",
         "install:all": "cd client && npm install && cd ../server && npm install"
     },
