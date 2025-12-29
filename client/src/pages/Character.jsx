@@ -92,8 +92,8 @@ Rules:
   // ---- SEO constants ----
   const canonical = "https://www.fantasynamecreator.com/character";
   const siteName = "Fantasy Name Creator";
-  const title = "Fantasy Character Name Generator & Creator | Fantasy Name Creator";
-  const description = "Create unique fantasy character names for RPGs, novels and D&D. Tune race, gender, profession, class and tone to generate believable names.";
+  const title = "Character Name Generator | Fantasy Names for D&D, RPGs & Stories";
+  const description = "Generate unique fantasy character names by race, profession & personality. Perfect for D&D, RPGs, novels & worldbuilding. Free character name generator.";
   const ogImage = "https://www.fantasynamecreator.com/images/og-default.png"; // replace with your brand OG if available
 
   // ---- FAQ (must match JSON-LD exactly) ----

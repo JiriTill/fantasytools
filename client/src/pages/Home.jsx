@@ -40,14 +40,14 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Fantasy Name Generator - Free AI Name Creator for Fantasy Worlds, Characters & More</title>
+        <title>Fantasy Name Generator - Free Name Creator for Characters, Worlds & More</title>
         <meta
           name="description"
-          content="Use our free AI-powered fantasy name generator to craft unique names for your characters, worlds, and factions. The perfect tool for writers, game masters, and worldbuilders."
+          content="Create unique fantasy names for characters, worlds, factions, religions & items. Perfect for writers, game masters & worldbuilders. Free, no signup required."
         />
         <meta
           name="keywords"
-          content="fantasy name generator, fantasy name creator, AI fantasy name generator, character names, world name generator, RPG tools, DnD name creator, faction names, worldbuilding tools"
+          content="fantasy name generator, character name generator, world name generator, RPG tools, DnD name creator, faction names, worldbuilding tools, fantasy names"
         />
         <meta property="og:title" content="Fantasy Name Generator - Free AI Name Creator for Fantasy Worlds" />
         <meta
