@@ -1,0 +1,84 @@
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+
+module.exports = async (req, res) => {
+    // Enable CORS
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    // Handle OPTIONS preflight
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Method not allowed' });
+    }
+
+    const { mode, params, context } = req.body;
+
+    let prompt = '';
+    switch (mode) {
+        case 'character':
+            prompt = `Generate 10-15 fantasy names for a character with the following details:
+      - Gender: ${params.gender}
+      - Race: ${params.race}
+      - Profession: ${params.profession}
+      - Social Class: ${params.socialClass}
+      - Personality: ${params.personality}
+      - Tone: ${params.tone}
+      - Additional Context: ${context || 'None provided'}
+      Each name should feel unique and fitting for a fantasy world called Neoantica. 
+      RETURN ONLY A RAW JSON ARRAY OF STRINGS. DO NOT include "json" formatting or backticks. Example: ["Name1", "Name2"]`;
+            break;
+        case 'lore':
+            prompt = `Generate a short, immersive 2-3 sentence backstory for a fantasy character named "${params.name}".
+      - Gender: ${params.gender}
+      - Race: ${params.race}
+      - Profession: ${params.profession}
+      - Social Class: ${params.socialClass}
+      - Personality: ${params.personality || 'Unknown'}
+      - Tone: ${params.tone}
+      The backstory should be evocative and fit a high fantasy setting.
+      RETURN ONLY THE PLAIN TEXT BACKSTORY.`;
+            break;
+        default:
+            if (req.body.prompt) {
+                prompt = req.body.prompt;
+            } else {
+                return res.status(400).json({ error: 'Invalid mode or missing prompt' });
+            }
+    }
+
+    try {
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text();
+
+        if (mode === 'lore') {
+            return res.json({ lore: text.trim() });
+        }
+
+        let names;
+        try {
+            const cleanText = text.replace(/```json/g, '').replace(/```/g, '').trim();
+            names = JSON.parse(cleanText);
+        } catch (parseError) {
+            names = text.split('\n')
+                .map(line => line.replace(/^\d+[\.\)]\s*/, '').trim())
+                .filter(line => line.length > 0 && !line.includes('[') && !line.includes(']'));
+            if (names.length === 0) names = ['Error parsing AI response'];
+        }
+
+        return res.json({ names });
+    } catch (error) {
+        console.error("Gemini API Error:", error);
+        return res.status(500).json({
+            error: `Failed to generate names: ${error.message}`,
+            details: error.response ? error.response.data : null
+        });
+    }
+};
