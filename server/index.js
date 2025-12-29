@@ -7,6 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/api/health', (req, res) => {
+    res.json({
+        status: 'ok',
+        timestamp: new Date().toISOString(),
+        env: {
+            hasApiKey: !!process.env.GEMINI_API_KEY
+        }
+    });
+});
+
 app.use('/api/generate', generateRoutes);
 
 const PORT = process.env.PORT || 5000;
