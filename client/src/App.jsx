@@ -17,6 +17,7 @@ import GoogleAd from './components/GoogleAd';
 import HowToCreateLoreRichNames from './pages/HowToCreateLoreRichNames';
 import FiveTipsForWorldbuilding from './pages/FiveTipsForWorldbuilding';
 import FemalevsMale from './pages/FemalevsMale';
+import FAQ from './pages/FAQ';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
       <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
       <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
+      <Route path="/faq" element={<FAQ />} />
     </Routes>
   );
 }

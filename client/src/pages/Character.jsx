@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import GoogleAd from '../components/GoogleAd';
 import MultiplexAd from '../components/MultiplexAd';
+import RelatedGenerators from '../components/RelatedGenerators';
 
 export default function Character() {
   const [form, setForm] = useState({
@@ -128,7 +129,7 @@ Rules:
 
         {/* Basic meta */}
         <meta name="description" content={description} />
-        <meta name="keywords" content="fantasy character name generator, D&D character name creator, fantasy names, character names, fantasy male name generator, fantasy female name generator" />
+        <meta name="keywords" content="fantasy name generator, character name generator, fantasy character names, name generator fantasy, random fantasy name generator, D&D character names, fantasy names, RPG name generator" />
         <meta name="robots" content="index,follow" />
 
         {/* Open Graph / Twitter */}
@@ -374,6 +375,10 @@ Rules:
 
           <MultiplexAd />
         </main>
+
+        {/* Related Generators - Internal Linking */}
+        <RelatedGenerators current="/character" />
+
         <Footer />
       </div>
     </>
