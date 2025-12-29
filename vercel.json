@@ -1,7 +1,19 @@
+```json
 {
     "version": 2,
-    "buildCommand": "npm run build",
-    "installCommand": "npm run install:all",
+    "builds": [
+        {
+            "src": "server/index.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "client/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        }
+    ],
     "rewrites": [
         {
             "source": "/api/(.*)",
@@ -9,7 +21,8 @@
         },
         {
             "source": "/(.*)",
-            "destination": "/client/dist/$1"
+            "destination": "/client/$1"
         }
     ]
 }
+```
