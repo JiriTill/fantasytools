@@ -70,25 +70,15 @@ router.post('/', async (req, res) => {
       if (names.length === 0) names = ['Error parsing AI response'];
     }
 
-    // BACKWARD COMPATIBILITY: return array directly or object?
-    // Previously it returned `names` array directly.
-    // To be safe, we return `names` array directly as before, 
-    // BUT checking Character.jsx, it expects `response.data.names` (from `axios.post`). 
-    // Wait, let's check Character.jsx again.
-    // Character.jsx: `setNames(response.data.names)` -> It EXPECTS an object `{ names: [...] }`? 
-    // NO! existing backend code `res.json(names)` returns ARRAY `['Name1', 'Name2']`. 
-    // BUT Character.jsx line 49 says: `setNames(response.data.names)`. 
-    // This implies the current frontend is BROKEN if backend returns raw array. 
-    // Let's look at `World.jsx`: `setNames(response.data.names)`.
-    // It seems I need to return `{ names: [...] }` to match frontend expectation.
-    // The OLD code returned `res.json(names)` (Array). 
-    // If the frontend expects `response.data.names`, then `response.data` is the array, so `response.data.names` is undefined!
-    // I will fix this safely by returning an object `{ names: names }`.
-
+    // BACKWARD COMPATIBILITY: default to returning object
     res.json({ names });
   } catch (error) {
     console.error("Gemini API Error:", error);
-    res.status(500).json({ error: 'Failed to generate names' });
+    // Return the actual error message for clearer debugging in Vercel logs
+    res.status(500).json({
+      error: `Failed to generate names: ${error.message}`,
+      details: error.response ? error.response.data : null
+    });
   }
 });
 
