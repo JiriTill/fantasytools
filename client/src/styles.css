@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-fantasy-dark text-gray-200 font-sans;
+  /* subtle pattern overlay - neutral gray */
+  background-image: radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.4) 0%, transparent 100%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-fantasy text-fantasy-gold;
+}
