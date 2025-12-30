@@ -312,6 +312,14 @@ Return the names as a simple numbered list (1-10), with no additional text or co
 
 
         </main>
+
+        {/* Back to Home link at bottom */}
+        <div className="w-full text-center py-8 border-t border-white/5">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-2 text-fantasy-gold hover:text-white transition font-fantasy text-lg">
+            ← Back to Home
+          </Link>
+        </div>
+
         <Footer />
       </div>
     </>

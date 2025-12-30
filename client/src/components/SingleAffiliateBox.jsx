@@ -12,7 +12,7 @@ export default function SingleAffiliateBox() {
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gold-gradient opacity-50 group-hover:opacity-100 transition-opacity"></div>
 
                 {/* Icon/Badge - Smaller */}
-                <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5">
+                <div className="flex-shrink-0 mb-3 md:mb-0 md:mr-5 flex items-center">
                     <div className="w-14 h-14 md:w-16 md:h-16 rounded-lg bg-fantasy-gold/10 border border-fantasy-gold/30 flex items-center justify-center group-hover:bg-fantasy-gold/20 transition-all">
                         <span className="text-3xl md:text-3xl">📚</span>
                     </div>
