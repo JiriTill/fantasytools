@@ -239,6 +239,9 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             </div>
           )}
 
+          {/* Amazon Affiliate Recommendations - Right after results */}
+          {names.length > 0 && <AmazonAffiliate />}
+
           <div className="flex flex-col items-center gap-6 mt-12 w-full">
             <ShareGeneratedName form={form} />
           </div>
@@ -296,8 +299,7 @@ Return the names as a simple numbered list (1-10), with no additional text or co
             </section>
           </div>
 
-          {/* Amazon Affiliate Recommendations */}
-          {names.length > 0 && <AmazonAffiliate />}
+
         </main>
         <Footer />
       </div>

@@ -21,54 +21,67 @@ export default function AmazonAffiliate() {
     ];
 
     return (
-        <div className="w-full max-w-4xl mx-auto my-8">
-            {/* Disclosure */}
-            <p className="text-xs text-gray-500 text-center mb-4">
-                As an Amazon Associate I earn from qualifying purchases.
-            </p>
+        <div className="w-full max-w-4xl mx-auto my-10">
+            {/* Heading Section */}
+            <div className="text-center mb-6">
+                <h3 className="text-2xl md:text-3xl font-fantasy text-fantasy-gold mb-2">
+                    ⚔️ Bring Your Adventures to Life
+                </h3>
+                <p className="text-gray-400 text-sm md:text-base">
+                    Essential tools for every worldbuilder and dungeon master
+                </p>
+            </div>
 
             {/* Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {products.map((product, index) => (
                     <a
                         key={index}
                         href={product.url}
                         target="_blank"
                         rel="nofollow sponsored noopener noreferrer"
-                        className="group flex flex-col bg-fantasy-dark-secondary/80 border border-white/10 rounded-lg p-5 hover:border-fantasy-gold/50 transition-all duration-300 hover:shadow-lg hover:shadow-fantasy-gold/10 hover:-translate-y-1"
+                        className="group flex flex-col bg-gradient-to-b from-fantasy-dark-secondary to-fantasy-dark border-2 border-fantasy-gold/20 rounded-xl p-6 hover:border-fantasy-gold/60 transition-all duration-300 hover:shadow-xl hover:shadow-fantasy-gold/20 hover:-translate-y-2 relative overflow-hidden"
                     >
+                        {/* Accent gradient overlay */}
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gold-gradient opacity-50 group-hover:opacity-100 transition-opacity"></div>
+
                         {/* Label */}
-                        <div className="text-xs text-fantasy-gold/70 uppercase tracking-wider mb-2 font-semibold">
+                        <div className="text-xs text-fantasy-gold uppercase tracking-widest mb-3 font-bold">
                             {product.label}
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-lg font-bold text-gray-100 mb-2 group-hover:text-fantasy-gold transition-colors">
+                        <h4 className="text-xl font-bold text-gray-100 mb-3 group-hover:text-fantasy-gold transition-colors leading-tight">
                             {product.title}
-                        </h3>
+                        </h4>
 
                         {/* Description */}
-                        <p className="text-sm text-gray-400 mb-4 flex-grow leading-relaxed">
+                        <p className="text-sm text-gray-400 mb-5 flex-grow leading-relaxed">
                             {product.description}
                         </p>
 
-                        {/* CTA */}
-                        <div className="flex items-center justify-between text-sm">
-                            <span className="text-fantasy-gold-light font-medium group-hover:text-white transition-colors">
-                                View on Amazon
-                            </span>
-                            <svg
-                                className="w-4 h-4 text-fantasy-gold-light group-hover:text-white group-hover:translate-x-1 transition-all"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
+                        {/* CTA Button */}
+                        <div className="mt-auto">
+                            <div className="flex items-center justify-center gap-2 bg-fantasy-gold/10 group-hover:bg-fantasy-gold text-fantasy-gold group-hover:text-black px-4 py-3 rounded-lg font-semibold text-sm transition-all border border-fantasy-gold/30 group-hover:border-fantasy-gold">
+                                <span>View on Amazon</span>
+                                <svg
+                                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
                         </div>
                     </a>
                 ))}
             </div>
+
+            {/* Disclosure */}
+            <p className="text-xs text-gray-500 text-center mt-4">
+                As an Amazon Associate I earn from qualifying purchases.
+            </p>
         </div>
     );
 }
