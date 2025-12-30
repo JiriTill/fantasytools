@@ -18,6 +18,7 @@ export default function World() {
 
   const [names, setNames] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [timer, setTimer] = useState(0);
   const resultsRef = React.useRef(null);
 
   // Auto-scroll to results when names are generated
@@ -26,6 +27,18 @@ export default function World() {
       resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [names]);
+
+  // Timer for generation
+  React.useEffect(() => {
+    let interval;
+    if (loading) {
+      setTimer(0);
+      interval = setInterval(() => {
+        setTimer(prev => prev + 0.1);
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [loading]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -224,7 +237,7 @@ Return the names as a simple numbered list (1-10), with no additional text or co
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
                   </svg>
-                  Mapping the Realm...
+                  Mapping the Realm... {timer.toFixed(1)}s
                 </>
               ) : (
                 'Generate Names'
