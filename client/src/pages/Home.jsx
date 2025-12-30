@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import NameGallery from '../components/NameGallery';
+import SingleAffiliateBox from '../components/SingleAffiliateBox';
 import Footer from '../components/Footer';
 import { useEffect } from 'react';
 
@@ -93,6 +94,9 @@ export default function Home() {
         {/* Main Content Container */}
         <main className="w-full max-w-7xl mx-auto px-4 py-12 flex flex-col items-center">
 
+          {/* Single Affiliate Box before category grid */}
+          <SingleAffiliateBox />
+
           <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-gray-100 border-b border-fantasy-gold/30 pb-2">
             What do you want to create?
           </h2>
@@ -102,6 +106,7 @@ export default function Home() {
               <a
                 key={cat.name}
                 href={cat.path}
+                onClick={() => window.scrollTo(0, 0)}
                 className="group relative flex flex-col items-center text-center p-4 rounded-xl bg-card-gradient border border-white/10 hover:border-fantasy-gold/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <div className="aspect-square w-full mb-4 overflow-hidden rounded-lg bg-black/50 shadow-inner group-hover:shadow-fantasy-gold/20 transition">

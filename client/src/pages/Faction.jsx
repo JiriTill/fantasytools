@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
+import SingleAffiliateBox from '../components/SingleAffiliateBox';
 
 export default function Faction() {
   const [form, setForm] = useState({
@@ -17,6 +18,7 @@ export default function Faction() {
   const [names, setNames] = useState([]);
   const [loading, setLoading] = useState(false);
   const [timer, setTimer] = useState(0);
+  const resultsRef = React.useRef(null);
 
   useEffect(() => {
     let interval;
@@ -28,6 +30,13 @@ export default function Faction() {
     }
     return () => clearInterval(interval);
   }, [loading]);
+
+  // Auto-scroll to results when names are generated
+  React.useEffect(() => {
+    if (names.length > 0 && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [names]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -129,7 +138,7 @@ Rules:
 
       <div className="min-h-screen flex flex-col items-center">
         <header className="w-full text-center pt-10 pb-6 px-4 bg-gradient-to-b from-fantasy-dark-secondary to-fantasy-dark border-b border-white/5">
-          <Link to="/" className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
             ← Back to Home
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gold-gradient drop-shadow-sm tracking-wide">
@@ -138,6 +147,8 @@ Rules:
         </header>
 
         <main className="w-full max-w-4xl mx-auto px-4 py-8 flex flex-col items-center flex-grow">
+          {/* Single Affiliate Box before form */}
+          <SingleAffiliateBox />
           {/* Intro */}
           <div className="w-full max-w-2xl text-center mb-10 text-gray-300">
             <p className="text-lg">
@@ -203,7 +214,7 @@ Rules:
 
           {/* RESULTS */}
           {names.length > 0 && (
-            <div className="mt-10 w-full max-w-lg animate-fade-in">
+            <div ref={resultsRef} className="mt-10 w-full max-w-lg animate-fade-in">
               <div className="bg-fantasy-dark-secondary/80 p-8 rounded-xl border border-fantasy-gold/30 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold-gradient"></div>
                 <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6 text-center">Faction Names</h2>
