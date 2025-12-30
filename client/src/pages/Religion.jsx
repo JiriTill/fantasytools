@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
+import AmazonAffiliate from '../components/AmazonAffiliate';
 
 export default function Religion() {
   const [form, setForm] = useState({
@@ -143,7 +142,6 @@ Rules:
         </header>
 
         <main className="w-full max-w-4xl mx-auto px-4 py-8 flex flex-col items-center flex-grow">
-          <GoogleAd slot="4105556455" />
 
           {/* Intro */}
           <div className="w-full max-w-2xl text-center mb-10 text-gray-300">
@@ -287,7 +285,8 @@ Rules:
             </section>
           </div>
 
-          <MultiplexAd />
+          {/* Amazon Affiliate Recommendations */}
+          {names.length > 0 && <AmazonAffiliate />}
         </main>
         <Footer />
       </div>

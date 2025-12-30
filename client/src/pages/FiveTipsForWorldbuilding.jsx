@@ -2,18 +2,11 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
+
 
 export default function FiveTipsForWorldbuilding() {
   // Ads push
-  useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle");
-    for (let i = 0; i < ads.length; i++) {
-      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); }
-      catch (e) { console.error("Adsbygoogle error:", e); }
-    }
-  }, []);
+
 
   const scrollToTop = () => window.scrollTo(0, 0);
 
@@ -125,9 +118,7 @@ export default function FiveTipsForWorldbuilding() {
             Your world is not a static backdrop; it's a living, breathing entity. As your story unfolds, let the events have real consequences on the world itself. A major battle might leave a lasting scar on the landscape, a new king might change the laws, or the discovery of a new magical artifact might alter the balance of power. This dynamic nature keeps the world engaging and makes your story's impact feel real.
           </p>
 
-          <div className="my-8">
-            <GoogleAd slot="4105556455" />
-          </div>
+
 
           <div className="mt-10 p-8 bg-card-gradient rounded-xl border border-white/10 shadow-lg">
             <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6">Continue Your Journey</h2>
@@ -155,7 +146,7 @@ export default function FiveTipsForWorldbuilding() {
           </div>
         </div>
 
-        <MultiplexAd />
+
       </main>
       <Footer />
     </div>

@@ -3,18 +3,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
+
 
 export default function GenderSpecificNames() {
-  // push Google Ads
-  useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle");
-    for (let i = 0; i < ads.length; i++) {
-      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); }
-      catch (e) { console.error("Adsbygoogle error:", e); }
-    }
-  }, []);
+
 
   // --- SEO constants for this post ---
   const canonical = "https://www.fantasynamecreator.com/blog/gender-specific-names";
@@ -120,9 +112,7 @@ export default function GenderSpecificNames() {
             While these conventions are a great starting point, a truly memorable name can come from subverting them. A female warrior with a harsh, traditionally male name can hint at her unique backstory. A male scholar with a soft, melodic name can suggest a peaceful disposition or a different cultural background. These choices can be a great tool for character development and plot.
           </p>
 
-          <div className="my-8">
-            <GoogleAd slot="4105556455" />
-          </div>
+
 
           <div className="mt-10 p-8 bg-card-gradient rounded-xl border border-white/10 shadow-lg">
             <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6">Continue Your Journey</h2>
@@ -150,7 +140,7 @@ export default function GenderSpecificNames() {
           </div>
         </div>
 
-        <MultiplexAd />
+
       </main>
       <Footer />
     </div>

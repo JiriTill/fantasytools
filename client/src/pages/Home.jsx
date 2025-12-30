@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet';
 import NameGallery from '../components/NameGallery';
 import Footer from '../components/Footer';
 import { useEffect } from 'react';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
+
 import { Analytics } from '@vercel/analytics/react';
 
 const categories = [
@@ -17,16 +16,7 @@ const categories = [
 ];
 
 export default function Home() {
-  useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle");
-    for (let i = 0; i < ads.length; i++) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("Adsbygoogle error:", e);
-      }
-    }
-  }, []);
+
 
   // FAQ content (used for visible section + JSON-LD)
   const faq = [
@@ -61,12 +51,7 @@ export default function Home() {
 
         <link rel="canonical" href="https://www.fantasynamecreator.com/" />
 
-        {/* Load Google Ads script */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7735418117469222"
-          crossOrigin="anonymous"
-        ></script>
+
 
         <script type="application/ld+json">
           {`
@@ -134,9 +119,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="w-full flex justify-center mb-12">
-            <GoogleAd />
-          </div>
+
 
           <section className="w-full max-w-4xl mx-auto bg-fantasy-dark-secondary/50 p-6 md:p-10 rounded-2xl border border-white/5 backdrop-blur-sm">
             <NameGallery />
@@ -170,7 +153,7 @@ export default function Home() {
             </div>
           </section>
 
-          <MultiplexAd />
+
         </main>
 
         <Footer />

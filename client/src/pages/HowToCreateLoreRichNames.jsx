@@ -3,18 +3,11 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
+
 
 export default function HowToCreateLoreRichNames() {
   // push Google Ads
-  useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle");
-    for (let i = 0; i < ads.length; i++) {
-      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); }
-      catch (e) { console.error("Adsbygoogle error:", e); }
-    }
-  }, []);
+
 
   // --- SEO constants for this post ---
   const canonical = "https://www.fantasynamecreator.com/blog/lore-rich-names";
@@ -125,9 +118,7 @@ export default function HowToCreateLoreRichNames() {
             A name can be a powerful storytelling device. A character with a simple, common name who rises to greatness feels different from one with a grand, prophetic name. The tension between a name and a character's actions can be a source of narrative conflict. Don't be afraid to let a character "grow into" their name or, conversely, defy it completely.
           </p>
 
-          <div className="my-8">
-            <GoogleAd slot="4105556455" />
-          </div>
+
 
           <div className="mt-10 p-8 bg-card-gradient rounded-xl border border-white/10 shadow-lg">
             <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6">Continue Your Journey</h2>
@@ -155,7 +146,7 @@ export default function HowToCreateLoreRichNames() {
           </div>
         </div>
 
-        <MultiplexAd />
+
       </main>
       <Footer />
     </div>

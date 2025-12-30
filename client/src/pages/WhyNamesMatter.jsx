@@ -2,21 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
-import GoogleAd from '../components/GoogleAd';
-import MultiplexAd from '../components/MultiplexAd';
-import { useEffect } from 'react';
+
 
 export default function WhyNamesMatter() {
-  useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle");
-    for (let i = 0; i < ads.length; i++) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("Adsbygoogle error:", e);
-      }
-    }
-  }, []);
+
 
   return (
     <div className="min-h-screen flex flex-col items-center">
@@ -71,9 +60,7 @@ export default function WhyNamesMatter() {
             Why do names matter so much? Because in fantasy, every detail counts. A generic or out-of-place name can shatter the illusion of a rich, believable world. But a carefully chosen one reinforces it. For example, names for elves might sound melodic and ancient, while dwarves may favor rough, consonant-heavy tones. Orc names may carry aggression, and noble names may sound refined or ceremonial.
           </p>
 
-          <div className="my-8">
-            <GoogleAd slot="4105556455" />
-          </div>
+
 
           <p>
             With Neoantica’s fantasy name creator, you don’t need to spend hours agonizing over naming conventions. Whether you're creating a new hero, forging a mythical kingdom, or inventing a secretive cult, our generator offers hundreds of unique, AI-crafted options that resonate with the tone and lore of your world.
@@ -115,7 +102,7 @@ export default function WhyNamesMatter() {
           </div>
         </div>
 
-        <MultiplexAd />
+
       </main>
       <Footer />
     </div>
