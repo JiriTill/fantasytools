@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
 import SingleAffiliateBox from '../components/SingleAffiliateBox';
+import RelatedGenerators from '../components/RelatedGenerators';
 
 export default function World() {
   const [form, setForm] = useState({
@@ -331,55 +332,78 @@ Return the names as a simple numbered list (1-10), with no additional text or co
           {/* SEO content block */}
           <div className="w-full max-w-3xl text-left space-y-8 text-gray-400">
             <div className="prose prose-invert max-w-none">
-              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Why Your World Needs a Great Name</h2>
-              <p>We combine phonetics, geography cues and genre tropes to generate thousands of original names. Whether you need a name for a sprawling continent, a single kingdom, a mythical city or a hidden realm, the generator provides on-theme ideas that sound like they belong on a fantasy map.</p>
+              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">World & Places Name Generator</h2>
+              <h3 className="text-xl font-bold text-gray-200 mt-6 mb-2">Why your world needs a great name</h3>
+              <p className="mb-4">
+                A map can look amazing, but if the names feel random, the whole setting loses power. The right place name instantly tells your audience what they’re stepping into: ancient or new, holy or cursed, wealthy or starving, safe or war-torn. That’s what this generator is for—creating world and location names that sound like they belong in the same story.
+              </p>
+              <p className="mb-4">
+                Whether you’re naming a continent, kingdom, empire, region, mountain range, river, forest, island chain, or a single mythical city, you’ll get on-theme options that read well, look good on a fantasy map, and don’t feel like a random word mash.
+              </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Build a Believable Setting</h2>
-              <p>Pick a climate, cultural influence, magic level and tone to nudge the results toward your vision. Use these names as seeds for your lore, history and cartography.</p>
+              <h3 className="text-xl font-bold text-gray-200 mt-6 mb-2">Names that fit the map, not just the moment</h3>
+              <p className="mb-4">
+                Place names aren’t only about sounding cool—they should match geography and history. A desert trade capital should feel different than a frost-bitten fortress town. A coastal republic shouldn’t sound like a hidden necromancer realm (unless that’s the twist). This generator helps you keep those signals consistent, so your setting feels believable even when you’re creating locations fast.
+              </p>
+              <p className="mb-4">
+                Use it when you’re:
+              </p>
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
+                <li>starting a brand-new world and need naming direction</li>
+                <li>filling your map with dozens of towns and landmarks</li>
+                <li>building regions with distinct cultures and languages</li>
+                <li>improvising places mid-session as a DM</li>
+                <li>naming locations for a game, novel, or comic</li>
+              </ul>
 
-              <p className="mt-6">
-                Looking for more? Try our
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <Link className="text-fantasy-gold hover:underline" to="/character">Character</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/faction">Faction</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/religion">Religion</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/item">Item</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/dynamic">Dynamic</Link>
-                </div>
+              <h3 className="text-xl font-bold text-gray-200 mt-6 mb-2">Shape the results to match your vision</h3>
+              <p className="mb-4">
+                You can guide the output with choices like climate, cultural influence, magic level, and tone. Want a bright high-fantasy realm with noble names? Done. Need harsh frontier settlements, swamp ruins, or ominous forbidden valleys? You can push the generator in that direction too. The idea is to help you maintain a consistent style across your map, so every new location feels like it comes from the same world.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-200 mt-6 mb-2">Add depth instantly with the Lore button</h3>
+              <p className="mb-4">
+                Once you generate a name you like, click Lore to get a short lore snippet for that specific place. It might reveal a founding myth, a local fear, an old war, a hidden secret, or the reason travelers avoid the roads at night. It’s a quick way to turn “a name on a map” into a location with history—and it’s perfect for sparking quests, rumors, and plot hooks.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-200 mt-6 mb-2">Build a believable setting, one name at a time</h3>
+              <p className="mb-4">
+                Generate a batch, pick your favorites, and let the names guide the details: borders, trade routes, rivalries, ruins, and legends. Good place names don’t just label the world—they help create it.
               </p>
             </div>
 
-
-            {/* VISIBLE FAQ (must match JSON-LD above) */}
-            <section id="faq" className="mt-10">
-              <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6 border-b border-white/10 pb-2">World Name Generator – FAQ</h2>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200">{faq[0].q}</h3>
-                  <p className="mt-1">{faq[0].a}</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200">{faq[1].q}</h3>
-                  <p className="mt-1">{faq[1].a}</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200">{faq[2].q}</h3>
-                  <p className="mt-1">{faq[2].a}</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200">{faq[3].q}</h3>
-                  <p className="mt-1">{faq[3].a}</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200">{faq[4].q}</h3>
-                  <p className="mt-1">{faq[4].a}</p>
-                </div>
-              </div>
-            </section>
+            {/* Related Generators Block */}
+            <RelatedGenerators current="/world" />
           </div>
 
 
+          {/* VISIBLE FAQ (must match JSON-LD above) */}
+          <section id="faq" className="mt-10 w-full max-w-3xl">
+            <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6 border-b border-white/10 pb-2">World Name Generator – FAQ</h2>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-200">{faq[0].q}</h3>
+                <p className="mt-1">{faq[0].a}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-200">{faq[1].q}</h3>
+                <p className="mt-1">{faq[1].a}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-200">{faq[2].q}</h3>
+                <p className="mt-1">{faq[2].a}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-200">{faq[3].q}</h3>
+                <p className="mt-1">{faq[3].a}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-200">{faq[4].q}</h3>
+                <p className="mt-1">{faq[4].a}</p>
+              </div>
+            </div>
+          </section>
         </main>
 
         {/* Back to Home link at bottom */}
