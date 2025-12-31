@@ -163,7 +163,9 @@ RETURN ONLY plain text.`;
         const data = await response.json();
         const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
 
-        if (mode === 'lore') {
+
+        // Check if this is any lore mode and return as lore object
+        if (mode === 'lore' || mode === 'world-lore' || mode === 'faction-lore' || mode === 'religion-lore') {
             return res.json({ lore: text.trim() });
         }
 
