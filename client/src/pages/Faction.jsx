@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
 import SingleAffiliateBox from '../components/SingleAffiliateBox';
+import RelatedGenerators from '../components/RelatedGenerators';
 
 export default function Faction() {
   const [form, setForm] = useState({
@@ -298,28 +299,62 @@ Rules:
           {/* SEO content + internal links */}
           <div className="w-full max-w-3xl text-left space-y-8 text-gray-400">
             <div className="prose prose-invert max-w-none">
-              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Crafting Epic Faction Names for Your Fantasy World</h2>
-              <p>
-                A well-named faction can suggest a rich history, hidden purpose or fearsome reputation. Our <strong>fantasy faction name generator</strong> helps DMs, writers and designers create names that resonate with the setting.
+              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Fantasy Faction Name Generator</h2>
+              <p className="text-xl text-gray-200 mb-4 font-semibold">Craft epic faction names that feel real</p>
+
+              <p className="mb-4">
+                A faction name should do more than sound cool. The best ones hint at history, purpose, and reputation—the kind of name people whisper in taverns, paint on banners, or carve into stone. Whether you’re building a holy order, a criminal syndicate, a rebel alliance, or a royal bloodline, a strong name instantly tells your players or readers what they’re dealing with.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">How to Use the Guild Name Generator and More</h2>
-              <p>
-                Choose a <strong>faction type</strong> like "Guild," "Clan" or "House," then select an <strong>alignment</strong> to set the moral tone.
-                Add a <strong>cultural influence</strong> for unique flavor, and pick a <strong>tone</strong> for emotional weight. This customization keeps results authentic to your world.
+              <p className="mb-4">
+                This faction name generator helps DMs, writers, and game designers create memorable faction names that fit the tone of their world. Use it to name the groups that shape your setting: the ones that start wars, control trade, guard forbidden knowledge, or hunt monsters for coin.
               </p>
 
-              <p className="mt-6">
-                Explore more generators:
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <Link className="text-fantasy-gold hover:underline" to="/character">Character</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/world">World</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/religion">Religion</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/item">Item</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/dynamic">Dynamic</Link>
-                </div>
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">From guilds and clans to houses and cults</h2>
+
+              <p className="mb-4">
+                Not every faction works the same—and they shouldn’t all sound the same either. That’s why the generator supports many styles, including:
+              </p>
+
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2 text-gray-300">
+                <li><strong>Guilds</strong> (merchant guilds, thieves’ guilds, mage circles)</li>
+                <li><strong>Clans and tribal groups</strong></li>
+                <li><strong>Noble Houses and dynasties</strong></li>
+                <li><strong>Orders and brotherhoods</strong></li>
+                <li><strong>Legions, companies, and mercenary bands</strong></li>
+                <li><strong>Cults, sects, and secret societies</strong></li>
+                <li><strong>Rebel movements and underground networks</strong></li>
+              </ul>
+
+              <p className="mb-4">
+                If you’re specifically looking for a guild name generator, you can narrow the type and get results that sound organized, established, and believable—perfect for cities, trade hubs, and political intrigue.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Guide the results with alignment, culture, and tone</h2>
+
+              <p className="mb-4">
+                Quick names are useful. Accurate names are better. With this fantasy faction name generator, you can shape the output so it matches your world instead of fighting against it.
+              </p>
+
+              <p className="mb-4">
+                Choose a faction type (Guild, Clan, House, Order, Cult…), then set an alignment to establish the moral direction: honorable, neutral, ruthless, fanatical, or outright evil. Add a cultural influence to shift the naming style, and pick a tone for emotional weight—noble, grim, mystical, brutal, elegant, or rebellious. These small choices help the names feel consistent across your setting, like they share a real origin.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Use the Lore button to turn a name into a story</h2>
+
+              <p className="mb-4">
+                Found a name you like? Click Lore to get a short lore snippet tied to that specific faction. It might reveal a founding legend, a code of rules, a secret goal, a notorious leader, or the rumor that makes common folk cross the street. It’s an easy way to turn a cool name into something playable and plot-ready—especially when you need instant hooks for quests, alliances, betrayals, and rivalries.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Build a world shaped by groups, not just places</h2>
+
+              <p className="mb-4">
+                Factions create conflict, politics, and identity. Generate a few, pick your favorites, and watch your world come alive: alliances form, enemies rise, borders shift, and legends spread. Start with a name—then click Lore and let the faction write itself.
               </p>
             </div>
+
+            {/* Related Generators Block */}
+            <RelatedGenerators current="/faction" />
 
             {/* VISIBLE FAQ (must match JSON-LD above) */}
             <section id="faq" className="mt-10">
