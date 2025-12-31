@@ -400,15 +400,10 @@ Rules:
                 <li>names that match different cultures and tones</li>
               </ul>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">More Generators for Your World</h2>
-              <p className="mb-4">
-                If you’re expanding beyond characters, explore our <Link to="/faction" className="text-fantasy-gold hover:underline">faction name generator</Link> for faction names, our fantasy faction name generator for banners and guilds, a <Link to="/religion" className="text-fantasy-gold hover:underline">religion name generator</Link> (also a fantasy religion generator / fantasy religion name generator), plus a <Link to="/item" className="text-fantasy-gold hover:underline">fantasy object name generator</Link> for artifacts, weapons, and relics.
-              </p>
-
-              <p className="mb-4">
-                Forge your character’s identity, click Lore, and let the story move forward—one great name at a time. When it clicks, you’ll feel it: the name fits, the lore hook lands, and the adventure starts.
-              </p>
             </div>
+
+            {/* Related Generators Block */}
+            <RelatedGenerators current="/character" />
 
             {/* VISIBLE FAQ (must match JSON-LD above) */}
             <section id="faq" className="mt-10">
@@ -442,8 +437,7 @@ Rules:
 
         </main>
 
-        {/* Related Generators - Internal Linking */}
-        <RelatedGenerators current="/character" />
+
 
         {/* Back to Home link at bottom */}
         <div className="w-full text-center py-8 border-t border-white/5">
