@@ -8,28 +8,28 @@ const blogPosts = [
         title: "Why Names Matter in Fantasy Worlds?",
         slug: "/blog/why-names-matter",
         excerpt: "Discover how the right name can transform your characters, worlds, and factions from good to unforgettable.",
-        date: "2024",
+        date: "2025",
         category: "Worldbuilding"
     },
     {
         title: "5 Tips for Worldbuilding and Creating a Cohesive World",
         slug: "/blog/tips-for-worldbuilding",
         excerpt: "Learn essential worldbuilding techniques to create immersive, believable fantasy settings that captivate your audience.",
-        date: "2024",
+        date: "2025",
         category: "Worldbuilding"
     },
     {
         title: "How to Create Lore-Rich Names for Your Characters",
         slug: "/blog/lore-rich-names",
         excerpt: "Master the art of crafting names that carry weight, history, and meaning in your fantasy narratives.",
-        date: "2024",
+        date: "2025",
         category: "Character Creation"
     },
     {
         title: "Fantasy Female vs. Male Names: Crafting Distinctive Identities",
         slug: "/blog/gender-specific-names",
         excerpt: "Explore how to create culturally-sensitive, memorable names that reflect gender identity in fantasy worlds.",
-        date: "2024",
+        date: "2025",
         category: "Character Creation"
     }
 ];
