@@ -50,6 +50,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.fantasynamecreator.com/" />
         <meta property="og:image" content="https://fantasynamecreator.com/images/og-home.jpg" />
         <meta name="robots" content="index, follow" />
+        <meta name="p:domain_verify" content="36bd546e32da8f5ee29ef715ec2df903" />
 
         <link rel="canonical" href="https://www.fantasynamecreator.com/" />
 
