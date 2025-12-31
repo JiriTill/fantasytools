@@ -55,8 +55,8 @@ module.exports = async (req, res) => {
             return res.status(500).json({ error: 'GEMINI_API_KEY not configured' });
         }
 
-        // Use v1beta endpoint for better model compatibility
-        const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
+        // Use v1beta endpoint with the -latest suffix for the Flash model
+        const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
         const response = await fetch(`${apiUrl}?key=${process.env.GEMINI_API_KEY}`, {
             method: 'POST',
