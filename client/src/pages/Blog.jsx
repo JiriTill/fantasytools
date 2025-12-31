@@ -5,6 +5,13 @@ import Footer from '../components/Footer';
 
 const blogPosts = [
     {
+        title: "7 Naming Systems Writers Use (and How to Copy Them)",
+        slug: "/blog/naming-systems-writers-use",
+        excerpt: "Discover the 7 naming systems fantasy writers use instantly to create consistent, realistic names for clans, guilds, and lineages.",
+        date: "2025",
+        category: "Character Creation"
+    },
+    {
         title: "Create Faiths, Cults, Orders & Pantheons That Feel Real",
         slug: "/blog/create-faiths-cults-orders",
         excerpt: "Build believable religions, holy orders, and cults. A guide to naming, designing beliefs, and creating lore that impacts your world.",
@@ -84,8 +91,8 @@ export default function Blog() {
                                 key={category}
                                 onClick={() => setSelectedCategory(category)}
                                 className={`px-5 py-2 rounded-full font-semibold transition-all border ${selectedCategory === category
-                                        ? "bg-fantasy-gold text-fantasy-dark border-fantasy-gold"
-                                        : "bg-fantasy-dark-secondary text-gray-400 border-white/10 hover:border-fantasy-gold hover:text-white"
+                                    ? "bg-fantasy-gold text-fantasy-dark border-fantasy-gold"
+                                    : "bg-fantasy-dark-secondary text-gray-400 border-white/10 hover:border-fantasy-gold hover:text-white"
                                     }`}
                             >
                                 {category}
