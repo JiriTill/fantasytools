@@ -58,8 +58,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/Why-names-matter" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
-                  Why names matter?
+                <Link to="/blog" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                  Blog
                 </Link>
               </li>
               <li>

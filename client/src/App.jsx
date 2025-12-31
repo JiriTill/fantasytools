@@ -18,6 +18,7 @@ import HowToCreateLoreRichNames from './pages/HowToCreateLoreRichNames';
 import FiveTipsForWorldbuilding from './pages/FiveTipsForWorldbuilding';
 import FemalevsMale from './pages/FemalevsMale';
 import FAQ from './pages/FAQ';
+import Blog from './pages/Blog';
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
       <Route path="/religion" element={<Religion />} />
       <Route path="/item" element={<Item />} />
       <Route path="/dynamic" element={<Dynamic />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/why-names-matter" element={<WhyNamesMatter />} />
       <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
       <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
       <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
