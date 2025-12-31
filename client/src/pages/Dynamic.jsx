@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
 import SingleAffiliateBox from '../components/SingleAffiliateBox';
+import RelatedGenerators from '../components/RelatedGenerators';
 
 export default function Dynamic() {
   const [form, setForm] = useState({
@@ -279,30 +280,63 @@ Rules:
           {/* SEO content block + internal links */}
           <div className="w-full max-w-3xl text-left space-y-8 text-gray-400">
             <div className="prose prose-invert max-w-none">
-              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">The Ultimate Custom Fantasy Name Generator</h2>
-              <p>
-                Our dynamic generator shines when you need a name that doesn’t fit a predefined box—unique races, arcane artifacts, legendary
-                weapons or mysterious spells. Input a custom context, cultural influence and tone to craft truly original names.
+              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Dynamic Fantasy Name Generator and Creator</h2>
+              <p className="text-xl text-gray-200 mb-4 font-semibold">The ultimate custom fantasy name generator</p>
+
+              <p className="mb-4">
+                Sometimes you don’t need “character” or “city.” You need something weird and specific that doesn’t fit a neat category: a new race, a lost spell, a secret organization, a legendary weapon, an arcane artifact, a planet, a realm beyond the clouds, or a title spoken only in prophecy. That’s exactly what the Dynamic Generator is for.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">How to Generate Unique Fantasy Names with Custom Inputs</h2>
-              <p>
-                For best results, be descriptive in the <strong>Context</strong> field (e.g., “a cursed greatsword once wielded by a shadow knight”).
-                In <strong>Cultural Influence</strong>, try “Old Norse,” “Japanese folklore,” or “Ancient Egyptian.” For <strong>Tone</strong>, use words like
-                “foreboding,” “heroic,” “serene,” or “chaotic.” Use this as your go-to <strong>custom name creator</strong> to bring unique ideas to life.
+              <p className="mb-4">
+                This is your flexible, open-ended custom name creator. Instead of picking from predefined boxes, you describe what you want—and the generator gives you names that match your idea. It’s perfect for creators who build unusual worlds, mix genres, or want names that feel truly original.
               </p>
 
-              <p className="mt-6">
-                Explore more generators:
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <Link className="text-fantasy-gold hover:underline" to="/character">Character</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/world">World</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/faction">Faction</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/item">Item</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/religion">Religion</Link>
-                </div>
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">How to generate unique fantasy names with custom inputs</h2>
+
+              <p className="mb-4">
+                The Dynamic Generator works best when you give it a clear “anchor” in the Context field. You don’t have to write a novel—just a strong one-liner that explains what the thing is and why it matters.
+              </p>
+
+              <p className="mb-4 font-semibold text-fantasy-gold">Examples of good context:</p>
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2 text-gray-300">
+                <li>“A cursed greatsword once wielded by a shadow knight”</li>
+                <li>“A floating city powered by storm crystals”</li>
+                <li>“A desert clan that worships a silent sun”</li>
+                <li>“A forbidden spell that trades memories for power”</li>
+                <li>“A pirate republic built inside a colossal whale skeleton”</li>
+              </ul>
+
+              <p className="mb-4">
+                Then add:
+              </p>
+
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2 text-gray-300">
+                <li><strong>Cultural Influence</strong> — this shapes the feel of the names. Try ideas like Old Norse, Japanese folklore, Ancient Egyptian, Celtic, Latin, Slavic, or even “mixed frontier dialect.”</li>
+                <li><strong>Tone</strong> — this controls the emotional weight. Use words like foreboding, heroic, serene, grim, regal, chaotic, mystical, or playful.</li>
+              </ul>
+
+              <p className="mb-4">
+                Each click returns 10 new options, so you can explore variations quickly. If the results are close but not perfect, tweak a few words in your context (change “cursed” to “holy,” “shadow” to “storm,” “ancient” to “new”) and try again. Small changes often produce dramatically better fits.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">The Lore button: instant meaning, not just a name</h2>
+
+              <p className="mb-4">
+                The Dynamic Generator also includes the Lore feature. When a name stands out, click Lore to get a short lore snippet tied to that specific result—an origin hint, rumor, secret purpose, title, taboo, or twist. It’s a fast way to turn a name into something you can actually use: a plot hook, a quest seed, a backstory detail, or a worldbuilding note you didn’t know you needed.
+              </p>
+
+              <p className="mb-4">
+                For game masters, this is gold for improvisation. For writers, it’s a great “unlock” when you have a concept but no story angle yet. For designers, it adds flavor fast—without slowing your workflow.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">When to use Dynamic</h2>
+              <p className="mb-4">
+                Use it when your idea is too custom for a standard generator, or when you want the generator to meet your imagination halfway. Describe it, generate names, click Lore, and watch the concept become part of your world.
               </p>
             </div>
+
+            {/* Related Generators Block */}
+            <RelatedGenerators current="/dynamic" />
 
 
             {/* VISIBLE FAQ (must match JSON-LD above) */}
