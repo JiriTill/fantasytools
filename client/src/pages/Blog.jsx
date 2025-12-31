@@ -5,6 +5,20 @@ import Footer from '../components/Footer';
 
 const blogPosts = [
     {
+        title: "Faction Names for Board Games: Guilds, Houses, Clans, and Empires",
+        slug: "/blog/faction-names-board-games",
+        excerpt: "Learn practical naming rules and templates to create memorable faction names for board games that signal playstyle and theme.",
+        date: "2025",
+        category: "Tabletop Games"
+    },
+    {
+        title: "Religion and Myth in Tabletop Games: Naming Cults, Gods, and Pantheons",
+        slug: "/blog/religion-myth-tabletop-games",
+        excerpt: "A guide to creating mythic yet playable names for religions, cults, and pantheons in board games and TTRPGs.",
+        date: "2025",
+        category: "Tabletop Games"
+    },
+    {
         title: "7 Naming Systems Writers Use (and How to Copy Them)",
         slug: "/blog/naming-systems-writers-use",
         excerpt: "Discover the 7 naming systems fantasy writers use instantly to create consistent, realistic names for clans, guilds, and lineages.",
@@ -48,7 +62,7 @@ const blogPosts = [
     }
 ];
 
-const categories = ["All", "Worldbuilding", "Character Creation"];
+const categories = ["All", "Worldbuilding", "Character Creation", "Tabletop Games"];
 
 export default function Blog() {
     const [selectedCategory, setSelectedCategory] = useState("All");

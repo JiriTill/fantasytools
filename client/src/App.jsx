@@ -21,6 +21,8 @@ import FAQ from './pages/FAQ';
 import Blog from './pages/Blog';
 import CreateFaiths from './pages/CreateFaiths';
 import NamingSystems from './pages/NamingSystems';
+import FactionNamesBoardGames from './pages/FactionNamesBoardGames';
+import ReligionMythTabletop from './pages/ReligionMythTabletop';
 import Ideas from './pages/Ideas';
 import TopNav from './components/TopNav';
 
@@ -51,6 +53,8 @@ function App() {
         <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
         <Route path="/blog/create-faiths-cults-orders" element={<CreateFaiths />} />
         <Route path="/blog/naming-systems-writers-use" element={<NamingSystems />} />
+        <Route path="/blog/faction-names-board-games" element={<FactionNamesBoardGames />} />
+        <Route path="/blog/religion-myth-tabletop-games" element={<ReligionMythTabletop />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/ideas" element={<Ideas />} />
       </Routes>
