@@ -368,28 +368,46 @@ Rules:
 
             <div className="prose prose-invert max-w-none">
               <h2 className="text-fantasy-gold text-2xl font-bold mb-4">The Ultimate Fantasy Character Name Generator and Creator</h2>
-              <p>
-                Our generator provides instant, unique names that fit your character’s race, class and backstory. A great name hints at heritage,
-                personality or destiny—use this tool to jumpstart your creativity.
+
+              <p className="mb-4">
+                Welcome to Fantasy Name Creator, a flexible fantasy character name generator built for writers, RPG players, DMs, and worldbuilders who want names that feel like they belong in a real setting. A great character name isn’t just a label—it suggests heritage, personality, culture, status, and destiny. Whether you’re naming a hero, a ruthless villain, or a tavern full of NPCs, this generator helps you create names that are memorable, believable, and ready to use.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Discover the Perfect Fantasy Female and Male Names</h2>
-              <p>
-                Generate a wide variety of names for both genders—or neutral options. Whether you need a fierce warrior queen or a stoic knight,
-                our AI-driven system creates original yet familiar names that resonate with players and readers.
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Create Names That Match Race, Class, and Tone</h2>
+              <p className="mb-4">
+                Most name tools throw random syllables at you and hope something sticks. Here, you can guide the results to fit your character. Choose a race, pick a profession or class, and set a tone—noble, dark, mystical, savage, elegant, heroic, or gritty. The generator then delivers names that match the mood of your world, so your knight doesn’t sound like a space pirate and your necromancer doesn’t sound like a cheerful bard. Want a harsh frontier vibe? Go gritty. Need royal court drama? Go elegant. Creating a cult leader, pirate captain, or desert ranger? Adjust tone and class to match.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Forge Your Hero’s Identity</h2>
-              <p>
-                Choose race, profession, class and tone to shape the sound and feel. Explore related tools:
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Fantasy Female, Male, and Neutral Names</h2>
+              <p className="mb-4">
+                Need fantasy female names, fantasy male names, or gender-neutral options? Generate all three. Create a fearless warrior queen, a silent assassin, a scarred sellsword, or a calm archmage—then keep generating until one clicks. It’s also great for consistent naming across families, clans, and regions when you’re building a larger cast. Save your favorites, compare them side by side, and say them out loud—if it sounds right in a sentence, it will read well on the page and at the table.
               </p>
-              <div className="flex flex-wrap gap-3 mt-4">
-                <Link className="text-fantasy-gold hover:underline" to="/world">World</Link> •
-                <Link className="text-fantasy-gold hover:underline" to="/faction">Faction</Link> •
-                <Link className="text-fantasy-gold hover:underline" to="/religion">Religion</Link> •
-                <Link className="text-fantasy-gold hover:underline" to="/item">Item</Link> •
-                <Link className="text-fantasy-gold hover:underline" to="/dynamic">Dynamic</Link>
-              </div>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Turn a Name Into a Story With the Lore Button</h2>
+              <p className="mb-4">
+                Names are powerful because they imply history—and that’s why every result includes a Lore button. When you find a name you like, click Lore to reveal a short lore snippet tied to that name: a rumor, title, origin hint, personality trait, oath, curse, or destiny hook. Use it as-is, remix it, or combine two snippets into one. This is perfect when you want instant answers to “Who are they?” and “What trouble follows them?” without pausing your flow.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Perfect for RPGs, Novels, and Campaign Prep</h2>
+              <p className="mb-4">
+                Use this name generator fantasy tool when you need:
+              </p>
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
+                <li>protagonist names with meaning</li>
+                <li>villain names that sound feared and legendary</li>
+                <li>quick NPC names mid-session</li>
+                <li>a cast for a novel, game, or comic</li>
+                <li>names that match different cultures and tones</li>
+              </ul>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">More Generators for Your World</h2>
+              <p className="mb-4">
+                If you’re expanding beyond characters, explore our <Link to="/faction" className="text-fantasy-gold hover:underline">faction name generator</Link> for faction names, our fantasy faction name generator for banners and guilds, a <Link to="/religion" className="text-fantasy-gold hover:underline">religion name generator</Link> (also a fantasy religion generator / fantasy religion name generator), plus a <Link to="/item" className="text-fantasy-gold hover:underline">fantasy object name generator</Link> for artifacts, weapons, and relics.
+              </p>
+
+              <p className="mb-4">
+                Forge your character’s identity, click Lore, and let the story move forward—one great name at a time. When it clicks, you’ll feel it: the name fits, the lore hook lands, and the adventure starts.
+              </p>
             </div>
 
             {/* VISIBLE FAQ (must match JSON-LD above) */}
