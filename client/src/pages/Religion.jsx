@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
 import SingleAffiliateBox from '../components/SingleAffiliateBox';
+import RelatedGenerators from '../components/RelatedGenerators';
 
 export default function Religion() {
   const [form, setForm] = useState({
@@ -304,27 +305,56 @@ Rules:
           {/* SEO content block + internal links */}
           <div className="w-full max-w-3xl text-left space-y-8 text-gray-400">
             <div className="prose prose-invert max-w-none">
-              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Crafting Divine and Mysterious Religion Names</h2>
-              <p>
-                A well-named religion can hint at origins, tenets and the nature of its deity. Use the fields above to steer phonetics and tone—perfect for churches, secret cults, holy orders and ancient pantheons.
+              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Fantasy Religion Name Generator</h2>
+              <p className="text-xl text-gray-200 mb-4 font-semibold">Craft divine and mysterious religion names</p>
+
+              <p className="mb-4">
+                Religions are the heartbeat of many fantasy worlds. They shape laws, wars, festivals, taboos, and the way people explain the unknown. A strong religion name can instantly suggest origins, sacred beliefs, rituals, and the nature of the deity behind it—whether that deity is real, silent, dead, or hiding in plain sight.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">How to Use the Cult & Faith Name Generator</h2>
-              <p>
-                Select a <strong>Religion Type</strong>, set <strong>Deity Alignment</strong>, provide a <strong>Cultural Influence</strong>, and choose a <strong>Tone</strong>. Each generation produces 10 fresh ideas you can refine or regenerate.
+              <p className="mb-4">
+                This religion name generator helps you create names that feel fitting for your setting, not generic filler. Use it for grand public faiths, strange regional beliefs, forbidden cults, saintly orders, or ancient pantheons carved into the foundations of ruined temples. If you’re looking for a fantasy religion generator or fantasy religion name generator that delivers names with tone and identity, you’re in the right place.
               </p>
 
-              <p className="mt-6">
-                Explore more generators:
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <Link className="text-fantasy-gold hover:underline" to="/character">Character</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/world">World</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/faction">Faction</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/item">Item</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/dynamic">Dynamic</Link>
-                </div>
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Perfect for churches, cults, orders, and pantheons</h2>
+
+              <p className="mb-4">
+                Not every belief system should sound the same. Some religions are proud and official. Others are whispered about in alleyways. Some are philosophical and calm, while others are violent, ecstatic, or terrifying. This generator is built to handle that range, including names for:
               </p>
+
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2 text-gray-300">
+                <li><strong>Churches and state religions</strong></li>
+                <li><strong>Secret cults and forbidden sects</strong></li>
+                <li><strong>Holy orders and temple organizations</strong></li>
+                <li><strong>Pantheons and multi-deity traditions</strong></li>
+                <li><strong>Heresies, splinter faiths, and reform movements</strong></li>
+              </ul>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Guide the results with simple controls</h2>
+
+              <p className="mb-4">
+                To keep names consistent with your world, you can steer the generator before you create results. Choose a Religion Type (church, cult, order, pantheon, etc.), set Deity Alignment to define the moral direction of the faith, add a Cultural Influence to shape the naming style, and pick a Tone—noble, ominous, mystical, austere, brutal, or serene. Each generation gives you 10 fresh ideas, so you can refine, compare, and regenerate until something fits.
+              </p>
+
+              <p className="mb-4">
+                This is especially useful when you’re building multiple faiths. You can create one official “sunlit” religion for the capital, then generate darker underground cults with a different tone—without breaking the internal logic of your setting.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Unlock story hooks with the Lore button</h2>
+
+              <p className="mb-4">
+                Found a religion name you like? Click Lore to reveal a short lore snippet tied to that specific result. It might hint at the faith’s core doctrine, a sacred rule, an origin myth, a controversial practice, a holy symbol, or a secret the clergy doesn’t want revealed. In seconds, you can turn “a cool name” into something you can actually use in play or in a chapter.
+              </p>
+
+              <p className="mb-4">
+                For DMs, Lore is perfect for quick world detail and quest seeds: forbidden rites, lost saints, rival temples, heretic hunters, and political control. For writers and designers, it helps you create belief systems that feel lived-in—like they existed before the story began.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Create a name, click Lore, and let your world’s faith take shape</h2>
             </div>
+
+            {/* Related Generators Block */}
+            <RelatedGenerators current="/religion" />
 
             {/* VISIBLE FAQ (must match JSON-LD above) */}
             <section id="faq" className="mt-10">
