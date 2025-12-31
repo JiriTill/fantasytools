@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
+import SingleAffiliateBox from '../components/SingleAffiliateBox';
 
 
 export default function FiveTipsForWorldbuilding() {
@@ -136,6 +137,10 @@ export default function FiveTipsForWorldbuilding() {
             Once you know geography, your map starts “writing” your politics. That’s also when names become easier: a stormy coast will naturally produce different place names than a sacred valley. Use your World/Places generator to name continents, regions, and cities—and click Lore to get a rumor or founding myth. That single paragraph can define a whole quest chain.
           </p>
 
+          <div className="my-12">
+            <AmazonAffiliate />
+          </div>
+
           <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">3) Make magic a system (even if the audience never sees the rules)</h3>
           <p>
             Brandon Sanderson’s books are a good case practice for clear magic systems: there are costs, limits, and consequences. Even if you prefer mysterious magic, you should still know what it can’t do.
@@ -199,9 +204,9 @@ export default function FiveTipsForWorldbuilding() {
             </div>
           </div>
 
-          {/* Amazon Affiliate Box at the end */}
+          {/* Single Affiliate Box at the end (book link) */}
           <div className="my-12">
-            <AmazonAffiliate />
+            <SingleAffiliateBox />
           </div>
 
 
