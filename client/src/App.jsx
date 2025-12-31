@@ -19,30 +19,37 @@ import FiveTipsForWorldbuilding from './pages/FiveTipsForWorldbuilding';
 import FemalevsMale from './pages/FemalevsMale';
 import FAQ from './pages/FAQ';
 import Blog from './pages/Blog';
+import Ideas from './pages/Ideas';
+import TopNav from './components/TopNav';
 
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/character" element={<Character />} />
-      <Route path="/why-names-matter" element={<WhyNamesMatter />} />
-      <Route path="/world" element={<World />} />
-      <Route path="/faction" element={<Faction />} />
-      <Route path="/religion" element={<Religion />} />
-      <Route path="/item" element={<Item />} />
-      <Route path="/dynamic" element={<Dynamic />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/why-names-matter" element={<WhyNamesMatter />} />
-      <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
-      <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
-      <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
-      <Route path="/faq" element={<FAQ />} />
-    </Routes>
+    <>
+      <TopNav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/character" element={<Character />} />
+        <Route path="/why-names-matter" element={<WhyNamesMatter />} />
+        <Route path="/world" element={<World />} />
+        <Route path="/faction" element={<Faction />} />
+        <Route path="/religion" element={<Religion />} />
+        <Route path="/item" element={<Item />} />
+        <Route path="/dynamic" element={<Dynamic />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/why-names-matter" element={<WhyNamesMatter />} />
+        <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
+        <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
+        <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
+        <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/ideas" element={<Ideas />} />
+      </Routes>
+    </>
   );
 }
 

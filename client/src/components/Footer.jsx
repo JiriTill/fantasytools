@@ -46,35 +46,33 @@ export default function Footer() {
 
           {/* Quick links (right) */}
           <nav className="flex md:justify-end" aria-label="Footer navigation">
-            <ul className="space-y-3 text-gray-400">
-              <li>
-                <Link to="/About" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
-                  About Fantasy Name Creator
+            <ul className="flex flex-col md:items-end gap-2 text-gray-400">
+              {/* Line 1 */}
+              <li className="flex flex-wrap gap-4 md:gap-6 justify-center md:justify-end">
+                <Link to="/about" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                  About
                 </Link>
-              </li>
-              <li>
+                <Link to="/blog" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                  Blog
+                </Link>
+                <Link to="/ideas" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                  Ideas
+                </Link>
                 <Link to="/faq" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
                   FAQ - Help & Guide
                 </Link>
               </li>
-              <li>
-                <Link to="/blog" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
-                  Blog
+
+              {/* Line 2 */}
+              <li className="flex flex-wrap gap-4 md:gap-6 justify-center md:justify-end">
+                <Link to="/terms" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                  Terms of Service
                 </Link>
-              </li>
-              <li>
-                <Link to="/Terms" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
-                  Terms of Use
-                </Link>
-              </li>
-              <li>
-                <Link to="/Privacy" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                <Link to="/privacy" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
                   Privacy Policy
                 </Link>
-              </li>
-              <li>
-                <Link to="/Contact" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
-                  Contact &amp; Feedback
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-fantasy-gold transition duration-200">
+                  Contact & Feedback
                 </Link>
               </li>
             </ul>
