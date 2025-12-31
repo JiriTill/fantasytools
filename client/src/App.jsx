@@ -25,6 +25,7 @@ import FactionNamesBoardGames from './pages/FactionNamesBoardGames';
 import ReligionMythTabletop from './pages/ReligionMythTabletop';
 import Ideas from './pages/Ideas';
 import FifteenFantasyReligions from './pages/ideas/FifteenFantasyReligions';
+import FantasyQuestHooks from './pages/ideas/FantasyQuestHooks';
 import TopNav from './components/TopNav';
 
 
@@ -59,6 +60,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/ideas" element={<Ideas />} />
         <Route path="/ideas/15-fantasy-religions" element={<FifteenFantasyReligions />} />
+        <Route path="/ideas/10-fantasy-quest-hooks" element={<FantasyQuestHooks />} />
       </Routes>
     </>
   );

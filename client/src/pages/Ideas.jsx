@@ -10,6 +10,13 @@ const ideas = [
         excerpt: "A collection of 15 unique fantasy religions with lore seeds to spark conflicts, quests, and character motivations in your world.",
         date: "2025",
         category: "Religion"
+    },
+    {
+        title: "10 Fantasy Quest Hooks with Twists (Free to Use)",
+        slug: "/ideas/10-fantasy-quest-hooks",
+        excerpt: "Ten original fantasy quest hooks with unexpected twists to challenge your players. Perfect for D&D and RPG campaigns.",
+        date: "2025",
+        category: "Quests Hooks"
     }
     // Future ideas will be added here
 ];
@@ -54,8 +61,8 @@ export default function Ideas() {
                             key={cat}
                             onClick={() => setSelectedCategory(cat)}
                             className={`px-4 py-2 rounded-full border transition-all text-sm font-semibold tracking-wide ${selectedCategory === cat
-                                    ? 'bg-fantasy-gold text-fantasy-dark border-fantasy-gold shadow-[0_0_15px_rgba(212,175,55,0.4)]'
-                                    : 'bg-transparent text-gray-400 border-white/10 hover:border-fantasy-gold/50 hover:text-white'
+                                ? 'bg-fantasy-gold text-fantasy-dark border-fantasy-gold shadow-[0_0_15px_rgba(212,175,55,0.4)]'
+                                : 'bg-transparent text-gray-400 border-white/10 hover:border-fantasy-gold/50 hover:text-white'
                                 }`}
                         >
                             {cat}
