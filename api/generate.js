@@ -124,6 +124,48 @@ Style rules:
 
 RETURN ONLY plain text.`;
             break;
+        case 'item-lore':
+            prompt = `Generate a 2–3 sentence lore snippet for a fantasy item named "${params.name}".
+
+Inputs:
+- Item Type: ${params.itemType}
+- Rarity: ${params.rarity}
+- Material: ${params.material}
+- Magic Effect: ${params.magicEffect}
+- Tone: ${params.tone}
+
+Requirements:
+- Sentence 1: the item's origin or legend (include a unique proper noun: a forge, battle, wielder, or event).
+- Sentence 2: its power, curse, or secret (what makes this item special or dangerous).
+- Sentence 3 (optional): a hook: who seeks it now, or what will happen if it's used.
+
+Style rules:
+- No bullet points, no headings, no game mechanics.
+- Make it feel distinct: avoid using the most common fantasy nouns unless you give them a unique twist.
+- Do not change or "correct" the name "${params.name}" and do not add quotation marks around it.
+
+RETURN ONLY plain text.`;
+            break;
+        case 'dynamic-lore':
+            prompt = `Generate a 2–3 sentence lore snippet for "${params.name}".
+
+Context: ${params.context || 'A fantasy concept'}
+Cultural Influence: ${params.culture || 'Unknown'}
+Tone: ${params.tone || 'Evocative'}
+
+Requirements:
+- Sentence 1: establish what this is with vivid, grounded details (include 1 unique proper noun).
+- Sentence 2: reveal a defining feature, conflict, or mystery that makes it memorable.
+- Sentence 3 (optional): a present-tense hook suggesting what could happen next.
+
+Style rules:
+- Evocative, immersive language fitting a high fantasy setting.
+- No bullet points, no headings, no modern slang.
+- Make it feel distinct: avoid using the most common fantasy nouns unless you give them a unique twist.
+- Do not change or "correct" the name "${params.name}" and do not add quotation marks around it.
+
+RETURN ONLY plain text.`;
+            break;
         default:
             if (req.body.prompt) {
                 prompt = req.body.prompt;
@@ -165,7 +207,7 @@ RETURN ONLY plain text.`;
 
 
         // Check if this is any lore mode and return as lore object
-        if (mode === 'lore' || mode === 'world-lore' || mode === 'faction-lore' || mode === 'religion-lore') {
+        if (mode === 'lore' || mode === 'world-lore' || mode === 'faction-lore' || mode === 'religion-lore' || mode === 'item-lore' || mode === 'dynamic-lore') {
             return res.json({ lore: text.trim() });
         }
 

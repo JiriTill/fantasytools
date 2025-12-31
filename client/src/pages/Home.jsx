@@ -88,7 +88,7 @@ export default function Home() {
             Fantasy Name Generator
           </h1>
           <p className="text-center text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Create unique fantasy names for your worlds, characters, factions, religions, and legendary items.
+            Create unique fantasy names for characters, worlds, factions, religions, and legendary items — then unlock ✨ instant lore to bring them to life
           </p>
 
         </header>
