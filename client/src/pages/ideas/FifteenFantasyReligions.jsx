@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Footer from '../components/Footer';
-import AmazonAffiliate from '../components/AmazonAffiliate';
-import SingleAffiliateBox from '../components/SingleAffiliateBox';
-import RelatedGenerators from '../components/RelatedGenerators';
+import Footer from '../../components/Footer';
+import AmazonAffiliate from '../../components/AmazonAffiliate';
+import SingleAffiliateBox from '../../components/SingleAffiliateBox';
+import RelatedGenerators from '../../components/RelatedGenerators';
 
 export default function FifteenFantasyReligions() {
     const scrollToTop = () => window.scrollTo(0, 0);
