@@ -6,6 +6,7 @@ import ShareGeneratedName from '../components/ShareGeneratedName';
 import Footer from '../components/Footer';
 import AmazonAffiliate from '../components/AmazonAffiliate';
 import SingleAffiliateBox from '../components/SingleAffiliateBox';
+import RelatedGenerators from '../components/RelatedGenerators';
 
 export default function Item() {
   const [form, setForm] = useState({
@@ -307,29 +308,50 @@ Rules:
           {/* SEO content + internal links */}
           <div className="w-full max-w-3xl text-left space-y-8 text-gray-400">
             <div className="prose prose-invert max-w-none">
-              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">The Ultimate Fantasy Item Name Generator</h2>
-              <p>
-                Name swords, amulets, tomes, potions and relics with lore-friendly titles. Combine rarity, materials and magic effects to
-                produce names that feel tailored to your setting.
+              <h2 className="text-fantasy-gold text-2xl font-bold mb-4">Fantasy Item Name Generator and Creator</h2>
+              <p className="text-xl text-gray-200 mb-4 font-semibold">The ultimate fantasy item name generator</p>
+
+              <p className="mb-4">
+                A legendary item deserves a name that carries weight. Whether it’s a blade that ended a dynasty, an amulet feared by sailors, or a tome sealed in a monastery for a reason, the name should feel like it belongs in your world’s history. This fantasy item name generator helps you create lore-friendly names for swords, axes, bows, staves, amulets, rings, tomes, potions, relics, artifacts, and cursed treasures—the kind of names your players remember and your readers circle on the page.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Finding the Perfect Magic Weapon or Artifact Name</h2>
-              <p>
-                Choose <strong>Item Type</strong>, set <strong>Rarity</strong>, describe <strong>Material</strong> and <strong>Magic Effect</strong>,
-                then pick a <strong>Tone</strong>. Each click returns 10 new options—regenerate until one sings.
+              <p className="mb-4">
+                Instead of generic “Flaming Sword +1” style titles, you’ll get names that sound like they were forged, discovered, stolen, worshipped, or buried. Use the results as final names, or as seeds you can twist into something even more personal.
               </p>
 
-              <p className="mt-6">
-                Explore more generators:
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <Link className="text-fantasy-gold hover:underline" to="/character">Character</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/world">World</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/faction">Faction</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/religion">Religion</Link> •
-                  <Link className="text-fantasy-gold hover:underline" to="/dynamic">Dynamic</Link>
-                </div>
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Create magic weapon and artifact names that fit your setting</h2>
+
+              <p className="mb-4">
+                Items feel more believable when the name reflects what the object is made of, how rare it is, and what it does. With this generator, you can guide the results using simple inputs:
               </p>
+
+              <ul className="list-disc list-inside mb-4 ml-4 space-y-2 text-gray-300">
+                <li><strong>Item Type</strong> (weapon, armor, jewelry, book, potion, relic, tool, etc.)</li>
+                <li><strong>Rarity</strong> (common, rare, legendary… or however your world defines it)</li>
+                <li><strong>Material</strong> (iron, obsidian, bone, silverwood, glass, dragon scale…)</li>
+                <li><strong>Magic Effect</strong> (fire, shadow, healing, time, storms, illusions, binding…)</li>
+                <li><strong>Tone</strong> (noble, ominous, brutal, mystical, elegant, ancient, playful…)</li>
+              </ul>
+
+              <p className="mb-4">
+                Each click returns 10 new options, so you can compare, shortlist, and regenerate until one truly fits. Need something holy for a paladin? Go noble and radiant. Need a weapon for a warlord? Push brutal and heavy. Naming a forbidden relic? Choose ominous and ancient. The results shift with your choices, helping you keep the style consistent across your world.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">The Lore button: turn an item name into a quest hook</h2>
+
+              <p className="mb-4">
+                Found a name you like? Click Lore to generate a short lore snippet tied to that specific item. You might get an origin story, a previous owner, a rumor, a curse, a hidden ability, or the reason the item was sealed away. In a single moment, the object stops being “loot” and becomes a story engine.
+              </p>
+
+              <p className="mb-4">
+                For DMs, this is perfect for instant side quests: a stolen relic, a rival claimant, a missing key, a prophecy, or a temple that wants the artifact back. For writers and designers, Lore gives you quick flavor that makes items feel ancient and meaningful—like they existed before the story began.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl font-bold mt-8 mb-4">Name the object, click Lore, and let the item earn its legend</h2>
             </div>
+
+            {/* Related Generators Block */}
+            <RelatedGenerators current="/item" />
 
             {/* VISIBLE FAQ (must match JSON-LD above) */}
             <section id="faq" className="mt-10">
