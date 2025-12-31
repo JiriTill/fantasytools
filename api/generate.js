@@ -32,15 +32,97 @@ module.exports = async (req, res) => {
       RETURN ONLY A RAW JSON ARRAY OF STRINGS. DO NOT include "json" formatting or backticks. Example: ["Name1", "Name2"]`;
             break;
         case 'lore':
-            prompt = `Generate a short, immersive 2-3 sentence backstory for a fantasy character named "${params.name}".
-      - Gender: ${params.gender}
-      - Race: ${params.race}
-      - Profession: ${params.profession}
-      - Social Class: ${params.socialClass}
-      - Personality: ${params.personality || 'Unknown'}
-      - Tone: ${params.tone}
-      The backstory should be evocative and fit a high fantasy setting.
-      RETURN ONLY THE PLAIN TEXT BACKSTORY.`;
+            prompt = `Write an immersive 2–3 sentence high-fantasy backstory for a character named "${params.name}".
+
+Inputs:
+- Gender: ${params.gender}
+- Race: ${params.race}
+- Profession: ${params.profession}
+- Social Class: ${params.socialClass}
+- Personality: ${params.personality}
+- Tone: ${params.tone}
+
+Requirements:
+- Sentence 1: establish a specific origin or reputation (include 1 unique proper noun: a place, order, relic, or title).
+- Sentence 2: reveal a defining twist (secret, debt, curse, vow, betrayal, prophecy, or crime) that fits the Tone.
+- Sentence 3 (optional): end with a present-tense hook: what they want right now, and what stands in their way.
+
+Style rules:
+- Evocative, grounded details (one sensory image or concrete object).
+- No modern slang, no game mechanics, no bullet points, no headings.
+- Avoid cliché openers like "born in a small village…".
+- If any input is "Any/Unknown", subtly omit it and infer something fitting.
+- Make it feel distinct: avoid using the most common fantasy nouns (e.g., "tavern", "bandits", "chosen one") unless you give them a unique twist.
+- Write in third-person past tense, with the final hook in present tense.
+- Do not change or "correct" the name "${params.name}" and do not add quotation marks around it.
+
+RETURN ONLY the plain text backstory.`;
+            break;
+        case 'world-lore':
+            prompt = `Generate an evocative 2–3 sentence lore snippet for a fantasy world named "${params.name}".
+
+Inputs: 
+- Location Type: ${params.locationType}
+- Geography: ${params.geography}
+- Climate: ${params.climate}
+- Inhabitants: ${params.inhabitants}
+- Tone: ${params.tone}
+
+Requirements:
+- Sentence 1: a striking establishing image (geography + atmosphere) with one unique proper noun (region, landmark, era, or phenomenon).
+- Sentence 2: the world's defining tension (war, curse, collapse, divine feud, forbidden magic, rising empire).
+- Sentence 3 (optional): a hook that suggests what could happen next.
+
+Style rules:
+- No modern terms, no bullet points, no headings.
+- If an input is unknown, infer something consistent.
+- Make it feel distinct: avoid using the most common fantasy nouns unless you give them a unique twist.
+- Do not change or "correct" the name "${params.name}" and do not add quotation marks around it.
+
+RETURN ONLY plain text.`;
+            break;
+        case 'faction-lore':
+            prompt = `Generate a 2–3 sentence lore snippet for a fantasy faction named "${params.name}".
+
+Inputs:
+- Faction Type: ${params.factionType}
+- Alignment: ${params.alignment}
+- Size: ${params.size}
+- Influence: ${params.influence}
+- Tone: ${params.tone}
+
+Requirements:
+- Sentence 1: who they are + a signature symbol/trait (banner, creed, weapon, rite, uniform).
+- Sentence 2: what they want and what they're willing to do (include a rival, threat, or price).
+- Sentence 3 (optional): a hook: why they matter right now.
+
+Style rules:
+- No bullet points, no headings, no game mechanics.
+- Make it feel distinct: avoid using the most common fantasy nouns unless you give them a unique twist.
+- Do not change or "correct" the name "${params.name}" and do not add quotation marks around it.
+
+RETURN ONLY plain text.`;
+            break;
+        case 'religion-lore':
+            prompt = `Generate a 2–3 sentence lore snippet for a fantasy religion named "${params.name}".
+
+Inputs:
+- Religion Type: ${params.type}
+- Alignment: ${params.alignment}
+- Cultural Influence: ${params.culture}
+- Tone: ${params.tone}
+
+Requirements:
+- Sentence 1: what they worship/believe + the emotional flavor of the faith.
+- Sentence 2: a distinctive practice and a cost (taboo, sacrifice, conflict with outsiders, hidden truth).
+- Sentence 3 (optional): a hook: a schism, prophecy, heresy, or miracle stirring now.
+
+Style rules:
+- No bullet points, no headings, no modern slang.
+- Make it feel distinct: avoid using the most common fantasy nouns unless you give them a unique twist.
+- Do not change or "correct" the name "${params.name}" and do not add quotation marks around it.
+
+RETURN ONLY plain text.`;
             break;
         default:
             if (req.body.prompt) {

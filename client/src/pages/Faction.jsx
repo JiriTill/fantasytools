@@ -19,6 +19,8 @@ export default function Faction() {
   const [loading, setLoading] = useState(false);
   const [timer, setTimer] = useState(0);
   const [error, setError] = useState(null);
+  const [lore, setLore] = useState({});
+  const [loadingLore, setLoadingLore] = useState(null);
   const resultsRef = React.useRef(null);
 
   useEffect(() => {
@@ -71,6 +73,28 @@ Rules:
       }
     } finally {
       setLoading(false);
+    }
+  };
+
+  const generateLore = async (name) => {
+    if (lore[name]) return;
+    setLoadingLore(name);
+    setError(null);
+    try {
+      const response = await axios.post('/api/generate', {
+        mode: 'faction-lore',
+        params: { ...form, name }
+      });
+      setLore(prev => ({ ...prev, [name]: response.data.lore }));
+    } catch (err) {
+      console.error("Lore generation failed", err);
+      if (err.response && err.response.status === 429) {
+        setError("We are sorry, but there are too many requests at the moment. Please try again tomorrow.");
+      } else {
+        setError("Lore generation failed. Please try again.");
+      }
+    } finally {
+      setLoadingLore(null);
     }
   };
 
@@ -230,11 +254,31 @@ Rules:
               <div className="bg-fantasy-dark-secondary/80 p-8 rounded-xl border border-fantasy-gold/30 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gold-gradient"></div>
                 <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6 text-center">Faction Names</h2>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {names.map((name, index) => (
-                    <li key={index} className="flex items-center gap-3 text-lg border-b border-white/5 pb-2 last:border-0 hover:text-fantasy-gold-light transition cursor-default">
-                      <span className="text-fantasy-gold/50 font-mono text-sm">{(index + 1).toString().padStart(2, '0')}</span>
-                      {name}
+                    <li key={index} className="flex flex-col gap-2 border-b border-white/5 pb-4 last:border-0">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3 text-lg hover:text-fantasy-gold-light transition cursor-default">
+                          <span className="text-fantasy-gold/50 font-mono text-sm">{(index + 1).toString().padStart(2, '0')}</span>
+                          <span className="font-semibold text-gray-100">{name}</span>
+                        </div>
+                        <button
+                          onClick={() => generateLore(name)}
+                          className="text-xs bg-fantasy-gold/10 text-fantasy-gold hover:bg-fantasy-gold hover:text-black px-3 py-1 rounded-full border border-fantasy-gold/30 transition-all flex items-center gap-1"
+                        >
+                          <span>✨ Lore</span>
+                        </button>
+                      </div>
+                      {lore[name] && (
+                        <div className="text-sm text-gray-400 italic bg-black/40 p-3 rounded border-l-2 border-fantasy-gold/50 ml-8 animate-fade-in">
+                          {lore[name]}
+                        </div>
+                      )}
+                      {loadingLore === name && (
+                        <div className="text-xs text-fantasy-gold ml-8 animate-pulse">
+                          Divining destiny...
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>
