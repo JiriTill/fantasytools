@@ -6,7 +6,7 @@ export default function Terms() {
   return (
     <div className="min-h-screen flex flex-col items-center">
       <header className="w-full text-center pt-10 pb-6 px-4 bg-gradient-to-b from-fantasy-dark-secondary to-fantasy-dark border-b border-white/5">
-        <Link to="/" className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
           ← Back to Home
         </Link>
         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gold-gradient drop-shadow-sm tracking-wide">
@@ -38,7 +38,7 @@ export default function Terms() {
           <h2 className="text-fantasy-gold font-fantasy">4. Privacy</h2>
           <p>
             We do not collect personal data. Basic anonymous analytics may be used to help improve the site. For more information, please review our{' '}
-            <Link to="/privacy" className="text-fantasy-gold hover:text-white transition underline decoration-dotted">
+            <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition underline decoration-dotted">
               Privacy Policy
             </Link>.
           </p>
@@ -50,7 +50,7 @@ export default function Terms() {
 
           <p>
             If you have any questions or concerns, please{' '}
-            <Link to="/contact" className="text-fantasy-gold hover:text-white transition underline decoration-dotted">
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition underline decoration-dotted">
               contact us
             </Link> or visit{' '}
             <a href="https://neoantica.com" target="_blank" rel="noopener noreferrer" className="text-fantasy-gold hover:text-white transition underline decoration-dotted">

@@ -23,7 +23,7 @@ export default function GenderSpecificNames() {
   return (
     <div className="min-h-screen flex flex-col items-center">
       <header className="w-full text-center pt-10 pb-6 px-4 bg-gradient-to-b from-fantasy-dark-secondary to-fantasy-dark border-b border-white/5">
-        <Link to="/" className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
           ← Back to Home
         </Link>
         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gold-gradient drop-shadow-sm tracking-wide">
@@ -117,13 +117,13 @@ export default function GenderSpecificNames() {
           <div className="mt-10 p-8 bg-card-gradient rounded-xl border border-white/10 shadow-lg">
             <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6">Continue Your Journey</h2>
             <div className="flex flex-col space-y-3">
-              <Link to="/blog/why-names-matter" className="text-lg text-fantasy-gold hover:text-white transition-colors underline decoration-dotted">
+              <Link to="/blog/why-names-matter" onClick={() => window.scrollTo(0, 0)} className="text-lg text-fantasy-gold hover:text-white transition-colors underline decoration-dotted">
                 → Why Names Matter in Fantasy Worlds?
               </Link>
-              <Link to="/blog/tips-for-worldbuilding" className="text-lg text-fantasy-gold hover:text-white transition-colors underline decoration-dotted">
+              <Link to="/blog/tips-for-worldbuilding" onClick={() => window.scrollTo(0, 0)} className="text-lg text-fantasy-gold hover:text-white transition-colors underline decoration-dotted">
                 → 5 Tips for Worldbuilding and Creating a Cohesive World
               </Link>
-              <Link to="/blog/lore-rich-names" className="text-lg text-fantasy-gold hover:text-white transition-colors underline decoration-dotted">
+              <Link to="/blog/lore-rich-names" onClick={() => window.scrollTo(0, 0)} className="text-lg text-fantasy-gold hover:text-white transition-colors underline decoration-dotted">
                 → How to Create Lore-Rich Names for Your Characters
               </Link>
             </div>

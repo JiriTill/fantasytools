@@ -41,10 +41,10 @@ export default function RelatedGenerators({ current }) {
 
             {/* Quick Links */}
             <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                <Link to="/faq" className="text-fantasy-gold hover:text-white transition mr-6">
+                <Link to="/faq" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition mr-6">
                     FAQ - How to Use Our Generators
                 </Link>
-                <Link to="/" className="text-fantasy-gold hover:text-white transition">
+                <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition">
                     All Name Generators
                 </Link>
             </div>

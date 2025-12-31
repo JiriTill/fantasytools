@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import NameGallery from '../components/NameGallery';
 import SingleAffiliateBox from '../components/SingleAffiliateBox';
 import Footer from '../components/Footer';
@@ -103,9 +104,9 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 mb-16 w-full max-w-5xl">
             {categories.map((cat) => (
-              <a
+              <Link
                 key={cat.name}
-                href={cat.path}
+                to={cat.path}
                 onClick={() => window.scrollTo(0, 0)}
                 className="group relative flex flex-col items-center text-center p-4 rounded-xl bg-card-gradient border border-white/10 hover:border-fantasy-gold/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
@@ -120,7 +121,7 @@ export default function Home() {
                   {cat.name}
                 </span>
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-fantasy-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"></div>
-              </a>
+              </Link>
             ))}
           </div>
 

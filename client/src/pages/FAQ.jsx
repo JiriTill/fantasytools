@@ -214,13 +214,13 @@ export default function FAQ() {
                             Choose a name generator and start creating unique fantasy names for your world!
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link to="/character" className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">
+                            <Link to="/character" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">
                                 Character Names
                             </Link>
-                            <Link to="/world" className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">
+                            <Link to="/world" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">
                                 World Names
                             </Link>
-                            <Link to="/faction" className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">
+                            <Link to="/faction" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">
                                 Faction Names
                             </Link>
                         </div>
