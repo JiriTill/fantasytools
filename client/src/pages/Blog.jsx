@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 
 const blogPosts = [
+    {
+        title: "Create Faiths, Cults, Orders & Pantheons That Feel Real",
+        slug: "/blog/create-faiths-cults-orders",
+        excerpt: "Build believable religions, holy orders, and cults. A guide to naming, designing beliefs, and creating lore that impacts your world.",
+        date: "2025",
+        category: "Worldbuilding"
+    },
     {
         title: "Why Names Matter in Fantasy Worlds?",
         slug: "/blog/why-names-matter",
@@ -34,7 +41,15 @@ const blogPosts = [
     }
 ];
 
+const categories = ["All", "Worldbuilding", "Character Creation"];
+
 export default function Blog() {
+    const [selectedCategory, setSelectedCategory] = useState("All");
+
+    const filteredPosts = selectedCategory === "All"
+        ? blogPosts
+        : blogPosts.filter(post => post.category === selectedCategory);
+
     return (
         <>
             <Helmet>
@@ -49,7 +64,7 @@ export default function Blog() {
 
             <div className="min-h-screen flex flex-col items-center">
                 <header className="w-full text-center pt-10 pb-6 px-4 bg-gradient-to-b from-fantasy-dark-secondary to-fantasy-dark border-b border-white/5">
-                    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block">
+                    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-fantasy-gold hover:text-white transition font-fantasy text-xl mb-2 inline-block relative z-50">
                         ← Back to Home
                     </Link>
                     <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gold-gradient drop-shadow-sm tracking-wide">
@@ -60,14 +75,31 @@ export default function Blog() {
                     </p>
                 </header>
 
-                <main className="w-full max-w-4xl mx-auto px-4 py-12">
-                    <div className="grid gap-8">
-                        {blogPosts.map((post, index) => (
+                <main className="w-full max-w-7xl mx-auto px-4 py-12 flex flex-col items-center">
+
+                    {/* Category Filter */}
+                    <div className="flex flex-wrap gap-4 justify-center mb-10">
+                        {categories.map(category => (
+                            <button
+                                key={category}
+                                onClick={() => setSelectedCategory(category)}
+                                className={`px-5 py-2 rounded-full font-semibold transition-all border ${selectedCategory === category
+                                        ? "bg-fantasy-gold text-fantasy-dark border-fantasy-gold"
+                                        : "bg-fantasy-dark-secondary text-gray-400 border-white/10 hover:border-fantasy-gold hover:text-white"
+                                    }`}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                        {filteredPosts.map((post, index) => (
                             <Link
                                 key={index}
                                 to={post.slug}
                                 onClick={() => window.scrollTo(0, 0)}
-                                className="group bg-card-gradient p-8 rounded-xl border border-white/10 hover:border-fantasy-gold/50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                                className="group flex flex-col bg-card-gradient p-8 rounded-xl border border-white/10 hover:border-fantasy-gold/50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 h-full"
                             >
                                 <div className="flex items-start justify-between mb-4">
                                     <span className="text-xs font-semibold text-fantasy-gold bg-fantasy-gold/10 px-3 py-1 rounded-full border border-fantasy-gold/30">
@@ -75,13 +107,13 @@ export default function Blog() {
                                     </span>
                                     <span className="text-sm text-gray-500">{post.date}</span>
                                 </div>
-                                <h2 className="text-2xl font-fantasy text-gray-100 group-hover:text-fantasy-gold transition mb-3">
+                                <h2 className="text-2xl font-fantasy text-gray-100 group-hover:text-fantasy-gold transition mb-3 leading-tight">
                                     {post.title}
                                 </h2>
-                                <p className="text-gray-400 leading-relaxed mb-4">
+                                <p className="text-gray-400 leading-relaxed mb-6 flex-grow">
                                     {post.excerpt}
                                 </p>
-                                <span className="text-fantasy-gold text-sm font-semibold group-hover:underline">
+                                <span className="text-fantasy-gold text-sm font-semibold group-hover:underline mt-auto">
                                     Read More →
                                 </span>
                             </Link>
@@ -89,7 +121,7 @@ export default function Blog() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="mt-16 bg-gradient-to-r from-fantasy-gold/10 to-fantasy-gold/5 p-8 rounded-xl border border-fantasy-gold/30 text-center">
+                    <div className="mt-20 w-full bg-gradient-to-r from-fantasy-gold/10 to-fantasy-gold/5 p-8 rounded-xl border border-fantasy-gold/30 text-center">
                         <h3 className="text-2xl font-fantasy text-fantasy-gold mb-4">
                             Ready to Create Your Fantasy World?
                         </h3>

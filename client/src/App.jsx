@@ -19,6 +19,7 @@ import FiveTipsForWorldbuilding from './pages/FiveTipsForWorldbuilding';
 import FemalevsMale from './pages/FemalevsMale';
 import FAQ from './pages/FAQ';
 import Blog from './pages/Blog';
+import CreateFaiths from './pages/CreateFaiths';
 import Ideas from './pages/Ideas';
 import TopNav from './components/TopNav';
 
@@ -45,7 +46,9 @@ function App() {
         <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
         <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
         <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
+        <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
         <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
+        <Route path="/blog/create-faiths-cults-orders" element={<CreateFaiths />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/ideas" element={<Ideas />} />
       </Routes>
