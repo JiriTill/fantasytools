@@ -12,20 +12,32 @@ function CharacterGenerator() {
   const [context, setContext] = useState('');
   const [names, setNames] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleGenerate = async () => {
     setLoading(true);
+    setError(null);
     try {
       const response = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ mode: 'character', params, context }),
       });
-      const data = await response.json();
-      setNames(data);
+
+      if (response.status === 429) {
+        setError("We are sorry, but there are too many requests at the moment. Please try again tomorrow.");
+        setNames([]);
+      } else if (!response.ok) {
+        setError("An unexpected error occurred. Please try again later.");
+        setNames([]);
+      } else {
+        const data = await response.json();
+        setNames(data.names || []);
+      }
     } catch (error) {
       console.error(error);
-      setNames(['Error generating names']);
+      setError("An unexpected error occurred. Please try again later.");
+      setNames([]);
     }
     setLoading(false);
   };
@@ -113,6 +125,11 @@ function CharacterGenerator() {
           placeholder="Describe the character (e.g., a brave warrior from a desert tribe)"
         />
       </div>
+      {error && (
+        <div className="w-full p-4 mb-4 bg-red-900/30 border border-red-500/50 rounded-lg text-red-200 text-sm text-center font-medium">
+          {error}
+        </div>
+      )}
       <button
         onClick={handleGenerate}
         className="w-full p-3 bg-amber-400 text-gray-900 rounded hover:bg-amber-500"

@@ -18,6 +18,7 @@ export default function Religion() {
   const [names, setNames] = useState([]);
   const [loading, setLoading] = useState(false);
   const [timer, setTimer] = useState(0);
+  const [error, setError] = useState(null);
   const resultsRef = React.useRef(null);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ export default function Religion() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setNames([]);
+    setError(null);
 
     const prompt = `
 You are an expert in fantasy worldbuilding and naming, crafting evocative and immersive names for RPGs, Dungeons & Dragons, and fantasy novels.
@@ -67,6 +68,11 @@ Rules:
       setNames(response.data.names);
     } catch (err) {
       console.error(err);
+      if (err.response && err.response.status === 429) {
+        setError("We are sorry, but there are too many requests at the moment. Please try again tomorrow.");
+      } else {
+        setError("An unexpected error occurred. Please try again later.");
+      }
     } finally {
       setLoading(false);
     }
@@ -197,6 +203,12 @@ Rules:
                 ))}
               </select>
             </label>
+
+            {error && (
+              <div className="w-full p-4 bg-red-900/30 border border-red-500/50 rounded-lg text-red-200 text-sm text-center animate-fade-in font-medium">
+                {error}
+              </div>
+            )}
 
             <button
               type="submit"

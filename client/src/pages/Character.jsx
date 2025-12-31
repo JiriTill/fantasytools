@@ -27,6 +27,7 @@ export default function Character() {
     return saved ? JSON.parse(saved) : [];
   });
   const [timer, setTimer] = useState(0);
+  const [error, setError] = useState(null);
   const resultsRef = React.useRef(null);
 
   useEffect(() => {
@@ -63,6 +64,7 @@ export default function Character() {
   const generateLore = async (name) => {
     if (lore[name]) return; // Already generated
     setLoadingLore(name);
+    setError(null);
     try {
       const response = await axios.post('/api/generate', {
         mode: 'lore',
@@ -71,6 +73,11 @@ export default function Character() {
       setLore(prev => ({ ...prev, [name]: response.data.lore }));
     } catch (err) {
       console.error("Lore generation failed", err);
+      if (err.response && err.response.status === 429) {
+        setError("We are sorry, but there are too many requests at the moment. Please try again tomorrow.");
+      } else {
+        setError("Lore generation failed. Please try again.");
+      }
     } finally {
       setLoadingLore(null);
     }
@@ -80,6 +87,7 @@ export default function Character() {
     e.preventDefault();
     setLoading(true);
     setNames([]);
+    setError(null);
 
     try {
       const prompt = `
@@ -107,6 +115,11 @@ Rules:
       setNames(response.data.names);
     } catch (err) {
       console.error(err);
+      if (err.response && err.response.status === 429) {
+        setError("We are sorry, but there are too many requests at the moment. Please try again tomorrow.");
+      } else {
+        setError("An unexpected error occurred. Please try again later.");
+      }
     } finally {
       setLoading(false);
     }
@@ -265,6 +278,12 @@ Rules:
               />
               <p className="text-xs text-gray-500 mt-1">Specify a cultural style to influence name generation</p>
             </label>
+
+            {error && (
+              <div className="w-full p-4 bg-red-900/30 border border-red-500/50 rounded-lg text-red-200 text-sm text-center animate-fade-in font-medium">
+                {error}
+              </div>
+            )}
 
             <button
               type="submit"

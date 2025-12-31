@@ -44,7 +44,7 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
@@ -74,8 +74,9 @@ router.post('/', async (req, res) => {
     res.json({ names });
   } catch (error) {
     console.error("Gemini API Error:", error);
-    // Return the actual error message for clearer debugging in Vercel logs
-    res.status(500).json({
+    // Detect 429 error and return it to the frontend
+    const isQuotaExceeded = error.message?.includes('429') || error.response?.status === 429;
+    res.status(isQuotaExceeded ? 429 : 500).json({
       error: `Failed to generate names: ${error.message}`,
       details: error.response ? error.response.data : null
     });

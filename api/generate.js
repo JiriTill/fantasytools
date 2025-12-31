@@ -56,7 +56,7 @@ module.exports = async (req, res) => {
         }
 
         // Use REST API directly instead of SDK to use v1 endpoint
-        const apiUrl = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent';
+        const apiUrl = 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent';
 
         const response = await fetch(`${apiUrl}?key=${process.env.GEMINI_API_KEY}`, {
             method: 'POST',
@@ -72,7 +72,7 @@ module.exports = async (req, res) => {
 
         if (!response.ok) {
             const errorData = await response.text();
-            return res.status(500).json({
+            return res.status(response.status).json({
                 error: `Gemini API error: ${response.status}`,
                 details: errorData
             });
