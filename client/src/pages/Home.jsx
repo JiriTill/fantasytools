@@ -135,14 +135,59 @@ export default function Home() {
           {/* SEO & Content Section */}
           <div className="w-full max-w-3xl text-left mt-20 mb-10 text-gray-300 space-y-8">
             <div className="prose prose-invert prose-lg max-w-none">
-              <h2 className="text-fantasy-gold text-3xl mb-4">Crafting Your World with the Fantasy Name Generator</h2>
-              <p className="leading-readability">
-                Welcome to <span className="text-fantasy-gold-light">FantasyNameCreator.com</span>, your ultimate resource for crafting unique and immersive fantasy names. For every worldbuilder, writer, or game master, a great name is the first step toward a great story. Our advanced <strong>AI name generator</strong> is designed to provide you with a constant stream of inspiration for your characters, places, and lore.
+              <h2 className="text-fantasy-gold text-3xl mb-4">Crafting Your World with Fantasy Name Creator</h2>
+              <p className="leading-readability mb-4">
+                Welcome to <span className="text-fantasy-gold-light">FantasyNameCreator.com</span> — a practical place for worldbuilders, writers, and game masters who need names that feel like they belong in the same universe. In fantasy, names do a lot of heavy lifting. A good name can suggest culture, class, history, and danger in a single word. A bad one can break immersion instantly. If you’ve ever spent 30 minutes naming one character (and then needed 20 more names right after), you already know why a reliable fantasy name generator matters.
+              </p>
+              <p className="leading-readability mb-4">
+                Fantasy Name Creator is here to keep your momentum. Use it when you’re starting a brand-new setting, expanding a long-running campaign, or filling in the gaps between your “big ideas.” Generate options, pick what fits, and move forward.
               </p>
 
-              <h2 className="text-fantasy-gold text-2xl mt-8 mb-4">Why our Fantasy Name Generator is Different</h2>
-              <p className="leading-readability">
-                Unlike other simple name generators that randomly combine words, our tool is built on a sophisticated AI model. This allows us to create names that are not only unique but also cohesive and culturally inspired. Whether you need a name for a mystical elf, a fearsome orc faction, or a sprawling city in a new realm, our generator offers a wide range of categories to suit your needs. We believe in giving creators the control they need. That’s why you can adjust various settings—such as culture, tone, and alignment—to fine-tune the results and get the perfect name every time. Explore our diverse categories and start creating the lore-rich names that will bring your fantasy world to life.
+              <h2 className="text-fantasy-gold text-2xl mt-8 mb-4">Why this fantasy name generator feels different</h2>
+              <p className="leading-readability mb-4">
+                A lot of tools are basically random syllable mashers. Sometimes you get lucky, but often the results feel generic, repetitive, or out of place. Fantasy Name Creator is built for creators who want control.
+              </p>
+              <p className="leading-readability mb-4">
+                You can steer the results by choosing what you’re building and what vibe you want. Need something noble, mystical, dark, gritty, or heroic? Want names that sound like they come from the same region or culture? Dial in the tone, generate a batch, then refine. The goal isn’t to dump a wall of random names — it’s to give you names that read well in a sentence and sound right at the table.
+              </p>
+              <p className="leading-readability mb-4">
+                This is especially helpful when you’re building a world with multiple cultures. Once you find a style that fits (for example: “desert empire,” “cold northern clans,” “ancient elven court”), you can keep generating within that feel to stay consistent.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl mt-8 mb-4">Categories made for real worldbuilding</h2>
+              <p className="leading-readability mb-4">
+                FantasyNameCreator.com isn’t only about characters. It’s a toolkit for the parts of a setting that usually steal your time at the worst moment. Explore:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mb-4 ml-2">
+                <li>
+                  <Link to="/character" className="text-fantasy-gold hover:text-white hover:underline transition">Character Name Generator / Creator</Link> – for heroes, villains, NPCs, and quick improvised names.
+                </li>
+                <li>
+                  <Link to="/faction" className="text-fantasy-gold hover:text-white hover:underline transition">Faction Name Generator</Link> – create memorable faction names for guilds, cults, noble houses, rebel groups, mercenary companies, and empires. If you’re searching for a fantasy faction name generator, this is where you’ll live.
+                </li>
+                <li>
+                  <Link to="/religion" className="text-fantasy-gold hover:text-white hover:underline transition">Religion Name Generator</Link> – build faiths, sects, holy orders, and divine titles. Great if you want a fantasy religion generator or fantasy religion name generator for temples, heresies, and pantheons.
+                </li>
+                <li>
+                  <Link to="/item" className="text-fantasy-gold hover:text-white hover:underline transition">Fantasy Object Name Generator</Link> – name artifacts, legendary weapons, relics, grimoires, potions, ships, and cursed treasures.
+                </li>
+                <li>
+                  <Link to="/world" className="text-fantasy-gold hover:text-white hover:underline transition">World / Location tools</Link> – for cities, regions, ruins, islands, and realms that sound like they were shaped by history.
+                </li>
+              </ul>
+              <p className="leading-readability mb-4">
+                You can use one tool for a quick answer, or chain them together to build something richer: a faction name that matches a religion, a relic tied to that faith, and a character who carries it.
+              </p>
+
+              <h2 className="text-fantasy-gold text-2xl mt-8 mb-4">The Lore feature: instant story hooks</h2>
+              <p className="leading-readability mb-4">
+                Here’s the fun part. After you generate a name, you can click Lore to get a short lore snippet for that specific result — a rumor, title, origin hint, personality trait, or destiny hook. It’s perfect when you don’t just need a name, you need a reason the name matters.
+              </p>
+              <p className="leading-readability mb-4">
+                For game masters, it’s a lifesaver for improvisation. For writers, it’s a fast way to break through “I have a name but no story” syndrome. Generate, click Lore, and suddenly you’ve got a character idea or plot thread.
+              </p>
+              <p className="leading-readability mb-4">
+                If you’ve been looking for a name generator fantasy tool, a fantasy name maker, strong faction names, a religion name generator, or a fantasy object name generator, start here. Generate names, click Lore, and keep building.
               </p>
             </div>
           </div>
