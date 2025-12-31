@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
+import AmazonAffiliate from '../components/AmazonAffiliate';
 
 
 export default function WhyNamesMatter() {
@@ -26,8 +27,9 @@ export default function WhyNamesMatter() {
           <meta property="og:title" content="Why Names Matter: A Guide to Naming in Fantasy" />
           <meta property="og:description" content="Explore the art of naming in fantasy. Learn how to craft meaningful names that enhance your characters and worlds with our name generator." />
           <meta property="og:type" content="article" />
-          <meta property="og:url" content="https://fantasynamecreator.com/why-names-matter" />
-          <meta property="og:image" content="https://fantasynamecreator.com/images/og-image.jpg" />
+          <meta property="og:url" content="https://www.fantasynamecreator.com/blog/why-names-matter" />
+          <meta property="og:image" content="https://www.fantasynamecreator.com/images/og-image.jpg" />
+          <link rel="canonical" href="https://www.fantasynamecreator.com/blog/why-names-matter" />
         </Helmet>
 
         <div className="prose prose-invert prose-lg max-w-none text-gray-300">
@@ -76,6 +78,11 @@ export default function WhyNamesMatter() {
             “A name is not just what you're called. It's who you are when legends are told.”
           </p>
 
+          {/* Amazon Affiliate Box */}
+          <div className="my-12">
+            <AmazonAffiliate />
+          </div>
+
           <div className="mt-10 p-8 bg-card-gradient rounded-xl border border-white/10 shadow-lg">
             <h2 className="text-2xl font-fantasy text-fantasy-gold mb-6">Continue Your Journey</h2>
             <div className="flex flex-col space-y-3">
@@ -91,14 +98,19 @@ export default function WhyNamesMatter() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              to="/"
-              onClick={() => window.scrollTo(0, 0)}
-              className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-            >
-              ← Back to Fantasy Name Creator
-            </Link>
+          {/* CTA Section */}
+          <div className="my-12 bg-gradient-to-r from-fantasy-gold/10 to-fantasy-gold/5 p-8 rounded-xl border border-fantasy-gold/30 text-center">
+            <h3 className="text-2xl font-fantasy text-fantasy-gold mb-4">Ready to Create Your Fantasy World?</h3>
+            <p className="text-gray-300 mb-6">Use our generators to create unique names for characters, worlds, factions, religions, and items—then unlock instant lore to bring them to life.</p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to="/character" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">Generate Character Names</Link>
+              <Link to="/world" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">Generate World Names</Link>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition text-center">← Back to Blog</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-2 text-fantasy-gold hover:text-white transition font-fantasy text-lg">← Home</Link>
           </div>
         </div>
 

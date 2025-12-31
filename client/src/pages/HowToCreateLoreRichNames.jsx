@@ -1,8 +1,8 @@
-// client/src/pages/HowToCreateLoreRichNames.jsx
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
+import AmazonAffiliate from '../components/AmazonAffiliate';
 
 
 export default function HowToCreateLoreRichNames() {
@@ -108,6 +108,11 @@ export default function HowToCreateLoreRichNames() {
             A name can be a metaphor. Think of names that are derived from words in your fictional language. A warrior named "Kael" might mean "Strength," while a scholar's name, "Elara," might mean "Knowledge." Even if the meaning is not immediately obvious to the reader, knowing it as the creator adds a layer of intentionality and foreshadowing.
           </p>
 
+          {/* Amazon Affiliate Box */}
+          <div className="my-12">
+            <AmazonAffiliate />
+          </div>
+
           <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">4. Play with Sound and Alliteration</h3>
           <p>
             The way a name sounds can evoke a certain feeling. Sharp, hard consonants (K, T, D) can suggest aggression or toughness, while soft, flowing vowels (A, E, O) can imply grace or wisdom. Alliteration, like "Seraphina Silverwing," can make a name memorable and give it a poetic quality.
@@ -135,14 +140,19 @@ export default function HowToCreateLoreRichNames() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              to="/"
-              onClick={() => window.scrollTo(0, 0)}
-              className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-            >
-              ← Back to Fantasy Name Creator
-            </Link>
+          {/* CTA Section */}
+          <div className="my-12 bg-gradient-to-r from-fantasy-gold/10 to-fantasy-gold/5 p-8 rounded-xl border border-fantasy-gold/30 text-center">
+            <h3 className="text-2xl font-fantasy text-fantasy-gold mb-4">Ready to Create Your Fantasy World?</h3>
+            <p className="text-gray-300 mb-6">Use our generators to create unique names for characters, worlds, factions, religions, and items—then unlock instant lore to bring them to life.</p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to="/character" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">Generate Character Names</Link>
+              <Link to="/world" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">Generate World Names</Link>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition text-center">← Back to Blog</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-2 text-fantasy-gold hover:text-white transition font-fantasy text-lg">← Home</Link>
           </div>
         </div>
 

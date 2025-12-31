@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
+import AmazonAffiliate from '../components/AmazonAffiliate';
 
 
 export default function FiveTipsForWorldbuilding() {
@@ -108,6 +109,11 @@ export default function FiveTipsForWorldbuilding() {
             A great world feels ancient, with a history that stretches back beyond the current story. Think about major historical events, forgotten kingdoms, and epic battles that have shaped the current world. You don't need to write a full encyclopedia, but having a general understanding of the past will add depth to your locations, characters, and conflicts.
           </p>
 
+          {/* Amazon Affiliate Box */}
+          <div className="my-12">
+            <AmazonAffiliate />
+          </div>
+
           <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">4. Focus on the Small Details</h3>
           <p>
             The big picture is important, but small details are what truly make a world believable. Think about the daily lives of your inhabitants. What do they eat? What are their common superstitions? What is their most popular form of entertainment? These small, tangible elements connect your audience to your world and make it feel authentic.
@@ -135,14 +141,19 @@ export default function FiveTipsForWorldbuilding() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              to="/"
-              onClick={() => window.scrollTo(0, 0)}
-              className="mt-10 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-            >
-              ← Back to Fantasy Name Creator
-            </Link>
+          {/* CTA Section */}
+          <div className="my-12 bg-gradient-to-r from-fantasy-gold/10 to-fantasy-gold/5 p-8 rounded-xl border border-fantasy-gold/30 text-center">
+            <h3 className="text-2xl font-fantasy text-fantasy-gold mb-4">Ready to Create Your Fantasy World?</h3>
+            <p className="text-gray-300 mb-6">Use our generators to create unique names for characters, worlds, factions, religions, and items—then unlock instant lore to bring them to life.</p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to="/character" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">Generate Character Names</Link>
+              <Link to="/world" onClick={() => window.scrollTo(0, 0)} className="px-6 py-3 bg-fantasy-gold hover:bg-white text-fantasy-dark font-bold rounded-lg transition shadow-lg">Generate World Names</Link>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg transition text-center">← Back to Blog</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-2 text-fantasy-gold hover:text-white transition font-fantasy text-lg">← Home</Link>
           </div>
         </div>
 

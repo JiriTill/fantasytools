@@ -94,7 +94,7 @@ export default function Blog() {
                             Ready to Create Your Fantasy World?
                         </h3>
                         <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                            Use our AI-powered generators to create unique names for characters, worlds, factions, religions, and items — then unlock instant lore to bring them to life.
+                            Use our generators to create unique names for characters, worlds, factions, religions, and items — then unlock instant lore to bring them to life.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link
