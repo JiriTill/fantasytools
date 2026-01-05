@@ -1,4 +1,23 @@
+# Fantasy Name Creator - robots.txt
+# https://www.fantasynamecreator.com
+
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://www.fantasynamecreator.com/sitemap.xml
+
+# Crawl-delay suggestion (optional, helps prevent overloading)
+Crawl-delay: 1
+
+# Disallow any files that shouldn't be indexed
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow static assets to be crawled
+Allow: /images/
+Allow: /favicon.ico
+Allow: /sitemap.xml
+Allow: /robots.txt
