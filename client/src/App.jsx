@@ -52,8 +52,6 @@ function App() {
         <Route path="/blog/lore-rich-names" element={<HowToCreateLoreRichNames />} />
         <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
         <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
-        <Route path="/blog/tips-for-worldbuilding" element={<FiveTipsForWorldbuilding />} />
-        <Route path="/blog/gender-specific-names" element={<FemalevsMale />} />
         <Route path="/blog/create-faiths-cults-orders" element={<CreateFaiths />} />
         <Route path="/blog/naming-systems-writers-use" element={<NamingSystems />} />
         <Route path="/blog/faction-names-board-games" element={<FactionNamesBoardGames />} />
