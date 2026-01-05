@@ -106,7 +106,7 @@ export default function FantasyQuestHooks() {
 
                     {/* Amazon Affiliate Box in the middle */}
                     <div className="my-12">
-                        <AmazonAffiliate />
+                        <AmazonAffiliate type="quests" />
                     </div>
 
                     <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">5) The Tournament of Gentle Blades</h3>

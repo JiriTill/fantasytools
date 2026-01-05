@@ -132,7 +132,7 @@ export default function GenderSpecificNames() {
 
           {/* Amazon Affiliate Box */}
           <div className="my-12">
-            <AmazonAffiliate />
+            <AmazonAffiliate type="character" />
           </div>
 
           <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">2) Make gender differences feel “cultural,” not random</h3>

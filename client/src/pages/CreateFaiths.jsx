@@ -126,7 +126,7 @@ export default function CreateFaiths() {
 
                     {/* Amazon Affiliate Box in the middle */}
                     <div className="my-12">
-                        <AmazonAffiliate />
+                        <AmazonAffiliate type="religion" />
                     </div>
 
                     <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">4) Turn belief into institutions (this is where factions are born)</h3>

@@ -80,7 +80,7 @@ export default function WhyNamesMatter() {
 
           {/* Amazon Affiliate Box */}
           <div className="my-12">
-            <AmazonAffiliate />
+            <AmazonAffiliate type="character" />
           </div>
 
           <div className="mt-10 p-8 bg-card-gradient rounded-xl border border-white/10 shadow-lg">

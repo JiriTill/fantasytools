@@ -150,7 +150,7 @@ export default function HowToCreateLoreRichNames() {
 
           {/* Amazon Affiliate Box */}
           <div className="my-12">
-            <AmazonAffiliate />
+            <AmazonAffiliate type="character" />
           </div>
 
           <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">4) Add the “second layer”: public name vs. street name vs. enemy name</h3>

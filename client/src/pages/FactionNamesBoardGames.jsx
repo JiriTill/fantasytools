@@ -130,7 +130,7 @@ export default function FactionNamesBoardGames() {
 
                     {/* Amazon Affiliate Box in the middle */}
                     <div className="my-12">
-                        <AmazonAffiliate />
+                        <AmazonAffiliate type="faction" />
                     </div>
 
                     <h3 className="text-fantasy-gold font-fantasy text-2xl mt-8 mb-4">3) Use a 2–4 word “board game format”</h3>

@@ -100,10 +100,30 @@ export default function AmazonAffiliate({ type = 'character' }) {
                 description: "Manage divine spells without flipping through the handbook.",
                 url: "https://amzn.to/3LnlxmV"
             }
+        ],
+        quests: [
+            {
+                title: "The Game Master's Book of Random Encounters",
+                label: "500+ quest hooks",
+                description: "500+ customizable maps, tables, and story hooks.",
+                url: "https://amzn.to/4q14kio"
+            },
+            {
+                title: "The Game Master's Book of Villains, Minions and Their Tactics",
+                label: "Build the villain",
+                description: "Build the villain behind the quest. Lairs, minions, and plans.",
+                url: "https://amzn.to/3MXxHDL"
+            },
+            {
+                title: "Vault of Magic (Kobold Press)",
+                label: "The reward",
+                description: "Give them a reward worth fighting for. 900+ magic items.",
+                url: "https://amzn.to/3Nundf1"
+            }
         ]
     };
 
-    // Dynamic uses the same products as character
+    // Dynamic uses character, fallback to character for any unknown type
     const products = productsByType[type] || productsByType.character;
 
     return (
