@@ -18,7 +18,7 @@ export default function AmazonAffiliate({ type = 'character' }) {
                 title: "The Monsters Know What They're Doing",
                 label: "Master NPC tactics",
                 description: "Stop playing NPCs like idiots. Make them fight smarter.",
-                url: "https://amzn.to/4sqIWWv"
+                url: "https://amzn.to/4qDayou"
             }
         ],
         item: [
@@ -52,7 +52,7 @@ export default function AmazonAffiliate({ type = 'character' }) {
                 title: "Big Book of Battle Mats",
                 label: "Instant guild halls",
                 description: "Instant guild halls and dungeons. Open the book and play.",
-                url: "https://amzn.to/3L0aqsR"
+                url: "https://amzn.to/4phEg17"
             },
             {
                 title: "Fizban's Treasury of Dragons",
@@ -92,7 +92,7 @@ export default function AmazonAffiliate({ type = 'character' }) {
                 title: "Mordenkainen Presents: Monsters of the Multiverse",
                 label: "Extra-planar threats",
                 description: "Demons, Angels, and extra-planar threats for your gods.",
-                url: "https://amzn.to/49qXVbG"
+                url: "https://amzn.to/3LxitEV"
             },
             {
                 title: "Cleric & Paladin Spell Cards",
