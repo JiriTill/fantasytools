@@ -1,24 +1,110 @@
-export default function AmazonAffiliate() {
-    const products = [
-        {
-            title: "D&D Player's Handbook",
-            label: "Run a campaign",
-            description: "Core rules and character options for adventures.",
-            url: "https://amzn.to/3L7PEik"
-        },
-        {
-            title: "Dice Set",
-            label: "Bring it to the table",
-            description: "A classic polyhedral set for every session.",
-            url: "https://amzn.to/49edX5X"
-        },
-        {
-            title: "Worldbuilding Guide",
-            label: "Build deeper lore",
-            description: "Tools and prompts for places, factions, and stories.",
-            url: "https://amzn.to/4jn5oKX"
-        }
-    ];
+export default function AmazonAffiliate({ type = 'character' }) {
+    // Products organized by generator type
+    const productsByType = {
+        character: [
+            {
+                title: "The Game Master's Book of Non-Player Characters",
+                label: "Build your NPCs",
+                description: "Instant stats, backstories, and motives for the name you just generated.",
+                url: "https://amzn.to/3YIrvb5"
+            },
+            {
+                title: "DnD Miniatures (2D Set)",
+                label: "Fill your battle map",
+                description: "Fill your battle map with heroes and villains instantly.",
+                url: "https://amzn.to/49DX6eh"
+            },
+            {
+                title: "The Monsters Know What They're Doing",
+                label: "Master NPC tactics",
+                description: "Stop playing NPCs like idiots. Make them fight smarter.",
+                url: "https://amzn.to/4sqIWWv"
+            }
+        ],
+        item: [
+            {
+                title: "Vault of Magic (Kobold Press)",
+                label: "Expand your loot",
+                description: "900+ new magic items. The ultimate loot expansion for 5e.",
+                url: "https://amzn.to/3Nundf1"
+            },
+            {
+                title: "D&D Magic Item Cards",
+                label: "Hand out the loot",
+                description: "Don't just read the loot. Hand the official card to your player.",
+                url: "https://amzn.to/3MWZnbR"
+            },
+            {
+                title: "Heavy Metal Dice Set",
+                label: "Loot for the DM",
+                description: "Loot for the DM. High-quality heavy metal dice that feel epic.",
+                url: "https://amzn.to/3LevEdW"
+            }
+        ],
+        faction: [
+            {
+                title: "The Game Master's Book of Villains, Minions and Their Tactics",
+                label: "Build the organization",
+                description: "Build the organization behind the name. Lairs, minions, and plans.",
+                url: "https://amzn.to/3MXxHDL"
+            },
+            {
+                title: "Big Book of Battle Mats",
+                label: "Instant guild halls",
+                description: "Instant guild halls and dungeons. Open the book and play.",
+                url: "https://amzn.to/3L0aqsR"
+            },
+            {
+                title: "Fizban's Treasury of Dragons",
+                label: "Ultimate faction leaders",
+                description: "The ultimate faction leaders. Add dragons to your order.",
+                url: "https://amzn.to/4poWePp"
+            }
+        ],
+        world: [
+            {
+                title: "Kobold Guide to Worldbuilding",
+                label: "Build a living world",
+                description: "Don't just make a map. Build a living, breathing world history.",
+                url: "https://amzn.to/3Lth0Q0"
+            },
+            {
+                title: "Chessex Role Playing Play Mat (Reversible)",
+                label: "The industry standard",
+                description: "The industry standard. Draw your world, erase, and redraw.",
+                url: "https://amzn.to/44WBQxJ"
+            },
+            {
+                title: "Dungeon Designers Deck",
+                label: "Create massive dungeons",
+                description: "Create massive complex dungeons in seconds with these cards.",
+                url: "https://amzn.to/49DCtPs"
+            }
+        ],
+        religion: [
+            {
+                title: "The Deck of Many Things",
+                label: "Divine chaos",
+                description: "Inject divine chaos and fate into your campaign.",
+                url: "https://amzn.to/4jmDjDs"
+            },
+            {
+                title: "Mordenkainen Presents: Monsters of the Multiverse",
+                label: "Extra-planar threats",
+                description: "Demons, Angels, and extra-planar threats for your gods.",
+                url: "https://amzn.to/49qXVbG"
+            },
+            {
+                title: "Cleric & Paladin Spell Cards",
+                label: "Manage divine spells",
+                description: "Manage divine spells without flipping through the handbook.",
+                url: "https://amzn.to/3LnlxmV"
+            }
+        ]
+    };
+
+    // Dynamic uses the same products as character
+    const products = productsByType[type] || productsByType.character;
 
     return (
         <div className="w-full max-w-4xl mx-auto my-10">

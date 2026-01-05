@@ -288,7 +288,7 @@ Rules:
           )}
 
           {/* Amazon Affiliate Recommendations - Right after results */}
-          {names.length > 0 && <AmazonAffiliate />}
+          {names.length > 0 && <AmazonAffiliate type="faction" />}
 
           <div className="flex flex-col items-center gap-6 mt-12 w-full">
             <ShareGeneratedName form={form} />
