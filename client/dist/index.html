@@ -46,7 +46,25 @@
 </head>
 
 <body class="bg-fantasy-dark text-gray-200">
-  <div id="root"></div>
+  <!-- SEO: Fallback content for crawlers before JavaScript loads -->
+  <div id="root">
+    <div id="seo-fallback" style="padding: 2rem; text-align: center;">
+      <h1>Fantasy Name Generator | Fantasy Name Creator</h1>
+      <p>Generate unique fantasy names for characters, worlds, factions, religions, and items. AI-powered with instant lore generation.</p>
+      <p>Loading application...</p>
+    </div>
+  </div>
+  
+  <!-- Fallback for users without JavaScript -->
+  <noscript>
+    <style>#seo-fallback { display: block !important; }</style>
+    <div style="padding: 2rem; text-align: center; background: #1a1a2e; color: #e0e0e0;">
+      <h1 style="color: #d4a574;">Fantasy Name Generator</h1>
+      <p>This application requires JavaScript to run. Please enable JavaScript in your browser settings.</p>
+      <p><a href="https://www.fantasynamecreator.com/sitemap.xml" style="color: #d4a574;">View sitemap</a></p>
+    </div>
+  </noscript>
+  
   
 </body>
 
