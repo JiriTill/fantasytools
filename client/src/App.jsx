@@ -26,6 +26,7 @@ import ReligionMythTabletop from './pages/ReligionMythTabletop';
 import Ideas from './pages/Ideas';
 import FifteenFantasyReligions from './pages/ideas/FifteenFantasyReligions';
 import FantasyQuestHooks from './pages/ideas/FantasyQuestHooks';
+import GenderNeutralNames from './pages/GenderNeutralNames';
 import TopNav from './components/TopNav';
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route path="/blog/naming-systems-writers-use" element={<NamingSystems />} />
         <Route path="/blog/faction-names-board-games" element={<FactionNamesBoardGames />} />
         <Route path="/blog/religion-myth-tabletop-games" element={<ReligionMythTabletop />} />
+        <Route path="/blog/gender-neutral-names" element={<GenderNeutralNames />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/ideas" element={<Ideas />} />
         <Route path="/ideas/15-fantasy-religions" element={<FifteenFantasyReligions />} />

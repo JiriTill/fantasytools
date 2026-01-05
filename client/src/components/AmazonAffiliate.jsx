@@ -120,6 +120,26 @@ export default function AmazonAffiliate({ type = 'character' }) {
                 description: "Give them a reward worth fighting for. 900+ magic items.",
                 url: "https://amzn.to/3Nundf1"
             }
+        ],
+        genderneutral: [
+            {
+                title: "Mordenkainen Presents: Monsters of the Multiverse",
+                label: "Fluid identity races",
+                description: "Play a Changeling or Warforged. 30+ exotic race options.",
+                url: "https://amzn.to/3LxitEV"
+            },
+            {
+                title: "The Game Master's Book of Non-Player Characters",
+                label: "Complete your character",
+                description: "Instant stats and backstories for your unique character.",
+                url: "https://amzn.to/3YIrvb5"
+            },
+            {
+                title: "Heavy Metal Dice Set",
+                label: "Roll with style",
+                description: "Roll with style. High-quality heavy metal dice.",
+                url: "https://amzn.to/3LevEdW"
+            }
         ]
     };
 

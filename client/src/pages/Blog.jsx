@@ -5,6 +5,13 @@ import Footer from '../components/Footer';
 
 const blogPosts = [
     {
+        title: "Gender-Neutral Fantasy Names and Genderfluid Fantasy Names: A Respectful Guide",
+        slug: "/blog/gender-neutral-names",
+        excerpt: "A practical guide to creating gender-neutral and genderfluid fantasy names for writers and DMs. Learn how to build unique unisex names that fit your world.",
+        date: "2026",
+        category: "Character Creation"
+    },
+    {
         title: "Faction Names for Board Games: Guilds, Houses, Clans, and Empires",
         slug: "/blog/faction-names-board-games",
         excerpt: "Learn practical naming rules and templates to create memorable faction names for board games that signal playstyle and theme.",
