@@ -27,6 +27,7 @@ import Ideas from './pages/Ideas';
 import FifteenFantasyReligions from './pages/ideas/FifteenFantasyReligions';
 import FantasyQuestHooks from './pages/ideas/FantasyQuestHooks';
 import GenderNeutralNames from './pages/GenderNeutralNames';
+import CaseStudyBingVsGoogle from './pages/CaseStudyBingVsGoogle';
 import TopNav from './components/TopNav';
 
 
@@ -61,6 +62,7 @@ function App() {
         <Route path="/ideas" element={<Ideas />} />
         <Route path="/ideas/15-fantasy-religions" element={<FifteenFantasyReligions />} />
         <Route path="/ideas/10-fantasy-quest-hooks" element={<FantasyQuestHooks />} />
+        <Route path="/case-study/bing-vs-google" element={<CaseStudyBingVsGoogle />} />
       </Routes>
     </>
   );
